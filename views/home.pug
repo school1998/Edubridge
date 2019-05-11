@@ -1,0 +1,2977 @@
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='description', content='')
+    meta(name='author', content='Dashboard')
+    meta(name='keyword', content='Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina')
+    title Home
+    // Bootstrap core CSS
+    link(rel='stylesheet', href='//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css')
+    link(href='stylesheets/jquery-ui.css', rel='stylesheet')
+    script(src='javascripts/jquery-1.11.1.min.js')
+    script(src='javascripts/bootstrap.min.js')
+    script(src='javascripts/jquery-ui.js')
+    // external css
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+    // Custom styles for this template
+    link(href='stylesheets/style.css', rel='stylesheet')
+    link(href='stylesheets/style-responsive.css', rel='stylesheet')
+    // Data tables CSS
+    link(rel='stylesheet', type='text/css', href='stylesheets/buttons.dataTables.min.css')
+    link(rel='stylesheet', type='text/css', href='stylesheets/jquery.dataTables.min.css')    
+    link(href='stylesheets/dataTables.bootstrap.css', rel='stylesheet')
+    style.
+      .models{
+        display:none;
+      }
+      .models.active{
+        display:inline-block;
+      }
+    style.
+      .states{
+        display:none;
+      }
+      .states.active{
+        display:inline-block;
+      }
+    style.
+      .container1 {
+      display: block;
+      position: relative;
+      padding-left: 35px;
+      margin-bottom: 12px;
+      cursor: pointer;
+      font-size: 22px;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      }
+      /* Hide the browser's default radio button */
+      .container1 input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      }
+      /* Create a custom radio button */
+      .checkmark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 25px;
+      width: 25px;
+      background-color: #eee;
+      border-radius: 50%;
+      }
+      /* On mouse-over, add a grey background color */
+      .container:hover input ~ .checkmark {
+      background-color: #ccc;
+      }
+      /* When the radio button is checked, add a blue background */
+      .container input:checked ~ .checkmark {
+      background-color: #2196F3;
+      }
+      /* Create the indicator (the dot/circle - hidden when not checked) */
+      .checkmark:after {
+      content: "";
+      position: absolute;
+      display: none;
+      }
+      /* Show the indicator (dot/circle) when checked */
+      .container input:checked ~ .checkmark:after {
+      display: block;
+      }
+      /* Style the indicator (dot/circle) */
+      .container .checkmark:after {
+      top: 9px;
+      left: 9px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: white;
+      }
+    script.
+      $(function(){
+      var data = [
+        "Agali",
+        "Amadagur",
+        "Amalapuram",
+        "Anantapur",
+        "Atmakur",
+        "Bathalapalle",
+        "Beluguppa",
+        "Bommanahal",
+        "Brahmasamudram",
+        "Bukkapatnam",
+        "Bukkarayasamudram",
+        "Chenne Kothapalle",
+        "Chilamathur",
+        "D.Hirehal",
+        "Dharmavaram",
+        "Gandlapenta",
+        "Garladinne",
+        "Gooty",
+        "Gorantla",
+        "Gudibanda",
+        "Gummagatta",
+        "Guntakal",
+        "Hindupur",
+        "Kadiri",
+        "Kalyandurg",
+        "Kambadur",
+        "Kanaganapalle",
+        "Kanekal",
+        "Kothacheruvu",
+        "Kudair",
+        "Kundurpi",
+        "Lepakshi",
+        "Madakasira",
+        "Mudigubba",
+        "Nallacheruvu",
+        "Nallamada",
+        "Nambulapulakunta",
+        "Narpala",
+        "Obuladevaracheruvu",
+        "Pamidi",
+        "Parigi",
+        "Peddapappur",
+        "Peddavadugur",
+        "Penu Konda",
+        "Putlur",
+        "Puttaparthi",
+        "Ramagiri",
+        "Raptadu",
+        "Rayadurg",
+        "Roddam",
+        "Rolla",
+        "Settur",
+        "Singanamala",
+        "Somandepalle",
+        "Tadimarri",
+        "Tadpatri",
+        "Talupula",
+        "Tanakal",
+        "Uravakonda",
+        "Vajrakarur",
+        "Vidapanakal",
+        "Yadiki",
+        "Yellanur",
+        "Chittoor ",
+        "B. Kothakota",
+        "Baireddipalle",
+        "Bangarupalem",
+        "Buchinaidu khandriga",
+        "Chandragiri",
+        "Chinnagottigallu",
+        "Chittoor",
+        "Chowdepalle",
+        "Gangadhara nellore",
+        "Gangavaram",
+        "Gudipala",
+        "Gudupalle",
+        "Gurramkonda",
+        "Irala",
+        "K.V.B. Puram",
+        "Kalakada",
+        "Kalikiri",
+        "Kambhamvaripalle",
+        "Karvetinagar",
+        "Kuppam",
+        "Kurabalakota",
+        "Madanapalle",
+        "Mulakalacheruvu",
+        "Nagalapuram",
+        "Nagari",
+        "Narayanavanam",
+        "Nimmanapalle",
+        "Nindra",
+        "Pakala",
+        "Palamaner",
+        "Palasamudram",
+        "Peddamandyam",
+        "Peddapanjani",
+        "Peddathippasamudram",
+        "Penumuru",
+        "Pileru",
+        "Pitchatur",
+        "Pulicherla",
+        "Punganur",
+        "Puthalapattu",
+        "Puttur",
+        "Rama Chandrapuram",
+        "Ramakuppam",
+        "Ramasamudram",
+        "Renigunta",
+        "Rompicherla",
+        "Santhipuram",
+        "Satyavedu",
+        "Sodam",
+        "Somala",
+        "Srikalahasti",
+        "Srirangarajapuram",
+        "Thamballapalle",
+        "Thavanampalle",
+        "Thottambedu",
+        "Tirupati (rural)",
+        "Tirupati (urban)",
+        "Vadamalapeta",
+        "Varadaiahpalem",
+        "Vayalpadu",
+        "Vedurukuppam",
+        "Venkatagirikota",
+        "Vijayapuram",
+        "Yadamari",
+        "Yerpedu",
+        "Yerravaripalem",
+        "Kadapa ",
+        "Atlur",
+        "B.Kodur",
+        "Badvel",
+        "Brahmamgarimatham",
+        "Chakrayapet",
+        "Chapadu",
+        "Chennur",
+        "Chinnamandem",
+        "Chinthakomma Dinne",
+        "Chitvel",
+        "Duvvur",
+        "Galiveedu",
+        "Gopavaram",
+        "Jammalamadugu",
+        "Kadapa",
+        "Kalasapadu",
+        "Kamalapuram",
+        "Khajipet",
+        "Koduru",
+        "Kondapuram",
+        "Lakkireddipalle",
+        "Lingala",
+        "Muddanur",
+        "Mydukur",
+        "Mylavaram",
+        "Nandalur",
+        "Obulavaripalle",
+        "Peddamudium",
+        "Penagalur",
+        "Pendlimarri",
+        "Porumamilla",
+        "Proddatur",
+        "Pulivendula",
+        "Pullampeta",
+        "Rajampet",
+        "Rajupalem, Kadapa",
+        "Ramapuram",
+        "Rayachoti",
+        "Sambepalle",
+        "Sidhout",
+        "Simhadripuram",
+        "Sri Avadhuth Kasinayana",
+        "T. Sundupalle",
+        "Thondur",
+        "Vallur",
+        "Veeraballi",
+        "Veerapanayani Palle",
+        "Vempalle",
+        "Vemula",
+        "Vontimitta",
+        "Yerraguntla",
+        "East Godavari  ",
+        "Amalapuram",
+        "Addateegala",
+        "Ainavilli",
+        "Alamuru",
+        "Allavaram",
+        "Ambajipeta",
+        "Anaparti",
+        "Atreyapuram",
+        "Biccavolu",
+        "Chinturu",
+        "Devipatnam",
+        "Gandepalle",
+        "Gangavaram",
+        "Gokavaram",
+        "Gollaprolu",
+        "I.Polavaram",
+        "Jaggampeta",
+        "Kadiam",
+        "Kajuluru",
+        "Kakinada (rural)",
+        "Kakinada (urban)",
+        "Kapileswarapuram",
+        "Karapa",
+        "Katrenikona",
+        "Kirlampudi",
+        "Korukonda",
+        "Kotananduru",
+        "Kothapalle",
+        "Kothapeta",
+        "Kunavaram",
+        "Malikipuram",
+        "Mandapeta",
+        "Maredumilli",
+        "Mummidivaram",
+        "Mamidikuduru",
+        "Nellipaka",
+        "P.Gannavaram",
+        "Pamarru",
+        "Pedapudi",
+        "Peddapuram",
+        "Pithapuram",
+        "Prathipadu",
+        "Rajahmundry (rural)",
+        "Rajahmundry (urban))",
+        "Rajanagaram",
+        "Rajavommangi",
+        "Ramachandrapuram",
+        "Rampachodavaram",
+        "Rangampeta",
+        "Ravulapalem",
+        "Rayavaram",
+        "Razole",
+        "Routhulapudi",
+        "Sakhinetipalli",
+        "Samalkota",
+        "Sankhavaram",
+        "Seethanagaram",
+        "Thallarevu",
+        "Thondangi",
+        "Tuni",
+        "Uppalaguptam",
+        "Vararamachandrapuram",
+        "Y.Ramavaram",
+        "Yeleswaram",
+        "Guntur ",
+        "Amaravati",
+        "Amruthalur",
+        "Achampet",
+        "Bapatla",
+        "Bhattiprolu",
+        "Bellamkonda",
+        "Bollapalle",
+        "Chebrole",
+        "Cherukupalle",
+        "Chilakaluripet",
+        "Duggirala",
+        "Dachepalle",
+        "Durgi",
+        "Edlapadu",
+        "Ipur",
+        "Guntur",
+        "Gurazala",
+        "karlapalem",
+        "Kakumanu",
+        "karempudi",
+        "Kollipara",
+        "Kolluru",
+        "Krosuru",
+        "Machavaram",
+        "Macherla",
+        "Mangalagiri",
+        "Medikonduru",
+        "Muppalla",
+        "Nadendla",
+        "Nagaram",
+        "Nekarikallu",
+        "Narasaraopet",
+        "Nizampatnam",
+        "Nuzendla",
+        "Pedakakani",
+        "Pedakurapadu",
+        "pedanandipadu",
+        "Phirangipuram",
+        "Piduguralla",
+        "Pittalavanipalem",
+        "Ponnur",
+        "Prathipadu",
+        "Rajupalem",
+        "Rentachintala",
+        "Repalle",
+        "Rompicherla",
+        "Sattenapalli",
+        "Savalyapuram",
+        "Tadikonda",
+        "Tenali",
+        "Tadepalle, Guntur",
+        "Thulluru",
+        "Tsunduru",
+        "Vatticherukuru",
+        "Veldurthi",
+        "Vemuru",
+        "Vinukonda",
+        "Krishna  ",
+        "A.Konduru",
+        "Agiripalli",
+        "Avanigadda",
+        "Bantumilli",
+        "Bapulapadu",
+        "Challapalli",
+        "Chandarlapadu",
+        "Chatrai",
+        "G.Konduru",
+        "Gampalagudem",
+        "Gannavaram",
+        "Ghantasala",
+        "Gudivada",
+        "Gudlavalleru",
+        "Guduru",
+        "Ibrahimpatnam",
+        "Jaggayyapeta",
+        "Kaikalur",
+        "Kalidindi",
+        "Kanchikacherlal",
+        "Kankipadu",
+        "Koduru",
+        "Kruthivennu",
+        "Machilipatnam",
+        "Mandavalli",
+        "Mopidevi",
+        "Movva",
+        "Mudinepalli",
+        "Musunuru",
+        "Mylavaram",
+        "Nagayalanka",
+        "Nandigama",
+        "Nandivada",
+        "Nuzvid",
+        "Pamarru",
+        "Pamidimukkala",
+        "Pedana",
+        "Pedaparupudi",
+        "Penamaluru",
+        "Penuganchiprolu",
+        "Reddigudem",
+        "Thotlavalluru",
+        "Tiruvuru",
+        "Unguturu",
+        "Vatsavai",
+        "Veerullapadu",
+        "Vijayawada (Rural)",
+        "Vijayawada East",
+        "Vijayawada Central",
+        "Vijayawada North",
+        "Vijayawada West",
+        "Vissannapeta",
+        "Vuyyuru",
+        "Kurnool  ",
+        "Adoni",
+        "Allagadda",
+        "Alur",
+        "Aspari",
+        "Atmakur",
+        "Banaganapalle",
+        "Bandi Atmakur",
+        "Bethamcherla",
+        "C.Belagal",
+        "Chagalamarri",
+        "Chippagiri",
+        "Devanakonda",
+        "Dhone alias Dronachalam",
+        "Dornipadu",
+        "Gadivemula",
+        "Gonegandla",
+        "Gospadu",
+        "Gudur",
+        "Halaharvi",
+        "Holagunda",
+        "Jupadu Bungalow",
+        "Kallur",
+        "Kodumuru",
+        "Koilkuntla",
+        "Kolimigundla",
+        "Kosigi",
+        "Kothapalle",
+        "Kowthalam",
+        "Krishnagiri",
+        "Kurnool",
+        "Maddikera (East)",
+        "Mahanandi",
+        "Mantralayam",
+        "Miduthur",
+        "Nandavaram",
+        "Nandikotkur",
+        "Nandyal",
+        "Orvakal",
+        "Owk",
+        "Pagidyala",
+        "Pamulapadu",
+        "Panyam",
+        "Pattikonda",
+        "Peapally",
+        "Pedda Kadubur",
+        "Rudravaram",
+        "Sanjamala",
+        "Sirvel",
+        "Srisailam",
+        "Tuggali",
+        "Uyyalawada",
+        "Veldurthi",
+        "Velgodu",
+        "Yemmiganur.",
+        "Nellore  ",
+        "Allur",
+        "Ananthasagaram",
+        "Anumasamudrampeta",
+        "Atmakur",
+        "Balayapalle",
+        "Bhogolu",
+        "Buchireddipalem",
+        "Chejerla",
+        "Chillakur",
+        "Chittamur",
+        "Dagadarthi",
+        "Dakkili",
+        "Doravarisatram",
+        "Duttalur",
+        "Gudur",
+        "Indukurpet",
+        "Jaladanki",
+        "Kaligiri",
+        "Kaluvoya",
+        "Kavali",
+        "Kodavalur",
+        "Kondapuram",
+        "Kota",
+        "Kovur",
+        "Manubolu",
+        "Marripadu",
+        "Muthukur",
+        "Naidupeta",
+        "Nellore",
+        "Ozili",
+        "Pellakur",
+        "Podlakur",
+        "Rapur",
+        "Seetharamapuram",
+        "Sangam",
+        "Sullurpeta",
+        "Sydapuram",
+        "Tada",
+        "Thotapalligudur",
+        "Udayagiri",
+        "Vakadu",
+        "Varikuntapadu",
+        "Venkatachalam",
+        "Vinjamur",
+        "Venkatagiri",
+        "Vidavalur",
+        "Prakasam ",
+        "Addanki",
+        "Ardhaveedu",
+        "Ballikuruva",
+        "Bestavaripeta",
+        "Chinaganjam",
+        "Chandrasekharapuram",
+        "Chimakurthi",
+        "Chirala",
+        "Cumbum",
+        "Darsi",
+        "Donakonda",
+        "Dornala",
+        "Giddaluru",
+        "Gudluru",
+        "Hanumanthunipadu",
+        "Inkollu",
+        "Janakavaram Panguluru",
+        "Kandukur",
+        "Karamchedu",
+        "Komarolu",
+        "Kanigiri",
+        "Konakanamitla",
+        "Kondapi",
+        "Korisapadu",
+        "Kothapatnam",
+        "Kurichedu",
+        "Lingasamudram",
+        "Maddipadu",
+        "Markapur",
+        "Marripudi",
+        "Martur",
+        "Mundlamuru",
+        "Naguluppalapadu",
+        "Ongole",
+        "Pamur",
+        "Parchur",
+        "Pedaaraveedu",
+        "Pedacherlopalle",
+        "Podili",
+        "Ponnaluru",
+        "Pullalacheruvu",
+        "Santhamaguluru",
+        "Santhanuthlapadu",
+        "Singarayakonda",
+        "Racherla",
+        "Tangutur",
+        "Tarlupadu",
+        "Thallur",
+        "Tripuranthakam",
+        "Ulavapadu",
+        "Veligandla",
+        "Vetapalem",
+        "Voletivaripalem",
+        "Yeddanapudi",
+        "Yerragondapalem",
+        "Zarugumilli",
+        "Srikakulam ",
+        "Amadalavalasa",
+        "Bhamini",
+        "Burja",
+        "Etcherla",
+        "Gara",
+        "Ganguvari Sigadam",
+        "Hiramandalam",
+        "Ichchapuram",
+        "Jalumuru",
+        "Kanchili",
+        "Kaviti",
+        "Kotabommali",
+        "Kothuru(Srikakulam)",
+        "Lakshminarasupeta",
+        "Laveru",
+        "Mandasa",
+        "Meliaputti",
+        "Nandigam",
+        "Narasannapeta",
+        "Palakonda",
+        "Palasa",
+        "Pathapatnam",
+        "Polaki",
+        "Ponduru",
+        "Rajam",
+        "Ranastalam",
+        "Regidi Amadalavalasa",
+        "Santhabommali",
+        "Santhakavati",
+        "Saravakota",
+        "Sarubujjili",
+        "Seethampeta",
+        "Sompeta",
+        "Srikakulam",
+        "Tekkali",
+        "Vajrapu Kotturu",
+        "Vangara",
+        "Veeraghattam",
+        "Visakhapatnam  ",
+        "Anakapalli",
+        "Anandapuram",
+        "Ananthagiri",
+        "Araku Valley",
+        "Atchutapuram",
+        "Bheemunipatnam",
+        "Butchayyapeta",
+        "Cheedikada",
+        "Chintapalle",
+        "Chodavaram",
+        "Devarapalle",
+        "Dumbriguda",
+        "G.Madugula",
+        "Gajuwaka (Urban)",
+        "Golugonda",
+        "Gudem Kotha Veedhi",
+        "Hukumpeta",
+        "K.Kotapadu",
+        "Kasimkota",
+        "Kotauratla",
+        "Koyyuru",
+        "Madugula",
+        "Makavarapalem",
+        "Munagapaka",
+        "Munchingiputtu",
+        "Nakkapalli",
+        "Narsipatnam",
+        "Nathavaram",
+        "Paderu",
+        "Padmanabham",
+        "Paravada",
+        "Payakaraopeta",
+        "Pedabayalu",
+        "Pedagantyada",
+        "Pendurthi",
+        "Rambilli",
+        "Ravikamatham",
+        "Rolugunta",
+        "S.Rayavaram",
+        "Sabbavaram",
+        "Visakhapatnam (Rural)Chinna Gadhili",
+        "Seethammadhara",
+        "Gopalapatnam",
+        "Maharanipeta",
+        "Mulagada",
+        "Yelamanchili",
+        "Vizianagaram ",
+        "Bhogapuram",
+        "Badangi",
+        "Bondapalli",
+        "Balijipeta",
+        "Bobbili",
+        "Cheepurupalli",
+        "Dattirajeru",
+        "Denkada",
+        "Gajapathinagaram",
+        "Gantyada",
+        "Garividi",
+        "Gurla",
+        "Garugubilli",
+        "Gummalaxmipuram",
+        "Jami",
+        "Jiyyammavalasa",
+        "Komarada",
+        "Kothavalasa",
+        "Kurupam",
+        "Lakkavarapukota",
+        "Makkuva",
+        "Mentada",
+        "Merakamudidam",
+        "Nellimarla",
+        "Pachipenta",
+        "Parvathipuram",
+        "Pusapatirega",
+        "Ramabhadrapuram",
+        "Salur",
+        "Seethanagaram",
+        "Srungavarapukota",
+        "Therlam",
+        "Vepada",
+        "Vizianagaram",
+        "West Godavari  ",
+        "Attili",
+        "Akiveedu",
+        "Achanta",
+        "Buttayagudem",
+        "Bhimavaram",
+        "Bhimadole",
+        "Chagallu",
+        "Chintalapudi",
+        "Devarapalle",
+        "Denduluru",
+        "Dwarakatirumala",
+        "Eluru",
+        "Gopalapuram",
+        "Ganapavaram",
+        "Iragavaram",
+        "Jeelugumilli",
+        "Jangareddigudem",
+        "Kamavarapukota",
+        "Kovvur",
+        "Kukkunoor",
+        "Kalla",
+        "Koyyalagudem",
+        "Lingapalem",
+        "Mogalthur",
+        "Narasapuram",
+        "Nallajarla",
+        "Nidadavole",
+        "Nidamarru",
+        "Polavaram",
+        "Pedavegi",
+        "Pedapadu",
+        "Pentapadu",
+        "Peravali",
+        "Poduru",
+        "Palakoderu",
+        "Penumantra",
+        "Penugonda",
+        "Palakollu",
+        "Thallapudi",
+        "T.Narasapuram",
+        "Tadepalligudem",
+        "Tanuku",
+        "Undrajavaram",
+        "Unguturu",
+        "Undi",
+        "Veeravasaram",
+        "Yelamanchili",
+        "Velerupadu"
+      ];
+      $( ".man" ).autocomplete({
+      source: data
+      });
+      });
+    style.
+      .header, #sidebar {
+      background: #2C3E50;
+      }
+      .input{
+      border: 1px solid #000;
+      }
+      .text
+      {
+      font-weight:bold;
+      font-size: 18px;
+      color:#F2815E;
+      }
+      .text1
+      {
+      font-weight:bold;
+      font-size: 16px;
+      color:#000;
+      }
+      .header, #sidebar {
+      background: #2C3E50;
+      }
+      span {
+      font-size: 14px;
+      }
+      #wd
+      {
+      margin-left:20px;
+      }
+      .file-uploader {
+      background-color: #dbefe9;
+      border-radius: 3px;
+      color: #242424;
+      }
+      .file-uploader__message-area {
+      font-size: 18px;
+      padding: 1em;
+      text-align: center;
+      color: #377a65;
+      }
+      .file-list {
+      background-color: white;
+      font-size: 16px;
+      }
+      .file-list__name {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      }
+      .file-list li {
+      height: 50px;
+      line-height: 50px;
+      margin-left: .5em;
+      border: none;
+      overflow: hidden;
+      }
+      .removal-button {
+      width: 20%;
+      border: none;
+      background-color: #d65d38;
+      color: white;
+      }
+      .removal-button::before {
+      content: "X";
+      }
+      .removal-button:focus {
+      outline: 0;
+      }
+      .file-chooser {
+      padding: 1em;
+      transition: background-color 1s, height 1s;
+      }
+      .file-chooser p {
+      font-size: 18px;
+      padding-top: 1em;
+      }
+      .file-uploader {
+      max-width: 400px;
+      height: auto;
+      margin: 2em auto;
+      }
+      .file-uploader * {
+      display: block;
+      }
+      .file-uploader input[type=submit] {
+      margin-top: 2em;
+      float: right;
+      }
+      .file-list {
+      margin: 0 auto;
+      max-width: 90%;
+      }
+      .file-list__name {
+      max-width: 70%;
+      float: left;
+      }
+      .removal-button {
+      display: inline-block;
+      height: 100%;
+      float: right;
+      }
+      .file-chooser {
+      width: 90%;
+      margin: .5em auto;
+      }
+
+      .file-chooser__input {
+      margin: 0 auto;
+      }
+      .file-uploader__submit-button {
+      width: 100%;
+      border: none;
+      font-size: 1.5em;
+      padding: 1em;
+      background-color: #72bfa7;
+      color: white;
+      }
+      .file-uploader__submit-button:hover {
+      background-color: #a7d7c8;
+      }
+      .file-list li:after, .file-uploader:after {
+      content: "";
+      display: table;
+      clear: both;
+      }
+      .hidden {
+      display: none;
+      }
+      .hidden input {
+      display: none;
+      }
+      .error {
+      background-color: #d65d38;
+      color: white;
+      }
+      *, *::before, *::after {
+      box-sizing: border-box;
+      }
+      ul, li {
+      margin: 0;
+      padding: 0;
+      }
+      .personal_details {
+      background-color: white;
+      width: 90%;
+      margin-left:5%;
+      }
+      .personal_details h3 {
+      padding: 10px;
+      border-bottom: 2px solid #fd9f1b;
+      }
+      .panel-box .panel-icon {
+      display: table-cell;
+      padding: px;
+      width: 1%;
+      vertical-align: top;
+      border-radius: 0px;
+      text-align: center;
+      /*border-bottom: 1px solid #fcfcfc;
+      border-top: 1px solid #fcfcfc;
+      border-right: 1px solid #fcfcfc;*/
+      }
+      .panel-box .size-h1 {
+      margin-top:7px;
+      }
+      .panel-box .fa {
+      margin-top:9px;
+      }
+      .dashboard-stats .stat-icon {
+      line-height: 65px;
+      }
+      .bg-success {
+      background-color: #A3C86D !important;
+      color: #FFF !important;
+      }
+
+      .success-text {
+      color: #82b33a;
+      }
+      .btn-info{
+      margin-left:20px;
+      }
+      .btn-circle {
+      width: 30px;
+      height: 30px;
+      text-align: center;
+      padding: 6px 0;
+      font-size: 12px;
+      line-height: 1.428571429;
+      border-radius: 15px;
+      }
+      .data{
+        font-weight:bold;
+      }
+      th {
+        background-color: #001f3f !important;
+        color: #fff;
+        padding: 0.5em 1em;
+      }
+
+      td {
+          border-top: 1px solid #eee;
+          padding: 0.5em 1em;
+      }
+
+      @media screen and (max-width: 768px) {
+        ul.sidebar-menu{
+          margin-top: 140px;
+        }
+      }
+
+      @media screen and (max-width: 767px) {
+        #heading {
+          font-size: 14px;
+        }
+      }
+  body(oncontextmenu='return false;')
+    section#container
+      // header start
+      header.header.black-bg
+        .sidebar-toggle-box
+          .fa.fa-bars.tooltips(data-placement='right', data-original-title='Toggle Navigation')
+        // logo start
+        a.col-md-2.col-sm-3.col-xs-8.logo(href='#')
+          b
+            img.img-responsive(src='images/education.png',style='height:65px;width:200px;margin-top:-13px')
+        center
+        // logo end
+        .navbar-custom-menu
+          //center
+          b.col-md-8.col-sm-7.col-xs-8
+            h3#heading.text-center(style='color:#fff; font-family: Times New Roman, Times, serif;') Improving The Rural Education
+            //img.img-responsive(src='images/Title1.png',style='height:70px;width:500px;margin-top:-30px')
+          ul.col-md-1.col-sm-1.col-xs-1.top-nav.navbar-right.pull-right
+            // Notification Menu
+            // User Menu
+            li.dropdown
+              a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+                i.fa.fa-user.fa-lg.pull-right(style='margin: 5px 5px 0 0;font-size: 2.2em;color: #f2815e;')
+              ul.dropdown-menu.settings-menu(style="margin-top: 35px")
+                li
+                  a(href='/help',target='_blank')
+                    i.fa.fa-question.fa-lg
+                    |  Help
+                li
+                  a(href='/changepassword')
+                    i.fa.fa-cog.fa-lg
+                    |  Change password
+                li
+                  a(href='/logout')
+                    i.fa.fa-sign-out.fa-lg
+                    |  Logout
+      // header end
+      //
+        **********************************************************************************************************************************************************
+        MAIN SIDEBAR MENU
+        ***********************************************************************************************************************************************************
+      // sidebar start
+      aside
+        #sidebar.nav-collapse
+          // sidebar menu start
+          ul#nav-accordion.sidebar-menu
+            p.centered
+              a(href='#')
+                img.img-circle(src='images/user.png', width='120')
+            h5.centered
+              p.sname= user.Name
+            -var role=user.Role;
+            -if(role=="Staff" || role=="S.M.C"){
+              li.sub-menu
+                a.active(data-toggle='tab', href='#complaint')
+                  i.fa.fa-edit
+                  span Complaint
+            -}
+            -var role=user.Role;
+            -if(role=="M.E.O"){
+              li.sub-menu
+                a.active(data-toggle='tab', href='#mupcomplaints')
+                  i.fa.fa-edit
+                  span Upper Primary
+            -}
+            -var role=user.Role;
+            -if(role=="M.E.O"){
+              li.sub-menu
+                a(data-toggle='tab', href='#mpcomplaints')
+                  i.fa.fa-edit
+                  span Primary
+            -}
+            -var role=user.Role;
+            -if(role=="D.E.O"){
+              li.sub-menu
+                a.active(data-toggle='tab', href='#dcomplaints')
+                  i.fa.fa-edit
+                  span High School
+            -}
+            -var role=user.Role;
+            -if(role=="D.E.O"){
+              li.sub-menu
+                a(data-toggle='tab', href='#upcomplaints')
+                  i.fa.fa-edit
+                  span Upper Primary
+            -}
+            -var role=user.Role;
+            -if(role=="D.E.O"){
+              li.sub-menu
+                a(data-toggle='tab', href='#pcomplaints')
+                  i.fa.fa-edit
+                  span Primary
+            -}
+            -var role=user.Role;
+            -if(role=="Staff" || role=="S.M.C"){
+              li.sub-menu
+                a(data-toggle='tab', href='#status')
+                  i.fa.fa-list
+                  span Status
+            -}
+            -var role=user.Role;
+            -if(role=="Staff" || role=="S.M.C" || role=="M.E.O" || role=="D.E.O"){
+              li.sub-menu
+                a(data-toggle='tab', href='#fb')
+                  i.fa.fa-commenting-o
+                  span feedback
+            -}
+            -var role=user.Role;
+            -if(role=="Staff" || role=="S.M.C" || role=="M.E.O" || role=="D.E.O"){
+              li.sub-menu
+                a(data-toggle='tab', href='#contact')
+                  i.fa.fa-phone
+                  span Contact
+            -}
+          // sidebar menu end
+      // sidebar end
+      //
+        **********************************************************************************************************************************************************
+        MAIN CONTENT
+        ***********************************************************************************************************************************************************
+      // main content start
+      section#main-content
+        section.wrapper.site-min-height
+          h3
+            i
+          .row.mt
+            .col-lg-12
+              .tab-content
+                -var role=user.Role;
+                -if(role=="Staff" || role=="S.M.C"){
+                  #complaint.tab-pane.fade.in.active
+                    .container(style='background-color: #fff;width: 100%;height:100%;border-radius: 1px')
+                      br
+                      br
+                      .col-lg-9
+                        form#reg_form.form-horizontal(action='/complaintform', method='post', enctype='multipart/form-data')
+                          fieldset
+                            .form-group
+                              label.col-md-4.control-label.text Country :
+                              .col-md-6.selectContainer
+                                .input-group
+                                  span.input-group-addon.input
+                                    i.fa.fa-globe(style='font-size:16px; color:#4267B2')
+                                  input.input.man.form-control(name='country', type='text', value='India' readonly='')
+                            .form-group
+                              label.col-md-4.control-label.text State :
+                              .col-md-6.selectContainer
+                                .input-group
+                                  span.input-group-addon.input
+                                    i.fa.fa-map-marker(style='font-size:16px; color:red')
+                                  select.state.input.form-control(name='state')
+                                    option(value='') -- State --
+                                    option(value='AndhraPradesh') Andhra Pradesh
+                                    option(value='ArunachalPradesh') Arunachal Pradesh
+                                    option(value='Assam') Assam
+                                    option(value='Bihar') Bihar
+                                    option(value='Chhattisgarh') Chhattisgarh
+                                    option(value='Goa') Goa
+                                    option(value='Gujarat') Gujarat
+                                    option(value='Haryana') Haryana
+                                    option(value='HimachalPradesh') Himachal Pradesh
+                                    option(value='JammuKashmir') Jammu & Kashmir
+                                    option(value='Jharkhand') Jharkhand
+                                    option(value='Karnataka') Karnataka
+                                    option(value='Kerala') Kerala
+                                    option(value='MadhyaPradesh') Madhya Pradesh
+                                    option(value='Maharashtra') Maharashtra
+                                    option(value='Manipur') Manipur
+                                    option(value='Meghalaya') Meghalaya
+                                    option(value='Mizoram') Mizoram
+                                    option(value='Nagaland') Nagaland
+                                    option(value='Odisha') Odisha
+                                    option(value='Punjab') Punjab
+                                    option(value='Rajasthan') Rajasthan
+                                    option(value='Sikkim') Sikkim
+                                    option(value='TamilNadu') TamilNadu
+                                    option(value='Telangana') Telangana
+                                    option(value='Tripura') Tripura
+                                    option(value='Uttarakhand') Uttarakhand
+                                    option(value='UttarPradesh') Uttar Pradesh
+                                    option(value='WestBengal') West Bengal
+                            .states.AndhraPradesh
+                              .form-group
+                                label.col-md-4.control-label.text District:
+                                .col-md-6.inputGroupContainer
+                                  .input-group
+                                    span.input-group-addon.input
+                                      i.fa.fa-location-arrow(style='font-size:16px; color:green')
+                                    select.input.form-control(name='')
+                                      option(value='') -- District --
+                                      option(value='Anantapur') Anantapur
+                                      option(value='Chittoor') Chittoor
+                                      option(value='East Godavari') East Godavari
+                                      option(value='Guntur') Guntur
+                                      option(value='Krishna') Krishna
+                                      option(value='Kurnool') Kurnool
+                                      option(value='Prakasam') Prakasam
+                                      option(value='Nellore') Nellore
+                                      option(value='Srikakulam') Srikakulam
+                                      option(value='Visakhapatnam') Visakhapatnam
+                                      option(value='Vizianagaram') Vizianagaram
+                                      option(value='West Godavari') West Godavari
+                                      option(value='Cuddapah') Cuddapah
+                            .states.ArunachalPradesh
+                              .form-group
+                                label.col-md-4.control-label.text District :
+                                .col-md-6.inputGroupContainer
+                                  .input-group
+                                    span.input-group-addon.input
+                                      i.fa.fa-location-arrow(style='font-size:16px; color:green')
+                                    select.input.form-control(name='')
+                                      option(value='') -- District --
+                                      option(value='Anjaw') Anjaw 
+                                      option(value='Changlang') Changlang 
+                                      option(value='East Kameng') East Kameng  
+                                      option(value='Pasighat') Pasighat 
+                                      option(value='Lohit') Lohit 
+                                      option(value='Lower Subansiri') Lower Subansiri 
+                                      option(value='Papum Pare') Papum Pare 
+                                      option(value='Tawang Town') Tawang Town 
+                                      option(value='Tirap') Tirap 
+                                      option(value='Lower Dibang Valley') Lower Dibang Valley    
+                                      option(value='Upper Siang') Upper Siang 
+                                      option(value='Upper Subansiri') Upper Subansiri  
+                                      option(value='West Kameng') West Kameng 
+                                      option(value='West Siang') West Siang 
+                                      option(value='Upper Dibang Valley') Upper Dibang Valley     
+                                      option(value='Kurung Kumey') Kurung Kumey
+                            .states.Assam
+                              .form-group
+                                label.col-md-4.control-label.text District :
+                                .col-md-6.inputGroupContainer
+                                  .input-group
+                                    span.input-group-addon.input
+                                      i.fa.fa-location-arrow(style='font-size:16px; color:green')
+                                    select.input.form-control(name='')
+                                      option(value='') -- District --
+                                      option(value='Baksa') Baksa  
+                                      option(value='Barpeta') Barpeta  
+                                      option(value='Bongaigaon') Bongaigaon
+                                      option(value='Cachar') Cachar
+                                      option(value='Chirang') Chirang  
+                                      option(value='Darrang') Darrang  
+                                      option(value='Dhemaji') Dhemaji  
+                                      option(value='Dhubri') Dhubri
+                                      option(value='Dibrugarh') Dibrugarh  
+                                      option(value='Dima Hasao') Dima Hasao 
+                                      option(value='Goalpara') Goalpara 
+                                      option(value='Golaghat') Golaghat 
+                                      option(value='Hailakandi') Hailakandi 
+                                      option(value='Jorhat') Jorhat 
+                                      option(value='Kamrup') Kamrup 
+                                      option(value='Kamrup Metropolitan') Kamrup Metropolitan  
+                                      option(value='Karbi Anglong') Karbi Anglong  
+                                      option(value='Karimganj') Karimganj  
+                                      option(value='Kokrajhar') Kokrajhar  
+                                      option(value='Lakhimpur') Lakhimpur  
+                                      option(value='Morigaon') Morigaon 
+                                      option(value='Nagaon') Nagaon 
+                                      option(value='Nalbari') Nalbari  
+                                      option(value='Sivasagar') Sivasagar  
+                                      option(value='Sonitpur') Sonitpur 
+                                      option(value='Tinsukia') Tinsukia 
+                                      option(value='Udalguri') Udalguri 
+                                      option(value='Biswanath') Biswanath  
+                                      option(value='Charaideo') Charaideo  
+                                      option(value='Hojai') Hojai  
+                                      option(value='Majuli') Majuli 
+                                      option(value='South Salamara-Mankachar') South Salamara-Mankachar 
+                                      option(value='West Karbi Anglon') West Karbi Anglon
+                                      option(value='Charaideo') Charaideo  
+                                      option(value='Hojai') Hojai  
+                                      option(value='Majuli') Majuli 
+                                      option(value='South Salamara-Mankachar') South Salamara-Mankachar 
+                                      option(value='West Karbi Anglon') West Karbi Anglon
+                            .states.Bihar
+                              .form-group
+                                label.col-md-4.control-label.text District :
+                                .col-md-6.inputGroupContainer
+                                  .input-group
+                                    span.input-group-addon.input
+                                      i.fa.fa-location-arrow(style='font-size:16px; color:green')
+                                    select.input.form-control(name='')
+                                      option(value='') -- District --
+                                      option(value='Araria') Araria 
+                                      option(value='Arwala') Arwala 
+                                      option(value='Aurangabad') Aurangabad 
+                                      option(value='Banka') Banka 
+                                      option(value='Begusarai') Begusarai 
+                                      option(value='Bhagalpur') Bhagalpur 
+                                      option(value='Bhojpur') Bhojpur 
+                                      option(value='Buxar') Buxar 
+                                      option(value='Darbhanga') Darbhanga 
+                                      option(value='East Champaran') East Champaran 
+                                      option(value='Gaya') Gaya 
+                                      option(value='Gopalganj') Gopalganj 
+                                      option(value='Jamui') Jamui 
+                                      option(value='Jehanabad') Jehanabad 
+                                      option(value='Khagaria') Khagaria 
+                                      option(value='Kishanganj') Kishanganj 
+                                      option(value='Kaimur') Kaimur 
+                                      option(value='Katihar') Katihar 
+                                      option(value='Lakhisarai') Lakhisarai 
+                                      option(value='Madhubani') Madhubani 
+                                      option(value='Munger') Munger 
+                                      option(value='Madhepura') Madhepura 
+                                      option(value='Muzaffarpur') Muzaffarpur 
+                                      option(value='Nalanda') Nalanda 
+                                      option(value='Nawada') Nawada 
+                                      option(value='Patna') Patna 
+                                      option(value='Purnia') Purnia 
+                                      option(value='Rohtas') Rohtas 
+                                      option(value='Saharsa') Saharsa 
+                                      option(value='Samastipur') Samastipur 
+                                      option(value='Sheohar') Sheohar 
+                                      option(value='Sheikhpura') Sheikhpura 
+                                      option(value='Saran') Saran 
+                                      option(value='Sitamarhi') Sitamarhi 
+                                      option(value='Supaul') Supaul 
+                                      option(value='Siwan') Siwan 
+                                      option(value='Vaishali') Vaishali 
+                                      option(value='West Champaran') West Champaran
+                            .states.Chhattisgarh
+                              .form-group
+                                label.col-md-4.control-label.text District :
+                                .col-md-6.inputGroupContainer
+                                  .input-group
+                                    span.input-group-addon.input
+                                      i.fa.fa-location-arrow(style='font-size:16px; color:green')
+                                    select.input.form-control(name='')
+                                      option(value='') -- District -- 
+                                      option(value='Balod') Balod 
+                                      option(value='Baloda Bazar') Baloda Bazar  
+                                      option(value='Balrampur') Balrampur 
+                                      option(value='Bastar') Banka 
+                                      option(value='Bemetara') Bemetara 
+                                      option(value='Bijapur') Bijapur 
+                                      option(value='Bilaspur') Bilaspur 
+                                      option(value='Dantewada') Dantewada 
+                                      option(value='Dhamtari') Dhamtari 
+                                      option(value='Durg') Durg  
+                                      option(value='Gariyaband') Gariyaband 
+                                      option(value='Janjgir-Champa') Janjgir-Champa 
+                                      option(value='Jashpur') Jashpur 
+                                      option(value='Kabirdham') Kabirdham 
+                                      option(value='Kanker') Kanker 
+                                      option(value='Kondagaon') Kondagaon 
+                                      option(value='Korba') Korba 
+                                      option(value='Korea') Korea 
+                                      option(value='Mahasamund') Mahasamund 
+                                      option(value='Mungeli') Mungeli 
+                                      option(value='Narayanpur') Narayanpur 
+                                      option(value='Raigarh') Raigarh 
+                                      option(value='Raipur') Raipur 
+                                      option(value='Rajnandgaon') Rajnandgaon 
+                                      option(value='Sukma') Sukma 
+                                      option(value='Surajpur') Surajpur 
+                                      option(value='Surguja') Surguja
+                            .states.Goa
+                              .form-group
+                                label.col-md-4.control-label.text District :
+                                .col-md-6.inputGroupContainer
+                                  .input-group
+                                    span.input-group-addon.input
+                                      i.fa.fa-location-arrow(style='font-size:16px; color:green')
+                                    select.input.form-control(name='')
+                                      option(value='') -- District -- 
+                                      option(value='Panaji') Panaji 
+                                      option(value='Mapusa') Mapusa 
+                                      option(value='Bicholim') Bicholim 
+                                      option(value='Ponda') Ponda 
+                                      option(value='Mormugao') Mormugao 
+                                      option(value='Margao') Margao 
+                                      option(value='Quepem') Quepem 
+                                      option(value='Dharbandori') Dharbandori
+                            .states.Gujarat
+                              .form-group
+                                label.col-md-4.control-label.text District :
+                                .col-md-6.inputGroupContainer
+                                  .input-group
+                                    span.input-group-addon.input
+                                      i.fa.fa-location-arrow(style='font-size:16px; color:green')
+                                    select.input.form-control(name='')
+                                      option(value='') -- District --
+                                      option(value='Ahmedabad') Ahmedabad 
+                                      option(value='AmreliBazar') Amreli Bazar 
+                                      option(value='Anand') Anand 
+                                      option(value='Aravalli') Aravalli 
+                                      option(value='Banaskantha') Banaskantha 
+                                      option(value='Bharuch') Bharuch 
+                                      option(value='Bhavnagar') Bhavnagar 
+                                      option(value='Botad') Botad 
+                                      option(value='Chhota Udepur') Chhota Udepur 
+                                      option(value='Dahod') Dahod  
+                                      option(value='Dangs') Dangs 
+                                      option(value='Devbhoomi Dwarka') Devbhoomi Dwarka 
+                                      option(value='Gandhinagar') Gandhinagar 
+                                      option(value='Gir Somnath') Gir Somnath 
+                                      option(value='Jamnagar') Jamnagar 
+                                      option(value='Junagadh') Junagadh 
+                                      option(value='Kachchh') Kachchh 
+                                      option(value='Kheda') Kheda 
+                                      option(value='Mahisagar') Mahisagar 
+                                      option(value='Mehsana') Mehsana 
+                                      option(value='Morbi') Morbi 
+                                      option(value='Narmada') Narmada 
+                                      option(value='Navsari') Navsari 
+                                      option(value='Panchmahal') Panchmahal 
+                                      option(value='Patan') Patan 
+                                      option(value='Porbandar') Porbandar 
+                                      option(value='Rajkot') Rajkot 
+                                      option(value='Sabarkantha') Sabarkantha 
+                                      option(value='Surat') Surat 
+                                      option(value='Surendranagar') Surendranagar 
+                                      option(value='Tapi') Tapi 
+                                      option(value='Vadodara') Vadodara 
+                                      option(value='Valsad') Valsad
+                            .states.Haryana
+                              .form-group
+                                label.col-md-4.control-label.text District :
+                                .col-md-6.inputGroupContainer
+                                  .input-group
+                                    span.input-group-addon.input
+                                      i.fa.fa-location-arrow(style='font-size:16px; color:green')
+                                    select.input.form-control(name='')
+                                      option(value='') -- District --
+                                      option(value='Ambala') Ambala 
+                                      option(value='Bhiwani') Bhiwani  
+                                      option(value='Charkhi Dadri') Charkhi Dadri
+                                      option(value='Faridabad') Faridabad 
+                                      option(value='Fatehabad') Fatehabad 
+                                      option(value='Gurgaon') Gurgaon 
+                                      option(value='Hisar') Hisar 
+                                      option(value='Jhajjar') Jhajjar 
+                                      option(value='Jind') Jind  
+                                      option(value='Kaithal') Kaithal  
+                                      option(value='Karnal') Karnal 
+                                      option(value='Kurukshetra') Kurukshetra 
+                                      option(value='Mahendragarh') Mahendragarh 
+                                      option(value='Mewat') Mewat 
+                                      option(value='Palwal') Palwal 
+                                      option(value='Panchkula') Panchkula 
+                                      option(value='Panipat') Panipat 
+                                      option(value='Rewari') Rewari 
+                                      option(value='Rohtak') Rohtak 
+                                      option(value='Sirsa') Sirsa 
+                                      option(value='Sonipat') Sonipat 
+                                      option(value='Yamunanagar') Yamunanagar
+                            .states.HimachalPradesh
+                              .form-group
+                                label.col-md-4.control-label.text District :
+                                .col-md-6.inputGroupContainer
+                                  .input-group
+                                    span.input-group-addon.input
+                                      i.fa.fa-location-arrow(style='font-size:16px; color:green')
+                                    select.input.form-control(name='')
+                                      option(value='') -- District --
+                                      option(value='Bilaspur') Bilaspur 
+                                      option(value='Chamba') Chamba  
+                                      option(value='Hamirpur') Hamirpur 
+                                      option(value='Kangra') Kangra 
+                                      option(value='Kinnaur') Kinnaur 
+                                      option(value='Kullu') Kullu 
+                                      option(value='Lahaul & Spiti') Lahaul & Spiti
+                                      option(value='Mandi') Mandi 
+                                      option(value='Shimla ') Shimla  
+                                      option(value='Sirmaur') Sirmaur  
+                                      option(value='Solan') Solan 
+                                      option(value='Una ') Una
+                            .states.JammuKashmir
+                              .form-group
+                                label.col-md-4.control-label.text District :
+                                .col-md-6.inputGroupContainer
+                                  .input-group
+                                    span.input-group-addon.input
+                                      i.fa.fa-location-arrow(style='font-size:16px; color:green')
+                                    select.input.form-control(name='')
+                                      option(value='') -- District --
+                                      option(value='Anantnag') Anantnag 
+                                      option(value='Bandipore') Bandipore  
+                                      option(value='Baramulla') Baramulla 
+                                      option(value='Budgam') Budgam 
+                                      option(value='Doda') Doda 
+                                      option(value='Ganderbal') Ganderbal 
+                                      option(value='Jammu') Jammu 
+                                      option(value='Kargil') Kargil 
+                                      option(value='Kathua') Kathua  
+                                      option(value='Kishtwar') Kishtwar  
+                                      option(value='Kulgam') Kulgam 
+                                      option(value='Kupwara') Kupwara 
+                                      option(value='Leh') Leh 
+                                      option(value='Poonch') Poonch 
+                                      option(value='Pulwama') Pulwama 
+                                      option(value='Rajouri') Rajouri 
+                                      option(value='Ramban') Ramban 
+                                      option(value='Reasi') Reasi 
+                                      option(value='Samba') Samba 
+                                      option(value='Shopian') Shopian 
+                                      option(value='Srinagar') Srinagar 
+                                      option(value='Udhampur') Udhampur
+                            .states.Jharkhand
+                              .form-group
+                                label.col-md-4.control-label.text District :
+                                .col-md-6.inputGroupContainer
+                                  .input-group
+                                    span.input-group-addon.input
+                                      i.fa.fa-location-arrow(style='font-size:16px; color:green')
+                                    select.input.form-control(name='')
+                                      option(value='') -- District -- 
+                                      option(value='Bokaro') Bokaro 
+                                      option(value='Chatra') Chatra  
+                                      option(value='Deoghar') Deoghar 
+                                      option(value='Dhanbad') Dhanbad 
+                                      option(value='Dumka') Dumka 
+                                      option(value='East Singhbhum') East Singhbhum 
+                                      option(value='Garhwa') Garhwa 
+                                      option(value='Giridih') Giridih 
+                                      option(value='Godda') Godda  
+                                      option(value='Gumla') Gumla  
+                                      option(value='Hazaribagh') Hazaribagh 
+                                      option(value='Jamtara') Jamtara 
+                                      option(value='Khunti') Khunti 
+                                      option(value='Koderma') Koderma 
+                                      option(value='Latehar') Latehar 
+                                      option(value='Lohardaga') Lohardaga 
+                                      option(value='Pakur') Pakur 
+                                      option(value='Palamu') Palamu 
+                                      option(value='Ramgarh') Ramgarh 
+                                      option(value='Ranchi') Ranchi 
+                                      option(value='Sahibganj') Sahibganj 
+                                      option(value='Seraikela-Kharsawan') Seraikela-Kharsawan
+                                      option(value='Simdega') Simdega 
+                                      option(value='West Singhbhum') West Singhbhum
+                            .states.Karnataka
+                              .form-group
+                                label.col-md-4.control-label.text District :
+                                .col-md-6.inputGroupContainer
+                                  .input-group
+                                    span.input-group-addon.input
+                                      i.fa.fa-location-arrow(style='font-size:16px; color:green')
+                                    select.input.form-control(name='')
+                                      option(value='') -- District -- 
+                                      option(value='Bagalkot') Bagalkot 
+                                      option(value='Ballari') Ballari  
+                                      option(value='Belagavi ') Belagavi 
+                                      option(value='Bengaluru Rural') Bengaluru Rural
+                                      option(value='Bengaluru Urban') Bengaluru Urban
+                                      option(value='Bidar') Bidar  
+                                      option(value='Chamarajanagar') Chamarajanagar 
+                                      option(value='Chikballapur') Chikballapur 
+                                      option(value='Chikkamagaluru') Chikkamagaluru  
+                                      option(value='Chitradurga') Chitradurga  
+                                      option(value='Dakshina Kannada') Dakshina Kannada
+                                      option(value='Davangere') Davangere 
+                                      option(value='Dharwad') Dharwad 
+                                      option(value='Gadag') Gadag 
+                                      option(value='Hassan') Hassan 
+                                      option(value='Haveri') Haveri 
+                                      option(value='Kalaburagi') Pakur 
+                                      option(value='Kodagu') Kodagu 
+                                      option(value='Kolar') Kolar 
+                                      option(value='Koppal') Koppal 
+                                      option(value='Mandya') Mandya 
+                                      option(value='Mysuru') Mysuru
+                                      option(value='Raichur') Raichur 
+                                      option(value='Ramanagara ') Ramanagara
+                                      option(value='Shivamogga') Shivamogga 
+                                      option(value='Tumakuru') Tumakuru  
+                                      option(value='Udupi') Udupi 
+                                      option(value='Uttara Kannada') Uttara Kannada
+                                      option(value='Vijayapura') Vijayapura 
+                                      option(value='Yadgir') Yadgir 
+                            .states.Kerala
+                              .form-group
+                                label.col-md-4.control-label.text District :
+                                .col-md-6.inputGroupContainer
+                                  .input-group
+                                    span.input-group-addon.input
+                                      i.fa.fa-location-arrow(style='font-size:16px; color:green')
+                                    select.input.form-control(name='')
+                                      option(value='') -- District --
+                                      option(value='Alappuzha') Alappuzha 
+                                      option(value='Ernakulam') Ernakulam  
+                                      option(value='Idukki') Idukki 
+                                      option(value='Kannur') Kannur 
+                                      option(value='Kasaragod') Kasaragod
+                                      option(value='Kollam') Kollam  
+                                      option(value='Kottayam') Kottayam 
+                                      option(value='Kozhikode') Kozhikode 
+                                      option(value='Malappuram') Malappuram  
+                                      option(value='Palakkad') Palakkad  
+                                      option(value='Pathanamthitta') Pathanamthitta 
+                                      option(value='Thiruvananthapuram') Thiruvananthapuram 
+                                      option(value='Thrissur') Thrissur 
+                                      option(value='Wayanad') Wayanad
+                            .states.MadhyaPradesh
+                              .form-group
+                                label.col-md-4.control-label.text District :
+                                .col-md-6.inputGroupContainer
+                                  .input-group
+                                    span.input-group-addon.input
+                                      i.fa.fa-location-arrow(style='font-size:16px; color:green')
+                                    select.input.form-control(name='')
+                                      option(value='') -- District --
+                                      option(value='Agar Malwa') Agar Malwa 
+                                      option(value='Alirajpur') Alirajpur  
+                                      option(value='Anuppur') Anuppur 
+                                      option(value='Ashoknagar') Ashoknagar 
+                                      option(value='Balaghat') Balaghat 
+                                      option(value='Barwani') Barwani  
+                                      option(value='Betul') Betul 
+                                      option(value='Bhind') Bhind 
+                                      option(value='Bhopal') Bhopal  
+                                      option(value='Burhanpur') Burhanpur  
+                                      option(value='Chhatarpur') Chhatarpur
+                                      option(value='Chhindwara') Chhindwara 
+                                      option(value='Damoh') Damoh 
+                                      option(value='Datia') Datia 
+                                      option(value='Dewas') Dewas 
+                                      option(value='Dhar') Dhar 
+                                      option(value='Dindori') Dindori 
+                                      option(value='Guna') Guna 
+                                      option(value='Gwalior') Gwalior 
+                                      option(value='Harda') Harda 
+                                      option(value='Hoshangabad') Hoshangabad 
+                                      option(value='Indore') Indore
+                                      option(value='Jabalpur') Jabalpur 
+                                      option(value='Jhabua ') Jhabua
+                                      option(value='Katni') Katni 
+                                      option(value='Khandwa') Khandwa  
+                                      option(value='Khargone ') Khargone 
+                                      option(value='Mandla ') Mandla
+                                      option(value='Mandsaur') Mandsaur 
+                                      option(value='Morena ') Morena 
+                                      option(value='Narsinghpur') Narsinghpur 
+                                      option(value='Neemuch') Neemuch  
+                                      option(value='Panna') Panna 
+                                      option(value='Raisen ') Raisen
+                                      option(value='Rajgarh') Rajgarh 
+                                      option(value='Ratlam ') Ratlam  
+                                      option(value='Rewa') Rewa 
+                                      option(value='Sagar') Sagar 
+                                      option(value='Satna') Satna  
+                                      option(value='Sehore') Sehore  
+                                      option(value='Seoni') Seoni 
+                                      option(value='Shahdol') Shahdol 
+                                      option(value='Shajapur') Shajapur 
+                                      option(value='Sheopur') Sheopur 
+                                      option(value='Shivpuri') Shivpuri 
+                                      option(value='Sidhi') Sidhi 
+                                      option(value='Singrauli') Singrauli 
+                                      option(value='Tikamgarh') Tikamgarh 
+                                      option(value='Ujjain') Ujjain 
+                                      option(value='Umaria') Umaria 
+                                      option(value='Vidisha') Vidisha
+                            .states.Maharashtra
+                              .form-group
+                                label.col-md-4.control-label.text District :
+                                .col-md-6.inputGroupContainer
+                                  .input-group
+                                    span.input-group-addon.input
+                                      i.fa.fa-location-arrow(style='font-size:16px; color:green')
+                                    select.input.form-control(name='')
+                                      option(value='') -- District -- 
+                                      option(value='Ahmednagar') Ahmednagar 
+                                      option(value='Akola') Akola  
+                                      option(value='Amravati') Amravati 
+                                      option(value='Aurangabad') Aurangabad 
+                                      option(value='Beed') Beed 
+                                      option(value='Bhandara ') Bhandara  
+                                      option(value='Buldhana') Buldhana 
+                                      option(value='Chandrapur') Chandrapur 
+                                      option(value='Dhule') Dhule  
+                                      option(value='Gadchiroli') Gadchiroli  
+                                      option(value='Gondia') Gondia
+                                      option(value='Hingoli') Hingoli 
+                                      option(value='Jalgaon') Jalgaon 
+                                      option(value='Jalna') Jalna 
+                                      option(value='Kolhapur') Kolhapur 
+                                      option(value='Latur') Latur 
+                                      option(value='Mumbai City') Mumbai City 
+                                      option(value='Mumbai Suburban') Mumbai Suburban
+                                      option(value='Nagpur') Nagpur 
+                                      option(value='Nanded') Nanded 
+                                      option(value='Nandurbar') Nandurbar 
+                                      option(value='Nashik') Nashik
+                                      option(value='Osmanabad') Osmanabad 
+                                      option(value='Palghar ') Palghar
+                                      option(value='Parbhani') Parbhani 
+                                      option(value='Pune') Pune  
+                                      option(value='Raigad ') Raigad 
+                                      option(value='Ratnagiri') Ratnagiri
+                                      option(value='Sangli') Sangli 
+                                      option(value='Satara') Satara 
+                                      option(value='Sindhudurg') Sindhudurg 
+                                      option(value='Solapur') Solapur  
+                                      option(value='Thane') Thane 
+                                      option(value='Wardha Rural') Wardha Rural
+                                      option(value='Washim Urban') Washim Urban
+                                      option(value='Yavatmal') Yavatmal
+                            .states.Manipur
+                              .form-group
+                                label.col-md-4.control-label.text District :
+                                .col-md-6.inputGroupContainer
+                                  .input-group
+                                    span.input-group-addon.input
+                                      i.fa.fa-location-arrow(style='font-size:16px; color:green')
+                                    select.input.form-control(name='')
+                                      option(value='') -- District -- 
+                                      option(value='Bishnupur') Bishnupur 
+                                      option(value='Chandel') Chandel  
+                                      option(value='Churachandpur') Churachandpur 
+                                      option(value='Imphal East') Imphal East
+                                      option(value='Imphal West') Imphal West
+                                      option(value='Jiribam') Jiribam  
+                                      option(value='Kakching') Kakching 
+                                      option(value='Kamjong') Kamjong 
+                                      option(value='Kangpokpi') Kangpokpi  
+                                      option(value='Noney') Noney  
+                                      option(value='Pherzawl') Pherzawl
+                                      option(value='Senapati') Senapati 
+                                      option(value='Tamenglong') Tamenglong 
+                                      option(value='Tengnoupal') Tengnoupal 
+                                      option(value='Thoubal') Thoubal 
+                                      option(value='Ukhrul') Ukhrul  
+                            .states.Meghalaya
+                              .form-group
+                                label.col-md-4.control-label.text District :
+                                .col-md-6.inputGroupContainer
+                                  .input-group
+                                    span.input-group-addon.input
+                                      i.fa.fa-location-arrow(style='font-size:16px; color:green')
+                                    select.input.form-control(name='')
+                                      option(value='') -- District --
+                                      option(value='East Garo Hills') East Garo Hills 
+                                      option(value='East Jaintia Hills') East Jaintia Hills  
+                                      option(value='East Khasi Hills') East Khasi Hills 
+                                      option(value='North Garo Hills') North Garo Hills 
+                                      option(value='Ri Bhoi') Ri Bhoi
+                                      option(value='South Garo Hills') South Garo Hills  
+                                      option(value='South West Garo Hills') South West Garo Hills 
+                                      option(value='South West Khasi Hills') South West Khasi Hills 
+                                      option(value='West Garo Hills') West Garo Hills  
+                                      option(value='West Jaintia Hills') West Jaintia Hills  
+                                      option(value='West Khasi Hills') West Khasi Hills
+                            .states.Mizoram
+                              .form-group
+                                label.col-md-4.control-label.text District :
+                                .col-md-6.inputGroupContainer
+                                  .input-group
+                                    span.input-group-addon.input
+                                      i.fa.fa-location-arrow(style='font-size:16px; color:green')
+                                    select.input.form-control(name='')
+                                      option(value='') -- District --
+                                      option(value='Aizawl') Aizawl 
+                                      option(value='Champhai') Champhai 
+                                      option(value='Kolasib') Kolasib
+                                      option(value='Lawngtlai') Lawngtlai
+                                      option(value='Lunglei') Lunglei
+                                      option(value='Mamit') Mamit   
+                                      option(value='Saiha') Saiha 
+                                      option(value='Serchhip') Serchhip
+                            .states.Nagaland
+                              .form-group
+                                label.col-md-4.control-label.text District :
+                                .col-md-6.inputGroupContainer
+                                  .input-group
+                                    span.input-group-addon.input
+                                      i.fa.fa-location-arrow(style='font-size:16px; color:green')
+                                    select.input.form-control(name='')
+                                      option(value='') -- District --
+                                      option(value='Dimapur') Dimapur 
+                                      option(value='Kiphire') Kiphire 
+                                      option(value='Kohima') Kohima
+                                      option(value='Longleng') Longleng
+                                      option(value='Mokokchung') Mokokchung
+                                      option(value='Mon') Mon   
+                                      option(value='Peren') Peren 
+                                      option(value='Phek') Phek
+                                      option(value='Tuensang') Tuensang 
+                                      option(value='Wokha') Wokha
+                                      option(value='Zunheboto') Zunheboto
+                            .states.Odisha
+                              .form-group
+                                label.col-md-4.control-label.text District :
+                                .col-md-6.inputGroupContainer
+                                  .input-group
+                                    span.input-group-addon.input
+                                      i.fa.fa-location-arrow(style='font-size:16px; color:green')
+                                    select.input.form-control(name='')
+                                      option(value='') -- District --
+                                      option(value='Angul') Angul 
+                                      option(value='Balangir') Balangir  
+                                      option(value='Balasore') Balasore 
+                                      option(value='Bargarh') Bargarh 
+                                      option(value='Bhadrak') Bhadrak 
+                                      option(value='Boudh') Boudh  
+                                      option(value='Cuttack') Cuttack 
+                                      option(value='Deogarh') Deogarh 
+                                      option(value='Dhenkanal') Dhenkanal  
+                                      option(value='Gajapati') Gajapati  
+                                      option(value='Ganjam') Ganjam
+                                      option(value='Jagatsinghapur') Jagatsinghapur 
+                                      option(value='Jajpur') Jajpur 
+                                      option(value='Jharsuguda') Jharsuguda 
+                                      option(value='Kalahandi') Kalahandi 
+                                      option(value='Kandhamal') Kandhamal 
+                                      option(value='Kendrapara') Kendrapara 
+                                      option(value='Kendujhar') Kendujhar 
+                                      option(value='Khordha') Khordha 
+                                      option(value='Koraput') Koraput 
+                                      option(value='Malkangiri') Malkangiri 
+                                      option(value='Mayurbhanj') Mayurbhanj
+                                      option(value='Nabarangpur') Nabarangpur 
+                                      option(value='Nayagarh') Nayagarh
+                                      option(value='Nuapada') Nuapada 
+                                      option(value='Puri') Puri  
+                                      option(value='Rayagada ') Rayagada 
+                                      option(value='Sambalpur') Sambalpur
+                                      option(value='Sonepur') Sonepur 
+                                      option(value='Sundargarh') Sundargarh 
+                            .states.Punjab
+                              .form-group
+                                label.col-md-4.control-label.text District :
+                                .col-md-6.inputGroupContainer
+                                  .input-group
+                                    span.input-group-addon.input
+                                      i.fa.fa-location-arrow(style='font-size:16px; color:green')
+                                    select.input.form-control(name='')
+                                      option(value='') -- District --
+                                      option(value='Amritsar') Amritsar 
+                                      option(value='Barnala') Barnala  
+                                      option(value='Bathinda') Bathinda 
+                                      option(value='Faridkot') Faridkot 
+                                      option(value='Fatehgarh Sahib') Fatehgarh Sahib
+                                      option(value='Fazilka') Fazilka  
+                                      option(value='Ferozepur') Ferozepur 
+                                      option(value='Gurdaspur') Gurdaspur 
+                                      option(value='Hoshiarpur') Hoshiarpur  
+                                      option(value='Jalandhar') Jalandhar  
+                                      option(value='Kapurthala') Kapurthala
+                                      option(value='Ludhiana') Ludhiana 
+                                      option(value='Mansa') Mansa 
+                                      option(value='Moga') Moga 
+                                      option(value='Muktsar') Muktsar 
+                                      option(value='Nawanshahr') Nawanshahr 
+                                      option(value='Pathankot') Pathankot  
+                                      option(value='Patiala') Kendujhar 
+                                      option(value='Rupnagar') Rupnagar 
+                                      option(value='Sahibzada') Sahibzada 
+                                      option(value='Sangrur') Sangrur 
+                                      option(value='Tarn Taran') Tarn Taran
+                            .states.Rajasthan
+                              .form-group
+                                label.col-md-4.control-label.text District :
+                                .col-md-6.inputGroupContainer
+                                  .input-group
+                                    span.input-group-addon.input
+                                      i.fa.fa-location-arrow(style='font-size:16px; color:green')
+                                    select.input.form-control(name='')
+                                      option(value='') -- District --
+                                      option(value='Ajmer') Ajmer 
+                                      option(value='Alwar') Alwar  
+                                      option(value='Banswara') Banswara 
+                                      option(value='Baran') Baran 
+                                      option(value='Barmer') Barmer 
+                                      option(value='Bharatpur') Bharatpur  
+                                      option(value='Bhilwara') Bhilwara 
+                                      option(value='Bikaner') Bikaner 
+                                      option(value='Bundi') Bundi  
+                                      option(value='Chittorgarh') Chittorgarh  
+                                      option(value='Churu') Churu
+                                      option(value='Dausa') Dausa 
+                                      option(value='Dholpur') Dholpur 
+                                      option(value='Dungarpur') Dungarpur 
+                                      option(value='Hanumangarh') Hanumangarh 
+                                      option(value='Jaipur') Jaipur 
+                                      option(value='Jaisalmer') Jaisalmer 
+                                      option(value='Jalore') Jalore 
+                                      option(value='Jhalawar') Jhalawar 
+                                      option(value='Jhunjhunu') Jhunjhunu 
+                                      option(value='Jodhpur') Jodhpur 
+                                      option(value='Karauli') Karauli
+                                      option(value='Kota') Kota 
+                                      option(value='Nagaur ') Nagaur
+                                      option(value='Pali') Pali 
+                                      option(value='Pratapgarh') Pratapgarh  
+                                      option(value='Rajsamand') Rajsamand 
+                                      option(value='Sawai Madhopur') Sawai Madhopur
+                                      option(value='Sikar') Sikar 
+                                      option(value='Sirohi') Sirohi 
+                                      option(value='Sri Ganganagar') Sri Ganganagar 
+                                      option(value='Tonk') Tonk
+                                      option(value='Udaipur') Udaipur
+                            .states.Sikkim
+                              .form-group
+                                label.col-md-4.control-label.text District :
+                                .col-md-6.inputGroupContainer
+                                  .input-group
+                                    span.input-group-addon.input
+                                      i.fa.fa-location-arrow(style='font-size:16px; color:green')
+                                    select.input.form-control(name='')
+                                      option(value='') -- District --
+                                      option(value='North sikkim district') North sikkim district 
+                                      option(value='south sikkim district') south sikkim district 
+                                      option(value='East sikkim district') East sikkim district
+                                      option(value='West sikkm district') West sikkm district  
+                            .states.TamilNadu
+                              .form-group
+                                label.col-md-4.control-label.text District :
+                                .col-md-6.inputGroupContainer
+                                  .input-group
+                                    span.input-group-addon.input
+                                      i.fa.fa-location-arrow(style='font-size:16px; color:green')
+                                    select.input.form-control(name='')
+                                      option(value='') -- District --
+                                      option(value='Ariyalur') Ariyalur
+                                      option(value='Chennai') Chennai
+                                      option(value='Coimbatore') Coimbatore
+                                      option(value='Cuddalore') Cuddalore
+                                      option(value='Dharmapuri') Dharmapuri
+                                      option(value='Dindigul') Dindigul
+                                      option(value='Erode') Erode
+                                      option(value='Kanchipuram') Kanchipuram
+                                      option(value='Kanyakumari') Kanyakumari
+                                      option(value='Karur') Karur
+                                      option(value='Krishnagiri') Krishnagiri
+                                      option(value='Madurai') Madurai
+                                      option(value='Nagapattinam') Nagapattinam
+                                      option(value='Namakkal') Namakkal
+                                      option(value='Nilgiris') Nilgiris
+                                      option(value='Perambalur') Perambalur
+                                      option(value='Pudukkottai') Pudukkottai
+                                      option(value='Ramanathapuram') Ramanathapuram
+                                      option(value='Salem') Salem
+                                      option(value='Sivaganga') Sivaganga
+                                      option(value='Thanjavur') Thanjavur
+                                      option(value='Theni') Theni
+                                      option(value='Thoothukudi ') Thoothukudi 
+                                      option(value='Tiruchirappalli') Tiruchirappalli
+                                      option(value='Tirunelveli') Tirunelveli
+                                      option(value='Tiruppur') Tiruppur
+                                      option(value='Tiruvallur') Tiruvallur
+                                      option(value='Tiruvannamalai') Tiruvannamalai
+                                      option(value='Tiruvarur') Tiruvarur
+                                      option(value='Vellore') Vellore
+                                      option(value='Viluppuram') Viluppuram
+                                      option(value='Virudhunagar') Virudhunagar
+                            .states.Telangana
+                              .form-group
+                                label.col-md-4.control-label.text District :
+                                .col-md-6.inputGroupContainer
+                                  .input-group
+                                    span.input-group-addon.input
+                                      i.fa.fa-location-arrow(style='font-size:16px; color:green')
+                                    select.input.form-control(name='')
+                                      option(value='') -- District --
+                                      option(value='Adilabad') Adilabad
+                                      option(value='Bhadradri Kothagudem') Bhadradri Kothagudem
+                                      option(value='Hyderabad') Hyderabad
+                                      option(value='Jagtial') Jagtial
+                                      option(value='Jangaon') Jangaon
+                                      option(value='Jayashankar Bhoopalpally') Jayashankar Bhoopalpally
+                                      option(value='Jogulamba Gadwal') Jogulamba Gadwal
+                                      option(value='Kamareddy') Kamareddy
+                                      option(value='Karimnagar') Karimnagar
+                                      option(value='Khammam') Khammam
+                                      option(value='Komaram Bheem Asifabad') Komaram Bheem Asifabad
+                                      option(value='Mahabubabad') Mahabubabad
+                                      option(value='Mahabubnagar') Mahabubnagar
+                                      option(value='Mancherial') Mancherial
+                                      option(value='Medak') Medak
+                                      option(value='Medchal') Medchal
+                                      option(value='Nagarkurnool') Nagarkurnool
+                                      option(value='Nalgonda') Nalgonda
+                                      option(value='Nirmal') Nirmal
+                                      option(value='Nizamabad') Nizamabad
+                                      option(value='Peddapalli') Peddapalli
+                                      option(value='Rajanna Sircilla') Rajanna Sircilla
+                                      option(value='Rangareddy') Rangareddy 
+                                      option(value='Sangareddy') Sangareddy
+                                      option(value='Siddipet') Siddipet
+                                      option(value='Suryapet') Suryapet
+                                      option(value='Vikarabad') Vikarabad
+                                      option(value='Wanaparthy') Wanaparthy
+                                      option(value='Warangal Rural') Warangal Rural
+                                      option(value='Warangal Urban') Warangal Urban
+                                      option(value='Yadadri Bhuvanagiri') Yadadri Bhuvanagiri
+                            .states.Tripura
+                              .form-group
+                                label.col-md-4.control-label.text District :
+                                .col-md-6.inputGroupContainer
+                                  .input-group
+                                    span.input-group-addon.input
+                                      i.fa.fa-location-arrow(style='font-size:16px; color:green')
+                                    select.input.form-control(name='')
+                                      option(value='') -- District --
+                                      option(value='Dhalai') Dhalai
+                                      option(value='Gomati') Gomati 
+                                      option(value='Khowai') Khowai
+                                      option(value='North Tripura') North Tripura
+                                      option(value='Sepahijala') Sepahijala
+                                      option(value='South Tripura') South Tripura 
+                                      option(value='Unakoti') Unakoti Gadwal
+                                      option(value='West Tripura') West Tripura
+                            .states.Uttarakhand
+                              .form-group
+                                label.col-md-4.control-label.text District :
+                                .col-md-6.inputGroupContainer
+                                  .input-group
+                                    span.input-group-addon.input
+                                      i.fa.fa-location-arrow(style='font-size:16px; color:green')
+                                    select.input.form-control(name='')
+                                      option(value='') -- District -- 
+                                      option(value='Almora') Almora
+                                      option(value='Bageshwar') Bageshwar
+                                      option(value='Chamoli') Chamoli
+                                      option(value='Champawat') Champawat
+                                      option(value='Dehradun') Dehradun
+                                      option(value='Haridwar') Haridwar
+                                      option(value='Nainital') Nainital 
+                                      option(value='Pauri Garhwal') Pauri Garhwal 
+                                      option(value='Pithoragarh') Pithoragarh
+                                      option(value='Rudraprayag') Rudraprayag
+                                      option(value='Tehri Garhwal') Tehri Garhwal
+                                      option(value='Udham Singh Nagar') Udham Singh Nagar 
+                                      option(value='Uttarkashi') Uttarkashi
+                            .states.UttarPradesh
+                              .form-group
+                                label.col-md-4.control-label.text District :
+                                .col-md-6.inputGroupContainer
+                                  .input-group
+                                    span.input-group-addon.input
+                                      i.fa.fa-location-arrow(style='font-size:16px; color:green')
+                                    select.input.form-control(name='')
+                                      option(value='') -- District --
+                                      option(value='Agra') Agra  
+                                      option(value='Aligarh') Aligarh  
+                                      option(value='Allahabad') Allahabad 
+                                      option(value='Ambedkar Nagar') Ambedkar Nagar 
+                                      option(value='Amethi') Amethi 
+                                      option(value='Amroha') Amroha  
+                                      option(value='Auraiya') Auraiya 
+                                      option(value='Azamgarh') Azamgarh 
+                                      option(value='Baghpat') Baghpat  
+                                      option(value='Bahraich') Bahraich  
+                                      option(value='Ballia') Ballia
+                                      option(value='Balrampur') Balrampur 
+                                      option(value='Banda') Banda 
+                                      option(value='Barabanki') Barabanki 
+                                      option(value='Bareilly') Bareilly 
+                                      option(value='Basti') Basti 
+                                      option(value='Bhadohi') Bhadohi 
+                                      option(value='Bijnor') Bijnor 
+                                      option(value='Budaun') Budaun 
+                                      option(value='Bulandshahr') Bulandshahr 
+                                      option(value='Chandauli') Chandauli 
+                                      option(value='Chitrakoot') Chitrakoot
+                                      option(value='Deoria') Deoria 
+                                      option(value='Etah') Etah
+                                      option(value='Etawah') Etawah 
+                                      option(value='Faizabad') Faizabad  
+                                      option(value='Farrukhabad') Farrukhabad 
+                                      option(value='Fatehpur') Fatehpur
+                                      option(value='Firozabad') Firozabad 
+                                      option(value='Gautam Buddha Nagar') Gautam Buddha Nagar 
+                                      option(value='Ghaziabad') Ghaziabad 
+                                      option(value='Ghazipur') Ghazipur  
+                                      option(value='Gonda') Gonda 
+                                      option(value='Gorakhpur') Gorakhpur
+                                      option(value='Hamirpur') Hamirpur 
+                                      option(value='Hapur') Hapur  
+                                      option(value='Hardoi') Hardoi 
+                                      option(value='Hathras') Hathras 
+                                      option(value='Jalaun') Jalaun  
+                                      option(value='Jaunpur') Jaunpur  
+                                      option(value='Jhansi') Jhansi 
+                                      option(value='Kannauj') Kannauj 
+                                      option(value='Kanpur Dehat') Kanpur Dehat 
+                                      option(value='Kanpur Nagar') Kanpur Nagar 
+                                      option(value='Kanshiram Nagar') Kanshiram Nagar 
+                                      option(value='Kaushambi') Kaushambi 
+                                      option(value='Kushinagar') Kushinagar 
+                                      option(value='Lakhimpur') Lakhimpur 
+                                      option(value='Lalitpur') Lalitpur 
+                                      option(value='Lucknow') Lucknow 
+                                      option(value='Maharajganj') Maharajganj
+                                      option(value='Mahoba') Mahoba Malwa 
+                                      option(value='Mainpuri') Mainpuri  
+                                      option(value='Mathura') Mathura 
+                                      option(value='Mau') Mau 
+                                      option(value='Meerut') Meerut 
+                                      option(value='Mirzapur') Mirzapur  
+                                      option(value='Moradabad') Moradabad 
+                                      option(value='Muzaffarnagar') Muzaffarnagar 
+                                      option(value='Pilibhit') Pilibhit  
+                                      option(value='Pratapgarh') Pratapgarh  
+                                      option(value='RaeBareli') RaeBareli
+                                      option(value='Rampur') Rampur 
+                                      option(value='Saharanpur') Saharanpur 
+                                      option(value='Sambhal') Sambhal 
+                                      option(value='Sant Kabir Nagar') Sant Kabir Nagar 
+                                      option(value='Shahjahanpur') Shahjahanpur 
+                                      option(value='Shamali') Shamali 
+                                      option(value='Shravasti') Shravasti 
+                                      option(value='Siddharth Nagar') Siddharth Nagar 
+                                      option(value='Sitapur') Sitapur 
+                                      option(value='Sonbhadra') Sonbhadra 
+                                      option(value='Sultanpur') Sultanpur
+                                      option(value='Unnao') Unnao 
+                                      option(value='Varanasi') Varanasi 
+                            .states.WestBengal
+                              .form-group
+                                label.col-md-4.control-label.text District :
+                                .col-md-6.inputGroupContainer
+                                  .input-group
+                                    span.input-group-addon.input
+                                      i.fa.fa-location-arrow(style='font-size:16px; color:green')
+                                    select.input.form-control(name='')
+                                      option(value='') -- District --
+                                      option(value='Alipurduar') Alipurduar  
+                                      option(value='Bankura') Bankura  
+                                      option(value='Birbhum') Birbhum 
+                                      option(value='Cooch Behar') Cooch Behar  
+                                      option(value='Dakshin Dinajpur') Dakshin Dinajpur 
+                                      option(value='Darjeeling') Darjeeling  
+                                      option(value='Hooghly') Hooghly 
+                                      option(value='Howrah') Howrah 
+                                      option(value='Jalpaiguri') Jalpaiguri  
+                                      option(value='Jhargram') Jhargram  
+                                      option(value='Kalimpong') Kalimpong
+                                      option(value='Kolkata') Kolkata 
+                                      option(value='Malda') Malda 
+                                      option(value='Murshidabad') Murshidabad 
+                                      option(value='Nadia') Nadia 
+                                      option(value='North 24 Parganas') North 24 Parganas 
+                                      option(value='Paschim Medinipur') Paschim Medinipur 
+                                      option(value='Paschim Burdwan') Paschim Burdwan 
+                                      option(value='Purba Burdwan') Purba Burdwan 
+                                      option(value='Purba Medinipur') Purba Medinipur 
+                                      option(value='Purulia') Purulia 
+                                      option(value='South 24 Parganas') South 24 Parganas
+                                      option(value='Uttar Dinajpur') Uttar Dinajpur                              
+
+                            .form-group
+                              label.col-md-4.control-label.text Mandal :
+                              .col-md-6.inputGroupContainer
+                                .input-group
+                                  span.input-group-addon.input
+                                    i.fa.fa-map-pin(style='font-size:16px; color:#d1c455')
+                                  input.input.man.form-control(name='mandal', placeholder='Mandal', type='text', required)
+                            .form-group
+                              label.col-md-4.control-label.text Village :
+                              .col-md-6.inputGroupContainer
+                                .input-group
+                                  span.input-group-addon.input
+                                    i.fa.fa-street-view(style='font-size:16px; color:#4CAF50')
+                                  input.input.form-control(name='village', placeholder='Village', type='text', onkeypress='return event.charCode >31 && (event.charCode <48 || event.charCode >=65)', required)
+                            .form-group
+                              label.col-md-4.control-label.text School :
+                              .col-md-6.inputGroupContainer
+                                .input-group
+                                  span.input-group-addon.input
+                                    i.fa.fa-university(style='font-size:16px; color:#000')
+                                  input.input.form-control(name='school', placeholder='School', type='text', onkeypress='return event.charCode >31 && (event.charCode <48 || event.charCode >=65)', required)
+                            .form-group
+                              label.col-md-4.control-label.text School level :
+                              .col-md-6.inputGroupContainer
+                                .input-group
+                                  span.input-group-addon.input
+                                    i.fa.fa-list(style='font-size:16px; color:#000')
+                                  select.main.input.form-control(name='level')
+                                    option(value='none')  --Select--
+                                    option(value='Primary')  Primary
+                                    option(value='Upper primary') Upper primary  
+                                    option(value='High school')  High school     
+                            .form-group
+                              label.col-md-4.control-label.text Problem Category :
+                              .col-md-6.inputGroupContainer
+                                .input-group
+                                  span.input-group-addon.input
+                                    i.fa.fa-list(style='font-size:16px; color:#000')
+                                  select.main.input.form-control(name='Category')
+                                    option(value='none')  --Select--
+                                    option(value='Electrical')  Electrical
+                                    option(value='Furniture')  Furniture 
+                                    option(value='Water')  Water 
+                                    option(value='Equipment')  Equipment
+                                    option(value='Meals')  Meals 
+                                    option(value='Others') Others
+                            .models.Electrical
+                              .form-group
+                                label.col-md-4.control-label.text Sub Category :
+                                .col-md-6.inputGroupContainer
+                                  .input-group
+                                    span.input-group-addon.input
+                                      i.fa.fa-plug(style='font-size:16px; color:#000')
+                                    select.input.form-control(name='')
+                                      option(value='Fans')  Fans
+                                      option(value='Lights')  Lights
+                                      option(value='Plug')  Plug Boards
+                            .models.Furniture
+                              .form-group
+                                label.col-md-4.control-label.text Sub Category :
+                                .col-md-6.inputGroupContainer
+                                  .input-group
+                                    span.input-group-addon.input
+                                      i.fa.fa-bed(style='font-size:16px; color:#000')
+                                    select.input.form-control(name='')
+                                      option(value='Chairs')  Chairs
+                                      option(value='Benches')  Benches
+                                      option(value='Tables')  Tables
+                            .models.Water
+                              .form-group
+                                label.col-md-4.control-label.text Sub Category :
+                                .col-md-6.inputGroupContainer
+                                  .input-group
+                                    span.input-group-addon.input
+                                      i.fa.fa-tint(style='font-size:16px; color:#000')
+                                    select.input.form-control(name='')
+                                      option(value='Water')  Drinking Water
+                                      option(value='Pipes')  Pipes
+                                      option(value='Tank')  Tank
+                            .models.Equipment
+                              .form-group
+                                label.col-md-4.control-label.text Sub Category :
+                                .col-md-6.inputGroupContainer
+                                  .input-group
+                                    span.input-group-addon.input
+                                      i.fa.fa-cog(style='font-size:16px; color:#000')
+                                    select.input.form-control(name='')
+                                      option(value='Labs')  Labs
+                                      option(value='Library')  Library
+                                      option(value='Sports')  Sports
+                            .models.Meals
+                              .form-group
+                                label.col-md-4.control-label.text Sub Category :
+                                .col-md-6.inputGroupContainer
+                                  .input-group
+                                    span.input-group-addon.input
+                                      i.fa.fa-tint(style='font-size:16px; color:#000')
+                                    select.input.form-control(name='')
+                                      option(value='Poor food quality') Poor food quality 
+                                      option(value='lack of kitchens') lack of kitchens
+                                      option(value='Insufficient quantity') Insufficient quantity          
+                            .models.Others
+                              .form-group
+                                label.col-md-4.control-label.text Sub Category :
+                                .col-md-6.inputGroupContainer
+                                  .input-group
+                                    span.input-group-addon.input
+                                      i.fa.fa-comment(style='font-size:16px; color:#000')
+                                    input.input.form-control(name='', type='text', placeholder='Type your text here......', required)
+                            .form-group
+                              label.col-md-4.control-label.text Complaint :
+                              .col-md-6.inputGroupContainer
+                                .input-group
+                                  span.input-group-addon.input
+                                    i.fa.fa-pencil-square-o(style='font-size:16px; color:#4267B2')
+                                  textarea.input.form-control(name='complaint',placeholder='Type your complaints', required)
+                            .form-group
+                              label.col-md-4.control-label.text Image :
+                              .col-md-6.inputGroupContainer
+                                .input-group
+                                  span.input-group-addon.input
+                                    i.fa.fa-picture-o(style='font-size:16px; color:#33A2FF')
+                                  input.input.form-control(name='image', type='file')        
+                            // Button
+                            .form-group
+                              label.col-md-4.control-label
+                              .col-md-4
+                                button.btn(type='submit', style='background-color:#31B0D5; color:white')
+                                  | Submit 
+                                  i.fa.fa-paper-plane
+                -}
+                -var role=user.Role;
+                -if(role=="Staff" || role=="S.M.C"){
+                  #status.tab-pane.fade.align 
+                    span(style='color:red; padding-left:15px') Note : Whenever your issue is cleared,it is your responsibility to click on the status button and upload the image that refers development
+                    .container(style='background-color: #eaeaea;width: 100%;height:100%;border-radius: 1px')        
+                      .row 
+                        br   
+                        .col-lg-12
+                          .panel.panel-default
+                            .panel-body
+                              .table-responsive
+                                table.dataTables-example.table.table-striped.table-bordered.table-hover
+                                  thead
+                                    tr
+                                      th Image
+                                      th State
+                                      th District
+                                      th Mandal
+                                      th Village
+                                      th School
+                                      th Category
+                                      th Sub_Category
+                                      th Complaint
+                                      th Date
+                                      th Time
+                                      th Status
+                                  tbody
+                                    if status
+                                      each member in status
+                                        tr
+                                          td
+                                            img.img-responsive.img-thumbnail(src="uploads/" +member.Image)
+                                          td #{member.State}
+                                          td #{member.District}
+                                          td #{member.Mandal}
+                                          td #{member.Village}
+                                          td #{member.School}
+                                          td #{member.Category}
+                                          td #{member.Subcategory}
+                                          td #{member.Complaint}
+                                          td #{member.Date}
+                                          td #{member.Time}
+                                          td
+                                            button.btn.btn-success.status(value=member._id) #{member.Status}                                         
+                -}
+                -var role=user.Role;
+                -if(role=="M.E.O"){
+                  #mupcomplaints.tab-pane.fade.in.active
+                    .row.dashboard-stats.container
+                      br
+                      br
+                      .tab-pane.fade.in.active
+                        ul.nav.nav-tabs.nav-justified
+                          li.active
+                            center
+                              h3 
+                                a(data-toggle='pill', href='#pending11') Pending
+                          li
+                            center
+                              h3 
+                                a(data-toggle='pill', href='#completed11') Completed
+                        .tab-content
+                          // Add Single user
+                          #pending11.tab-pane.fade.in.active
+                            br
+                            br
+                            .col-lg-12
+                              .table-responsive
+                                table.dataTables-example.table.table-striped.table-bordered.table-hover
+                                  thead
+                                    tr
+                                      th Image
+                                      th State
+                                      th District
+                                      th Mandal
+                                      th Village
+                                      th School
+                                      th Complaint
+                                      th Date
+                                      th Time
+                                      th Category
+                                      th Subcategory
+
+                                  tbody
+                                    if pupmeo
+                                      each member in pupmeo
+                                        tr
+                                          td
+                                            img.img-responsive.img-thumbnail(src="uploads/" +member.Image, width='300px', height:'300px')
+                                          td #{member.State}
+                                          td #{member.District}
+                                          td #{member.Mandal}
+                                          td #{member.Village}
+                                          td #{member.School}
+                                          td #{member.Complaint}
+                                          td #{member.Date}
+                                          td #{member.Time}
+                                          td #{member.Category}
+                                          td #{member.Subcategory}
+                          #completed11.tab-pane.fade.align
+                            br
+                            br
+                            .container(style='width: 100%;border-radius: 10px')
+                              .col-lg-12
+                                .table-responsive
+                                  table.dataTables-example.table.table-striped.table-bordered.table-hover
+                                    thead
+                                      tr
+                                        th Image
+                                        th State
+                                        th District
+                                        th Mandal
+                                        th Village
+                                        th School
+                                        th Complaint
+                                        th Date
+                                        th Time
+                                        th Category
+                                        th SubCategory
+                                    tbody
+                                      if cupmeo
+                                        each member in cupmeo
+                                          tr
+                                            td
+                                              img.img-responsive.img-thumbnail(src="uploads/" +member.Image, width='300px', height:'300px')
+                                            td #{member.State}
+                                            td #{member.District}
+                                            td #{member.Mandal}
+                                            td #{member.Village}
+                                            td #{member.School}
+                                            td #{member.Complaint}
+                                            td #{member.Date}
+                                            td #{member.Time}
+                                            td #{member.Category}
+                                            td #{member.Subcategory}
+                -}
+                -var role=user.Role;
+                -if(role=="M.E.O"){
+                  #mpcomplaints.tab-pane.fade.align
+                    .row.dashboard-stats.container
+                      br
+                      br
+                      .tab-pane.fade.in.active
+                        ul.nav.nav-tabs.nav-justified
+                          li.active
+                            center
+                              h3 
+                                a(data-toggle='pill', href='#pending22') Pending
+                          li
+                            center
+                              h3 
+                                a(data-toggle='pill', href='#completed22') Completed
+                        .tab-content
+                          // Add Single user
+                          #pending22.tab-pane.fade.in.active
+                            br
+                            br
+                            .col-lg-12
+                              .table-responsive
+                                table.dataTables-example.table.table-striped.table-bordered.table-hover
+                                  thead
+                                    tr
+                                      th Image
+                                      th State
+                                      th District
+                                      th Mandal
+                                      th Village
+                                      th School
+                                      th Complaint
+                                      th Date
+                                      th Time
+                                      th Category
+                                      th Subcategory
+
+                                  tbody
+                                    if ppmeo
+                                      each member in ppmeo
+                                        tr
+                                          td
+                                            img.img-responsive.img-thumbnail(src="uploads/" +member.Image, width='300px', height:'300px')
+                                          td #{member.State}
+                                          td #{member.District}
+                                          td #{member.Mandal}
+                                          td #{member.Village}
+                                          td #{member.School}
+                                          td #{member.Complaint}
+                                          td #{member.Date}
+                                          td #{member.Time}
+                                          td #{member.Category}
+                                          td #{member.Subcategory}
+                          #completed22.tab-pane.fade.align
+                            br
+                            br
+                            .container(style='width: 100%;border-radius: 10px')
+                              .col-lg-12
+                                .table-responsive
+                                  table.dataTables-example.table.table-striped.table-bordered.table-hover
+                                    thead
+                                      tr
+                                        th Image
+                                        th State
+                                        th District
+                                        th Mandal
+                                        th Village
+                                        th School
+                                        th Complaint
+                                        th Date
+                                        th Time
+                                        th Category
+                                        th SubCategory
+                                    tbody
+                                      if pcmeo
+                                        each member in pcmeo
+                                          tr
+                                            td
+                                              img.img-responsive.img-thumbnail(src="uploads/" +member.Image, width='300px', height:'300px')
+                                            td #{member.State}
+                                            td #{member.District}
+                                            td #{member.Mandal}
+                                            td #{member.Village}
+                                            td #{member.School}
+                                            td #{member.Complaint}
+                                            td #{member.Date}
+                                            td #{member.Time}
+                                            td #{member.Category}
+                                            td #{member.Subcategory}
+                -}                             
+                -var role=user.Role;
+                -if(role=="D.E.O"){
+                  #dcomplaints.tab-pane.fade.in.active
+                    .row.dashboard-stats.container
+                      br
+                      br
+                      .tab-pane.fade.in.active
+                        ul.nav.nav-tabs.nav-justified
+                          li.active
+                            center
+                              h3 
+                                a(data-toggle='pill', href='#pending') Pending
+                          li
+                            center
+                              h3 
+                                a(data-toggle='pill', href='#completed') Completed
+                        .tab-content
+                          // Add Single user
+                          #pending.tab-pane.fade.in.active
+                            br
+                            br
+                            .col-lg-12
+                              .table-responsive
+                                table.dataTables-example.table.table-striped.table-bordered.table-hover
+                                  thead
+                                    tr
+                                      th Image
+                                      th State
+                                      th District
+                                      th Mandal
+                                      th Village
+                                      th School
+                                      th Complaint
+                                      th Date
+                                      th Time
+                                      th Category
+                                      th SubCategory
+                                  tbody
+                                    if hpending
+                                      each member in hpending
+                                        tr
+                                          td
+                                            img.img-responsive.img-thumbnail(src="uploads/" +member.Image, width='300px', height:'300px')
+                                          td #{member.State}
+                                          td #{member.District}
+                                          td #{member.Mandal}
+                                          td #{member.Village}
+                                          td #{member.School}
+                                          td #{member.Complaint}
+                                          td #{member.Date}
+                                          td #{member.Time}
+                                          td #{member.Category}
+                                          td #{member.Subcategory}
+                          #completed.tab-pane.fade.align
+                            br
+                            br
+                            .col-lg-12
+                              .table-responsive
+                                table.dataTables-example.table.table-striped.table-bordered.table-hover
+                                  thead
+                                    tr
+                                      th Image
+                                      th State
+                                      th District
+                                      th Mandal
+                                      th Village
+                                      th School
+                                      th Complaint
+                                      th Date
+                                      th Time
+                                      th Category
+                                      th SubCategory
+                                  tbody
+                                    if hcompleted
+                                      each member in hcompleted
+                                        tr
+                                          td
+                                            img.img-responsive.img-thumbnail(src="uploads/" +member.Image, width='300px', height:'300px')
+                                          td #{member.State}
+                                          td #{member.District}
+                                          td #{member.Mandal}
+                                          td #{member.Village}
+                                          td #{member.School}
+                                          td #{member.Complaint}
+                                          td #{member.Date}
+                                          td #{member.Time}
+                                          td #{member.Category}
+                                          td #{member.Subcategory}
+                -}
+                -var role=user.Role;
+                -if(role=="D.E.O"){
+                  #upcomplaints.tab-pane.fade.align
+                    .row.dashboard-stats.container
+                      br
+                      br
+                      .tab-pane.fade.in.active
+                        ul.nav.nav-tabs.nav-justified
+                          li.active
+                            center
+                              h3 
+                                a(data-toggle='pill', href='#pending1') Pending
+                          li
+                            center
+                              h3 
+                                a(data-toggle='pill', href='#completed1') Completed
+                        .tab-content
+                          // Add Single user
+                          #pending1.tab-pane.fade.in.active
+                            br
+                            br
+                            .col-lg-12
+                              .table-responsive
+                                table.dataTables-example.table.table-striped.table-bordered.table-hover
+                                  thead
+                                    tr
+                                      th Image
+                                      th State
+                                      th District
+                                      th Mandal
+                                      th Village
+                                      th School
+                                      th Complaint
+                                      th Date
+                                      th Time
+                                      th Category
+                                      th SubCategory
+                                  tbody
+                                    if upending
+                                      each member in upending
+                                        tr
+                                          td
+                                            img.img-responsive.img-thumbnail(src="uploads/" +member.Image, width='300px', height:'300px')
+                                          td #{member.State}
+                                          td #{member.District}
+                                          td #{member.Mandal}
+                                          td #{member.Village}
+                                          td #{member.School}
+                                          td #{member.Complaint}
+                                          td #{member.Date}
+                                          td #{member.Time}
+                                          td #{member.Category}
+                                          td #{member.Subcategory}
+                          #completed1.tab-pane.fade.align
+                            br
+                            br
+                            .col-lg-12
+                              .table-responsive
+                                table.dataTables-example.table.table-striped.table-bordered.table-hover
+                                  thead
+                                    tr
+                                      th Image
+                                      th State
+                                      th District
+                                      th Mandal
+                                      th Village
+                                      th School
+                                      th Complaint
+                                      th Date
+                                      th Time
+                                      th Category
+                                      th SubCategory
+                                  tbody
+                                    if ucompleted
+                                      each member in ucompleted
+                                        tr
+                                          td
+                                            img.img-responsive.img-thumbnail(src="uploads/" +member.Image, width='300px', height:'300px')
+                                          td #{member.State}
+                                          td #{member.District}
+                                          td #{member.Mandal}
+                                          td #{member.Village}
+                                          td #{member.School}
+                                          td #{member.Complaint}
+                                          td #{member.Date}
+                                          td #{member.Time}
+                                          td #{member.Category}
+                                          td #{member.Subcategory}
+                -}
+                -var role=user.Role;
+                -if(role=="D.E.O"){
+                  #pcomplaints.tab-pane.fade.align
+                    .row.dashboard-stats.container
+                      br
+                      br
+                      .tab-pane.fade.in.active
+                        ul.nav.nav-tabs.nav-justified
+                          li.active
+                            center
+                              h3 
+                                a(data-toggle='pill', href='#pending2') Pending
+                          li
+                            center
+                              h3 
+                                a(data-toggle='pill', href='#completed2') Completed
+                        .tab-content
+                          // Add Single user
+                          #pending2.tab-pane.fade.in.active
+                            br
+                            br
+                            .col-lg-12
+                              .table-responsive
+                                table.dataTables-example.table.table-striped.table-bordered.table-hover
+                                  thead
+                                    tr
+                                      th Image
+                                      th State
+                                      th District
+                                      th Mandal
+                                      th Village
+                                      th School
+                                      th Complaint
+                                      th Date
+                                      th Time
+                                      th Category
+                                      th SubCategory
+                                  tbody
+                                    if ppending
+                                      each member in ppending
+                                        tr
+                                          td
+                                            img.img-responsive.img-thumbnail(src="uploads/" +member.Image, width='300px', height:'300px')
+                                          td #{member.State}
+                                          td #{member.District}
+                                          td #{member.Mandal}
+                                          td #{member.Village}
+                                          td #{member.School}
+                                          td #{member.Complaint}
+                                          td #{member.Date}
+                                          td #{member.Time}
+                                          td #{member.Category}
+                                          td #{member.Subcategory}
+                          #completed2.tab-pane.fade.align
+                            br
+                            br
+                            .col-lg-12
+                              .table-responsive
+                                table.dataTables-example.table.table-striped.table-bordered.table-hover
+                                  thead
+                                    tr
+                                      th Image
+                                      th State
+                                      th District
+                                      th Mandal
+                                      th Village
+                                      th School
+                                      th Complaint
+                                      th Date
+                                      th Time
+                                      th Category
+                                      th SubCategory
+                                  tbody
+                                    if pcompleted
+                                      each member in pcompleted
+                                        tr
+                                          td
+                                            img.img-responsive.img-thumbnail(src="uploads/" +member.Image, width='300px', height:'300px')
+                                          td #{member.State}
+                                          td #{member.District}
+                                          td #{member.Mandal}
+                                          td #{member.Village}
+                                          td #{member.School}
+                                          td #{member.Complaint}
+                                          td #{member.Date}
+                                          td #{member.Time}
+                                          td #{member.Category}
+                                          td #{member.Subcategory}
+                -}
+                -var role=user.Role;
+                -if(role=="Staff" || role=="S.M.C" || role=="M.E.O" || role=="D.E.O"){
+                  #fb.tab-pane.fade.align
+                    .container(style='background-color: #fff;width: 100%;height:100%;border-radius: 1px')
+                      .row(style='margin-top: 50px;')
+                        .col-md-6.col-md-offset-3.form-container(style='margin-top: 50px; border: 1px solid black; background-color:grey; color:#fff')
+                          h2 Feedback
+                          b
+                            | Please provide your feedback below:
+                          form(method='post', action='feedback')
+                            .row
+                              .col-sm-12.form-group
+                                label How do you rate your overall experience?
+                                p
+                                  label.radio-inline
+                                    input.input#radio_experience(type='radio', name='experience', value='bad')
+                                    |                     Bad
+                                  label.radio-inline
+                                    input.input#radio_experience(type='radio', name='experience', value='average')
+                                    |                     Average
+                                  label.radio-inline
+                                    input.input#radio_experience(type='radio', name='experience', value='good')
+                                    |                     Good
+                            .row
+                              .col-sm-12.form-group
+                                label(for='comments')
+                                  | Comments:
+                                textarea.input#comments.form-control(type='textarea', name='comments', placeholder='Your Comments', maxlength='6000', rows='7', autocomplete='', required='')
+                            .row
+                              .col-sm-6.form-group
+                                label(for='name')
+                                  | Your Name:
+                                input.input#name.form-control(type='text', name='name', autocomplete='', required='')
+                              .col-sm-6.form-group
+                                label(for='email')
+                                  | Email:
+                                input.input#email.form-control(type='email', name='email', autocomplete='', required='')
+                            .row
+                              .col-sm-12.form-group
+                                button.btn(type='submit', style='background-color:#31B0D5; color:white')
+                                  | Submit 
+                                  span.glyphicon.glyphicon-send
+                -}
+                -var role=user.Role;
+                -if(role=="Staff" || role=="S.M.C" || role=="M.E.O" || role=="D.E.O"){
+                  #contact.tab-pane.fade.align
+                    .container(style='background-color: #fff;width: 100%;height:200%;border-radius: 1px')
+                      .innerwrap
+                        div(style='width: 100%; margin-top: 50px;')
+                          iframe(allowfullscreen='', frameborder='0', height='200', scrolling='no', src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3505.0014882999126!2d77.18615301542917!3d28.539674982454475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1dfa0495b8f9%3A0x8dc64d03171c490d!2sIndian+Society+for+Technical+Education!5e0!3m2!1sen!2sin!4v1493977047807', style='border:0', width='100%')
+                      .col2.column2.last
+                        .sec2innercont
+                          .sec2addr
+                            h3.sec2frmtitle 
+                              u 
+                                | Contact us
+                            p.text1 Indian Society for Technical Education
+                            p.text1 Shaheed Jeet Singh Marg, Near Katwaria Sarai
+                            p.text1 Opp. Sanskrit Vidyapeeth
+                            p.text1 New Delhi - 110 016
+                            p.text1 
+                              span.collig Phone :
+                              |  011-26513542, 26963431
+                            p.text1
+                              span.collig Email :
+                              |  istedhq@vsnl.net
+                        .sec2contactform
+                          h3.sec2frmtitle 
+                            u
+                              |  Want to Know More?? 
+                            u
+                              |  Drop Us a Mail
+                          form(action='/contact',method='post')
+                            .form-group
+                              label.col-md-4.control-label.text1 Name :
+                              .col-md-6.inputGroupContainer
+                                .input-group
+                                  span.input-group-addon.input
+                                    i.fa.fa-user(style='font-size:16px; color:#000')
+                                  input.input.form-control(name='name', placeholder='Enter Your Name', type='text')
+                            br
+                            br
+                            br
+                            .form-group
+                              label.col-md-4.control-label.text1 Email :
+                              .col-md-6.inputGroupContainer
+                                .input-group
+                                  span.input-group-addon.input
+                                    i.fa.fa-envelope(style='font-size:16px; color:#000')
+                                  input.input.form-control(name='email', placeholder='Enter Your Email', type='email')
+                            br
+                            br
+                            .form-group
+                              label.col-md-4.control-label.text1 Mobile Number :
+                              .col-md-6.inputGroupContainer
+                                .input-group
+                                  span.input-group-addon.input
+                                    i.fa.fa-phone(style='font-size:16px; color:#000')
+                                  input.input.form-control(name='mobile', placeholder='Enter Your MobileNo', type='text')
+                            br
+                            br
+                            .form-group
+                              label.col-md-4.control-label.text1 Comment :
+                              .col-md-6.inputGroupContainer
+                                .input-group
+                                  span.input-group-addon.input
+                                    i.fa.fa-comments-o(style='font-size:16px; color:#000')
+                                  textarea.input.form-control(name='comment',placeholder='Type your Comment')
+                            br
+                            br
+                            br
+                            br
+                            .form-group
+                              label.col-md-4.control-label
+                              .col-md-4
+                                button.btn(type='submit', style='background-color:#31B0D5; color:white')
+                                  | Submit 
+                                  span.glyphicon.glyphicon-send
+                -}
+
+                  
+    //scripts
+    script(src='javascripts/jquery.js')
+    script(src='javascripts/jquery-ui-1.9.2.custom.min.js')
+    script(src='javascripts/jquery.ui.touch-punch.min.js')
+    script.include(type='text/javascript', src='javascripts/jquery.dcjqaccordion.2.7.js')
+    script(src='javascripts/jquery.scrollTo.min.js')
+    script(src='javascripts/jquery.nicescroll.js', type='text/javascript')
+    // common script for all pages
+    script(src='javascripts/common-scripts.js')
+    script(src='javascripts/jquery.dataTables.min.js')
+    script(src='javascripts/dataTables.buttons.min.js')
+    script(src='javascripts/buttons.flash.min.js')
+    script(src='javascripts/jszip.min.js')
+    script(src='javascripts/pdfmake.min.js')
+    script(src='javascripts/vfs_fonts.js')
+    script(src='javascripts/buttons.html5.min.js')
+    script(src='javascripts/buttons.print.min.js')
+    //script for datatables
+    script.
+      $(document).ready(function () {
+        $('.dataTables-example').dataTable({
+          dom: 'Bfrtip',
+          buttons: [
+              {
+                  extend: 'copy',
+                  title: 'Status'
+              },
+              {
+                  extend: 'csvHtml5',
+                  title: 'Status'
+              },
+              {
+                  extend: 'excelHtml5',
+                  title: 'Status'
+              },
+              {
+                  extend: 'pdfHtml5',
+                  title: 'Status'
+              },
+              {
+                  extend: 'print',
+                     title: 'Status'
+              }
+          ]
+        });
+      });
+    script.
+      $('.status').click(function(err,docs){
+        var id = $(this).val();
+        $.post('/changestatus',{id:id}, function(data,textStatus,jqXHR){
+        alert("Status Changed Successfully....please give us feedback...");
+        location.reload();
+      });
+      });
+    script.
+      $(function(){
+        $(".main").on("change", function(){
+          $(".models.active").removeClass("active");
+          var List = $(".models."+$(this).val());
+          if (List.length){
+            List.addClass("active");
+            $(".models").find(".form-control").removeAttr('name');
+            $(".models").find(".form-control").removeAttr('required');
+            $(List).find(".form-control").attr('name', 'subCategory');
+            $(List).find(".form-control").attr('required', true);
+          }
+        });
+      });
+    script.
+      $(function(){
+        $(".state").on("change", function(){
+          $(".states.active").removeClass("active");
+          var subList = $(".states."+$(this).val());
+          if (subList.length){
+            subList.addClass("active");
+            $(".states").find(".form-control").removeAttr('name');
+            $(".states").find(".form-control").removeAttr('required');
+            $(subList).find(".form-control").attr('name', 'district');
+            $(subList).find(".form-control").attr('required', true);
+          }
+        });
+      });

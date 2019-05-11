@@ -1,0 +1,12 @@
+link(href='stylesheets/adminlogin.css', rel='stylesheet')
+.login
+  .login-triangle
+  h2.login-header Log in
+  form.login-container(method='post', action='/admin')
+    p(style='color:red') #{error}
+    p
+      input(type='text', name='username', placeholder='Username')
+    p
+      input(type='password', name='password', placeholder='Password')
+    p
+      input(type='submit', value='Log in')

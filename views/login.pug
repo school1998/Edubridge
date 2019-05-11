@@ -1,0 +1,138 @@
+doctype html
+html
+  head
+    title  Welcome
+    meta
+    //bootstrap links
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+    //internal links
+    link(href='stylesheets/login.css', rel='stylesheet')
+    style.
+      /* The message box is shown when the user clicks on the password field */
+      #message {
+      display:none;
+      background: #f1f1f1;
+      color: #000;
+      position: relative;
+      padding: 20px;
+      margin-top: 10px;
+      }
+      #message p {
+      padding: 10px 35px;
+      font-size: 18px;
+      }
+      /* Add a green text color and a checkmark when the requirements are right */
+      .valid {
+      color: green;
+      }
+      .valid:before {
+      position: relative;
+      left: -35px;
+      content: "✔";
+      }
+      /* Add a red text color and an "x" when the requirements are wrong */
+      .invalid {
+      color: red;
+      }
+      .invalid:before {
+      position: relative;
+      left: -35px;
+      content: "✖";
+      }
+  body(oncontextmenu='return false;')
+    .login
+      .wrap
+        #toggle-wrap
+          #toggle-terms
+            #cross
+              span
+              span
+        // TERMS
+        .terms
+          h2 Terms of Service
+          p * You shall not disguise the origin of information transmitted through the website.
+          p * You will not place false or misleading information on the Website. 
+          p * You will not use or access any service, information, application or software available via the Website in a manner not expressly permitted by UPS.
+          p * You will not use or access any service, information, application or software available via the Website in a manner not expressly permitted by UPS.
+          p * You will not input or upload to the Website any information which contains viruses, Trojan horses, worms, time bombs or other computer programming routines that are intended to damage, interfere with, intercept or expropriate any system, the Website or Information or that infringes the Intellectual Property (defined below) rights of another.Certain areas of the Website are restricted to customers of UPS.
+          p * You may not use or access the Website or the UPS Systems or Services in any way that, in UPS's judgment,adversely affects the performance or function of the UPS Systems, Services or the Website or interferes with the ability of authorized parties to access the UPS Systems, Services or the Website.
+          p * You may not frame or utilize framing techniques to enclose any portion or aspect of the Content or the Information,without the express written consent of UPS.p * This website is free to access to every government school faculty,M.E.O and D.E.O our service contain basic common infrastructural problems in government schools the faculty need to login through their ID if any problem in there service school need to select that problem and submit it.and M.E.O can refer that problems if not solved in 10 days it was posted to D.E.O and theyy also can refer the problem
+        // RECOVERY
+        .recovery
+          h2 Password Recovery
+          p
+            | Enter 
+            strong email address
+            |  and 
+            strong click Submit
+          p We'll email instructions on how to reset your password.
+          form.recovery-form(action='/forgotpassword', method='post')
+            input#user_recover.input(type='text', name='email', placeholder='Enter Email')
+            input.btn.btn-info(type='submit', value='Submit')
+          p.mssg An email has been sent to you with further instructions.
+        // SLIDER
+        .content
+          // LOGO
+          .logo
+           a(href='#')
+              img(src='images/aicte.png', alt='', style='width:100px; height:100px')
+          // center
+          b.col-md-12.col-sm-12.col-xs-12
+            h3#heading.text(style='color:##C1ED67; font-family: Times New Roman, Times, serif; font-size: 26px; float:right') Improving the Rural Education    
+          // SLIDESHOW
+          #slideshow
+            .one
+              h2
+                span EDUCATION
+              p Education is not preparation for life; education is life itself
+            .two
+              h2
+                span KNOWLEDGE
+              p For beautiful eyes, look for the good in others; for beautiful lips, speak only words of kindness; and for poise, walk with the knowledge that you are never alone.
+            .three
+              h2
+                span BRIDGE
+              p True teachers use themselves as bridges over which they invite their students to cross; then, having facilitated their crossing, joyfully collapse, encouraging them to create bridges of their own.
+            .four
+              h2
+                span ATTITUDE
+              p Each day, I come in with a positive attitude, trying to get better.
+        // LOGIN FORM
+        .user
+          //ACTIONS
+            <div class="actions">
+            <a class="help" href="#signup-tab-content">Sign Up</a><a class="faq" href="#login-tab-content">Login</a>
+            </div>
+          .form-wrap
+            // TABS
+            .tabs
+              h3.login-tab
+                a.log-in.active(href='#login-tab-content')
+                  span
+                    | Login
+            // TABS CONTENT
+            .tabs-content
+              // TABS CONTENT LOGIN
+              #login-tab-content.active
+                h4(style='color:red') #{error}
+                form.login-form(action='/login', method='post')
+                  input.input(type='text', autocomplete='off', name='empid', placeholder='Employee Id', onkeypress='return event.charCode >= 48 && (event.charCode <=57 || event.charCode ==43)' maxlength='5',required)
+                  input.input(type='password', autocomplete='off', name='password', placeholder='Password', required)
+                  input.btn.btn-info(type='submit', value='Login') 
+                  input.checkbox(type='checkbox', name='on' checked='')
+                  label(for='remember_me') Remember me 
+                .help-action
+                  p
+                    i.fa.fa-arrow-left(aria-hidden='true')
+                    a(href='/forgotpassword') Forgot your password?
+                  p
+                    i.fa.fa-arrow-left(aria-hidden='true')
+                    a.agree(href='#') Terms of service
+            #foot
+              p#dev
+                | Developed By 
+                img(src='images/T-Hub_logo.png', width='10%', height='10%') 
+    //scripts
+    script(src='javascripts/login.js')

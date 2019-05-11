@@ -1,0 +1,1142 @@
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='description', content='')
+    meta(name='author', content='Dashboard')
+    meta(name='keyword', content='Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina')
+    title Home
+    // Bootstrap core CSS
+    link(rel='stylesheet', href='//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css')
+    link(href='stylesheets/jquery-ui.css', rel='stylesheet')
+    script(src='javascripts/jquery-1.11.1.min.js')
+    script(src='javascripts/bootstrap.min.js')
+    script(src='javascripts/jquery-ui.js')
+    // external css
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+    // Custom styles for this template
+    link(href='stylesheets/style.css', rel='stylesheet')
+    link(href='stylesheets/style-responsive.css', rel='stylesheet')
+    // Data tables CSS
+    link(rel='stylesheet', type='text/css', href='stylesheets/buttons.dataTables.min.css')
+    link(rel='stylesheet', type='text/css', href='stylesheets/jquery.dataTables.min.css')    
+    link(href='stylesheets/dataTables.bootstrap.css', rel='stylesheet')
+    style.
+      .models{
+        display:none;
+      }
+      .models.active{
+        display:inline-block;
+      }
+    style.
+      .container1 {
+      display: block;
+      position: relative;
+      padding-left: 35px;
+      margin-bottom: 12px;
+      cursor: pointer;
+      font-size: 22px;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      }
+      /* Hide the browser's default radio button */
+      .container1 input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      }
+      /* Create a custom radio button */
+      .checkmark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 25px;
+      width: 25px;
+      background-color: #eee;
+      border-radius: 50%;
+      }
+      /* On mouse-over, add a grey background color */
+      .container:hover input ~ .checkmark {
+      background-color: #ccc;
+      }
+      /* When the radio button is checked, add a blue background */
+      .container input:checked ~ .checkmark {
+      background-color: #2196F3;
+      }
+      /* Create the indicator (the dot/circle - hidden when not checked) */
+      .checkmark:after {
+      content: "";
+      position: absolute;
+      display: none;
+      }
+      /* Show the indicator (dot/circle) when checked */
+      .container input:checked ~ .checkmark:after {
+      display: block;
+      }
+      /* Style the indicator (dot/circle) */
+      .container .checkmark:after {
+      top: 9px;
+      left: 9px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: white;
+      }
+    script.
+      $(function(){
+      var data = [
+        "Agali",
+        "Amadagur",
+        "Amalapuram",
+        "Anantapur",
+        "Atmakur",
+        "Bathalapalle",
+        "Beluguppa",
+        "Bommanahal",
+        "Brahmasamudram",
+        "Bukkapatnam",
+        "Bukkarayasamudram",
+        "Chenne Kothapalle",
+        "Chilamathur",
+        "D.Hirehal",
+        "Dharmavaram",
+        "Gandlapenta",
+        "Garladinne",
+        "Gooty",
+        "Gorantla",
+        "Gudibanda",
+        "Gummagatta",
+        "Guntakal",
+        "Hindupur",
+        "Kadiri",
+        "Kalyandurg",
+        "Kambadur",
+        "Kanaganapalle",
+        "Kanekal",
+        "Kothacheruvu",
+        "Kudair",
+        "Kundurpi",
+        "Lepakshi",
+        "Madakasira",
+        "Mudigubba",
+        "Nallacheruvu",
+        "Nallamada",
+        "Nambulapulakunta",
+        "Narpala",
+        "Obuladevaracheruvu",
+        "Pamidi",
+        "Parigi",
+        "Peddapappur",
+        "Peddavadugur",
+        "Penu Konda",
+        "Putlur",
+        "Puttaparthi",
+        "Ramagiri",
+        "Raptadu",
+        "Rayadurg",
+        "Roddam",
+        "Rolla",
+        "Settur",
+        "Singanamala",
+        "Somandepalle",
+        "Tadimarri",
+        "Tadpatri",
+        "Talupula",
+        "Tanakal",
+        "Uravakonda",
+        "Vajrakarur",
+        "Vidapanakal",
+        "Yadiki",
+        "Yellanur",
+        "Chittoor ",
+        "B. Kothakota",
+        "Baireddipalle",
+        "Bangarupalem",
+        "Buchinaidu khandriga",
+        "Chandragiri",
+        "Chinnagottigallu",
+        "Chittoor",
+        "Chowdepalle",
+        "Gangadhara nellore",
+        "Gangavaram",
+        "Gudipala",
+        "Gudupalle",
+        "Gurramkonda",
+        "Irala",
+        "K.V.B. Puram",
+        "Kalakada",
+        "Kalikiri",
+        "Kambhamvaripalle",
+        "Karvetinagar",
+        "Kuppam",
+        "Kurabalakota",
+        "Madanapalle",
+        "Mulakalacheruvu",
+        "Nagalapuram",
+        "Nagari",
+        "Narayanavanam",
+        "Nimmanapalle",
+        "Nindra",
+        "Pakala",
+        "Palamaner",
+        "Palasamudram",
+        "Peddamandyam",
+        "Peddapanjani",
+        "Peddathippasamudram",
+        "Penumuru",
+        "Pileru",
+        "Pitchatur",
+        "Pulicherla",
+        "Punganur",
+        "Puthalapattu",
+        "Puttur",
+        "Rama Chandrapuram",
+        "Ramakuppam",
+        "Ramasamudram",
+        "Renigunta",
+        "Rompicherla",
+        "Santhipuram",
+        "Satyavedu",
+        "Sodam",
+        "Somala",
+        "Srikalahasti",
+        "Srirangarajapuram",
+        "Thamballapalle",
+        "Thavanampalle",
+        "Thottambedu",
+        "Tirupati (rural)",
+        "Tirupati (urban)",
+        "Vadamalapeta",
+        "Varadaiahpalem",
+        "Vayalpadu",
+        "Vedurukuppam",
+        "Venkatagirikota",
+        "Vijayapuram",
+        "Yadamari",
+        "Yerpedu",
+        "Yerravaripalem",
+        "Kadapa ",
+        "Atlur",
+        "B.Kodur",
+        "Badvel",
+        "Brahmamgarimatham",
+        "Chakrayapet",
+        "Chapadu",
+        "Chennur",
+        "Chinnamandem",
+        "Chinthakomma Dinne",
+        "Chitvel",
+        "Duvvur",
+        "Galiveedu",
+        "Gopavaram",
+        "Jammalamadugu",
+        "Kadapa",
+        "Kalasapadu",
+        "Kamalapuram",
+        "Khajipet",
+        "Koduru",
+        "Kondapuram",
+        "Lakkireddipalle",
+        "Lingala",
+        "Muddanur",
+        "Mydukur",
+        "Mylavaram",
+        "Nandalur",
+        "Obulavaripalle",
+        "Peddamudium",
+        "Penagalur",
+        "Pendlimarri",
+        "Porumamilla",
+        "Proddatur",
+        "Pulivendula",
+        "Pullampeta",
+        "Rajampet",
+        "Rajupalem, Kadapa",
+        "Ramapuram",
+        "Rayachoti",
+        "Sambepalle",
+        "Sidhout",
+        "Simhadripuram",
+        "Sri Avadhuth Kasinayana",
+        "T. Sundupalle",
+        "Thondur",
+        "Vallur",
+        "Veeraballi",
+        "Veerapanayani Palle",
+        "Vempalle",
+        "Vemula",
+        "Vontimitta",
+        "Yerraguntla",
+        "East Godavari  ",
+        "Amalapuram",
+        "Addateegala",
+        "Ainavilli",
+        "Alamuru",
+        "Allavaram",
+        "Ambajipeta",
+        "Anaparti",
+        "Atreyapuram",
+        "Biccavolu",
+        "Chinturu",
+        "Devipatnam",
+        "Gandepalle",
+        "Gangavaram",
+        "Gokavaram",
+        "Gollaprolu",
+        "I.Polavaram",
+        "Jaggampeta",
+        "Kadiam",
+        "Kajuluru",
+        "Kakinada (rural)",
+        "Kakinada (urban)",
+        "Kapileswarapuram",
+        "Karapa",
+        "Katrenikona",
+        "Kirlampudi",
+        "Korukonda",
+        "Kotananduru",
+        "Kothapalle",
+        "Kothapeta",
+        "Kunavaram",
+        "Malikipuram",
+        "Mandapeta",
+        "Maredumilli",
+        "Mummidivaram",
+        "Mamidikuduru",
+        "Nellipaka",
+        "P.Gannavaram",
+        "Pamarru",
+        "Pedapudi",
+        "Peddapuram",
+        "Pithapuram",
+        "Prathipadu",
+        "Rajahmundry (rural)",
+        "Rajahmundry (urban))",
+        "Rajanagaram",
+        "Rajavommangi",
+        "Ramachandrapuram",
+        "Rampachodavaram",
+        "Rangampeta",
+        "Ravulapalem",
+        "Rayavaram",
+        "Razole",
+        "Routhulapudi",
+        "Sakhinetipalli",
+        "Samalkota",
+        "Sankhavaram",
+        "Seethanagaram",
+        "Thallarevu",
+        "Thondangi",
+        "Tuni",
+        "Uppalaguptam",
+        "Vararamachandrapuram",
+        "Y.Ramavaram",
+        "Yeleswaram",
+        "Guntur ",
+        "Amaravati",
+        "Amruthalur",
+        "Achampet",
+        "Bapatla",
+        "Bhattiprolu",
+        "Bellamkonda",
+        "Bollapalle",
+        "Chebrole",
+        "Cherukupalle",
+        "Chilakaluripet",
+        "Duggirala",
+        "Dachepalle",
+        "Durgi",
+        "Edlapadu",
+        "Ipur",
+        "Guntur",
+        "Gurazala",
+        "karlapalem",
+        "Kakumanu",
+        "karempudi",
+        "Kollipara",
+        "Kolluru",
+        "Krosuru",
+        "Machavaram",
+        "Macherla",
+        "Mangalagiri",
+        "Medikonduru",
+        "Muppalla",
+        "Nadendla",
+        "Nagaram",
+        "Nekarikallu",
+        "Narasaraopet",
+        "Nizampatnam",
+        "Nuzendla",
+        "Pedakakani",
+        "Pedakurapadu",
+        "pedanandipadu",
+        "Phirangipuram",
+        "Piduguralla",
+        "Pittalavanipalem",
+        "Ponnur",
+        "Prathipadu",
+        "Rajupalem",
+        "Rentachintala",
+        "Repalle",
+        "Rompicherla",
+        "Sattenapalli",
+        "Savalyapuram",
+        "Tadikonda",
+        "Tenali",
+        "Tadepalle, Guntur",
+        "Thulluru",
+        "Tsunduru",
+        "Vatticherukuru",
+        "Veldurthi",
+        "Vemuru",
+        "Vinukonda",
+        "Krishna  ",
+        "A.Konduru",
+        "Agiripalli",
+        "Avanigadda",
+        "Bantumilli",
+        "Bapulapadu",
+        "Challapalli",
+        "Chandarlapadu",
+        "Chatrai",
+        "G.Konduru",
+        "Gampalagudem",
+        "Gannavaram",
+        "Ghantasala",
+        "Gudivada",
+        "Gudlavalleru",
+        "Guduru",
+        "Ibrahimpatnam",
+        "Jaggayyapeta",
+        "Kaikalur",
+        "Kalidindi",
+        "Kanchikacherlal",
+        "Kankipadu",
+        "Koduru",
+        "Kruthivennu",
+        "Machilipatnam",
+        "Mandavalli",
+        "Mopidevi",
+        "Movva",
+        "Mudinepalli",
+        "Musunuru",
+        "Mylavaram",
+        "Nagayalanka",
+        "Nandigama",
+        "Nandivada",
+        "Nuzvid",
+        "Pamarru",
+        "Pamidimukkala",
+        "Pedana",
+        "Pedaparupudi",
+        "Penamaluru",
+        "Penuganchiprolu",
+        "Reddigudem",
+        "Thotlavalluru",
+        "Tiruvuru",
+        "Unguturu",
+        "Vatsavai",
+        "Veerullapadu",
+        "Vijayawada (Rural)",
+        "Vijayawada East",
+        "Vijayawada Central",
+        "Vijayawada North",
+        "Vijayawada West",
+        "Vissannapeta",
+        "Vuyyuru",
+        "Kurnool  ",
+        "Adoni",
+        "Allagadda",
+        "Alur",
+        "Aspari",
+        "Atmakur",
+        "Banaganapalle",
+        "Bandi Atmakur",
+        "Bethamcherla",
+        "C.Belagal",
+        "Chagalamarri",
+        "Chippagiri",
+        "Devanakonda",
+        "Dhone alias Dronachalam",
+        "Dornipadu",
+        "Gadivemula",
+        "Gonegandla",
+        "Gospadu",
+        "Gudur",
+        "Halaharvi",
+        "Holagunda",
+        "Jupadu Bungalow",
+        "Kallur",
+        "Kodumuru",
+        "Koilkuntla",
+        "Kolimigundla",
+        "Kosigi",
+        "Kothapalle",
+        "Kowthalam",
+        "Krishnagiri",
+        "Kurnool",
+        "Maddikera (East)",
+        "Mahanandi",
+        "Mantralayam",
+        "Miduthur",
+        "Nandavaram",
+        "Nandikotkur",
+        "Nandyal",
+        "Orvakal",
+        "Owk",
+        "Pagidyala",
+        "Pamulapadu",
+        "Panyam",
+        "Pattikonda",
+        "Peapally",
+        "Pedda Kadubur",
+        "Rudravaram",
+        "Sanjamala",
+        "Sirvel",
+        "Srisailam",
+        "Tuggali",
+        "Uyyalawada",
+        "Veldurthi",
+        "Velgodu",
+        "Yemmiganur.",
+        "Nellore  ",
+        "Allur",
+        "Ananthasagaram",
+        "Anumasamudrampeta",
+        "Atmakur",
+        "Balayapalle",
+        "Bhogolu",
+        "Buchireddipalem",
+        "Chejerla",
+        "Chillakur",
+        "Chittamur",
+        "Dagadarthi",
+        "Dakkili",
+        "Doravarisatram",
+        "Duttalur",
+        "Gudur",
+        "Indukurpet",
+        "Jaladanki",
+        "Kaligiri",
+        "Kaluvoya",
+        "Kavali",
+        "Kodavalur",
+        "Kondapuram",
+        "Kota",
+        "Kovur",
+        "Manubolu",
+        "Marripadu",
+        "Muthukur",
+        "Naidupeta",
+        "Nellore",
+        "Ozili",
+        "Pellakur",
+        "Podlakur",
+        "Rapur",
+        "Seetharamapuram",
+        "Sangam",
+        "Sullurpeta",
+        "Sydapuram",
+        "Tada",
+        "Thotapalligudur",
+        "Udayagiri",
+        "Vakadu",
+        "Varikuntapadu",
+        "Venkatachalam",
+        "Vinjamur",
+        "Venkatagiri",
+        "Vidavalur",
+        "Prakasam ",
+        "Addanki",
+        "Ardhaveedu",
+        "Ballikuruva",
+        "Bestavaripeta",
+        "Chinaganjam",
+        "Chandrasekharapuram",
+        "Chimakurthi",
+        "Chirala",
+        "Cumbum",
+        "Darsi",
+        "Donakonda",
+        "Dornala",
+        "Giddaluru",
+        "Gudluru",
+        "Hanumanthunipadu",
+        "Inkollu",
+        "Janakavaram Panguluru",
+        "Kandukur",
+        "Karamchedu",
+        "Komarolu",
+        "Kanigiri",
+        "Konakanamitla",
+        "Kondapi",
+        "Korisapadu",
+        "Kothapatnam",
+        "Kurichedu",
+        "Lingasamudram",
+        "Maddipadu",
+        "Markapur",
+        "Marripudi",
+        "Martur",
+        "Mundlamuru",
+        "Naguluppalapadu",
+        "Ongole",
+        "Pamur",
+        "Parchur",
+        "Pedaaraveedu",
+        "Pedacherlopalle",
+        "Podili",
+        "Ponnaluru",
+        "Pullalacheruvu",
+        "Santhamaguluru",
+        "Santhanuthlapadu",
+        "Singarayakonda",
+        "Racherla",
+        "Tangutur",
+        "Tarlupadu",
+        "Thallur",
+        "Tripuranthakam",
+        "Ulavapadu",
+        "Veligandla",
+        "Vetapalem",
+        "Voletivaripalem",
+        "Yeddanapudi",
+        "Yerragondapalem",
+        "Zarugumilli",
+        "Srikakulam ",
+        "Amadalavalasa",
+        "Bhamini",
+        "Burja",
+        "Etcherla",
+        "Gara",
+        "Ganguvari Sigadam",
+        "Hiramandalam",
+        "Ichchapuram",
+        "Jalumuru",
+        "Kanchili",
+        "Kaviti",
+        "Kotabommali",
+        "Kothuru(Srikakulam)",
+        "Lakshminarasupeta",
+        "Laveru",
+        "Mandasa",
+        "Meliaputti",
+        "Nandigam",
+        "Narasannapeta",
+        "Palakonda",
+        "Palasa",
+        "Pathapatnam",
+        "Polaki",
+        "Ponduru",
+        "Rajam",
+        "Ranastalam",
+        "Regidi Amadalavalasa",
+        "Santhabommali",
+        "Santhakavati",
+        "Saravakota",
+        "Sarubujjili",
+        "Seethampeta",
+        "Sompeta",
+        "Srikakulam",
+        "Tekkali",
+        "Vajrapu Kotturu",
+        "Vangara",
+        "Veeraghattam",
+        "Visakhapatnam  ",
+        "Anakapalli",
+        "Anandapuram",
+        "Ananthagiri",
+        "Araku Valley",
+        "Atchutapuram",
+        "Bheemunipatnam",
+        "Butchayyapeta",
+        "Cheedikada",
+        "Chintapalle",
+        "Chodavaram",
+        "Devarapalle",
+        "Dumbriguda",
+        "G.Madugula",
+        "Gajuwaka (Urban)",
+        "Golugonda",
+        "Gudem Kotha Veedhi",
+        "Hukumpeta",
+        "K.Kotapadu",
+        "Kasimkota",
+        "Kotauratla",
+        "Koyyuru",
+        "Madugula",
+        "Makavarapalem",
+        "Munagapaka",
+        "Munchingiputtu",
+        "Nakkapalli",
+        "Narsipatnam",
+        "Nathavaram",
+        "Paderu",
+        "Padmanabham",
+        "Paravada",
+        "Payakaraopeta",
+        "Pedabayalu",
+        "Pedagantyada",
+        "Pendurthi",
+        "Rambilli",
+        "Ravikamatham",
+        "Rolugunta",
+        "S.Rayavaram",
+        "Sabbavaram",
+        "Visakhapatnam (Rural)Chinna Gadhili",
+        "Seethammadhara",
+        "Gopalapatnam",
+        "Maharanipeta",
+        "Mulagada",
+        "Yelamanchili",
+        "Vizianagaram ",
+        "Bhogapuram",
+        "Badangi",
+        "Bondapalli",
+        "Balijipeta",
+        "Bobbili",
+        "Cheepurupalli",
+        "Dattirajeru",
+        "Denkada",
+        "Gajapathinagaram",
+        "Gantyada",
+        "Garividi",
+        "Gurla",
+        "Garugubilli",
+        "Gummalaxmipuram",
+        "Jami",
+        "Jiyyammavalasa",
+        "Komarada",
+        "Kothavalasa",
+        "Kurupam",
+        "Lakkavarapukota",
+        "Makkuva",
+        "Mentada",
+        "Merakamudidam",
+        "Nellimarla",
+        "Pachipenta",
+        "Parvathipuram",
+        "Pusapatirega",
+        "Ramabhadrapuram",
+        "Salur",
+        "Seethanagaram",
+        "Srungavarapukota",
+        "Therlam",
+        "Vepada",
+        "Vizianagaram",
+        "West Godavari  ",
+        "Attili",
+        "Akiveedu",
+        "Achanta",
+        "Buttayagudem",
+        "Bhimavaram",
+        "Bhimadole",
+        "Chagallu",
+        "Chintalapudi",
+        "Devarapalle",
+        "Denduluru",
+        "Dwarakatirumala",
+        "Eluru",
+        "Gopalapuram",
+        "Ganapavaram",
+        "Iragavaram",
+        "Jeelugumilli",
+        "Jangareddigudem",
+        "Kamavarapukota",
+        "Kovvur",
+        "Kukkunoor",
+        "Kalla",
+        "Koyyalagudem",
+        "Lingapalem",
+        "Mogalthur",
+        "Narasapuram",
+        "Nallajarla",
+        "Nidadavole",
+        "Nidamarru",
+        "Polavaram",
+        "Pedavegi",
+        "Pedapadu",
+        "Pentapadu",
+        "Peravali",
+        "Poduru",
+        "Palakoderu",
+        "Penumantra",
+        "Penugonda",
+        "Palakollu",
+        "Thallapudi",
+        "T.Narasapuram",
+        "Tadepalligudem",
+        "Tanuku",
+        "Undrajavaram",
+        "Unguturu",
+        "Undi",
+        "Veeravasaram",
+        "Yelamanchili",
+        "Velerupadu"
+      ];
+      $( ".man" ).autocomplete({
+      source: data
+      });
+      });
+    style.
+      .header, #sidebar {
+      background: #2C3E50;
+      }
+      .input{
+      border: 1px solid #000;
+      }
+      .text
+      {
+      font-weight:bold;
+      font-size: 18px;
+      color:#F2815E;
+      }
+      .text1
+      {
+      font-weight:bold;
+      font-size: 16px;
+      color:#000;
+      }
+      .header, #sidebar {
+      background: #2C3E50;
+      }
+      span {
+      font-size: 14px;
+      }
+      #wd
+      {
+      margin-left:20px;
+      }
+      .file-uploader {
+      background-color: #dbefe9;
+      border-radius: 3px;
+      color: #242424;
+      }
+      .file-uploader__message-area {
+      font-size: 18px;
+      padding: 1em;
+      text-align: center;
+      color: #377a65;
+      }
+      .file-list {
+      background-color: white;
+      font-size: 16px;
+      }
+      .file-list__name {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      }
+      .file-list li {
+      height: 50px;
+      line-height: 50px;
+      margin-left: .5em;
+      border: none;
+      overflow: hidden;
+      }
+      .removal-button {
+      width: 20%;
+      border: none;
+      background-color: #d65d38;
+      color: white;
+      }
+      .removal-button::before {
+      content: "X";
+      }
+      .removal-button:focus {
+      outline: 0;
+      }
+      .file-chooser {
+      padding: 1em;
+      transition: background-color 1s, height 1s;
+      }
+      .file-chooser p {
+      font-size: 18px;
+      padding-top: 1em;
+      }
+      .file-uploader {
+      max-width: 400px;
+      height: auto;
+      margin: 2em auto;
+      }
+      .file-uploader * {
+      display: block;
+      }
+      .file-uploader input[type=submit] {
+      margin-top: 2em;
+      float: right;
+      }
+      .file-list {
+      margin: 0 auto;
+      max-width: 90%;
+      }
+      .file-list__name {
+      max-width: 70%;
+      float: left;
+      }
+      .removal-button {
+      display: inline-block;
+      height: 100%;
+      float: right;
+      }
+      .file-chooser {
+      width: 90%;
+      margin: .5em auto;
+      }
+
+      .file-chooser__input {
+      margin: 0 auto;
+      }
+      .file-uploader__submit-button {
+      width: 100%;
+      border: none;
+      font-size: 1.5em;
+      padding: 1em;
+      background-color: #72bfa7;
+      color: white;
+      }
+      .file-uploader__submit-button:hover {
+      background-color: #a7d7c8;
+      }
+      .file-list li:after, .file-uploader:after {
+      content: "";
+      display: table;
+      clear: both;
+      }
+      .hidden {
+      display: none;
+      }
+      .hidden input {
+      display: none;
+      }
+      .error {
+      background-color: #d65d38;
+      color: white;
+      }
+      *, *::before, *::after {
+      box-sizing: border-box;
+      }
+      ul, li {
+      margin: 0;
+      padding: 0;
+      }
+      .personal_details {
+      background-color: white;
+      width: 90%;
+      margin-left:5%;
+      }
+      .personal_details h3 {
+      padding: 10px;
+      border-bottom: 2px solid #fd9f1b;
+      }
+      .panel-box .panel-icon {
+      display: table-cell;
+      padding: px;
+      width: 1%;
+      vertical-align: top;
+      border-radius: 0px;
+      text-align: center;
+      /*border-bottom: 1px solid #fcfcfc;
+      border-top: 1px solid #fcfcfc;
+      border-right: 1px solid #fcfcfc;*/
+      }
+      .panel-box .size-h1 {
+      margin-top:7px;
+      }
+      .panel-box .fa {
+      margin-top:9px;
+      }
+      .dashboard-stats .stat-icon {
+      line-height: 65px;
+      }
+      .bg-success {
+      background-color: #A3C86D !important;
+      color: #FFF !important;
+      }
+
+      .success-text {
+      color: #82b33a;
+      }
+      .btn-info{
+      margin-left:20px;
+      }
+      .btn-circle {
+      width: 30px;
+      height: 30px;
+      text-align: center;
+      padding: 6px 0;
+      font-size: 12px;
+      line-height: 1.428571429;
+      border-radius: 15px;
+      }
+      .data{
+        font-weight:bold;
+      }
+      th {
+        background-color: #001f3f;
+        //color: #fff;
+        padding: 0.5em 1em;
+      }
+
+      td {
+          border-top: 1px solid #eee;
+          padding: 0.5em 1em;
+      }
+
+      @media screen and (max-width: 768px) {
+        ul.sidebar-menu{
+          margin-top: 140px;
+        }
+      }
+
+      @media screen and (max-width: 767px) {
+        #heading {
+          font-size: 14px;
+        }
+      }
+  body(oncontextmenu='return false;')
+    section#container
+      // header start
+      header.header.black-bg
+        .sidebar-toggle-box
+          .fa.fa-bars.tooltips(data-placement='right', data-original-title='Toggle Navigation')
+        // logo start
+        a.logo(href='javascript:history.back()')
+          b
+            img.img-responsive(src='images/education.png',style='height:65px;width:200px;margin-top:-13px')
+        center
+        // logo end
+        .navbar-custom-menu
+          //center
+          b.col-md-8.col-sm-7.col-xs-8
+            h3#heading.text-center(style='color:#fff; font-family: Times New Roman, Times, serif;') Improving Rural School Environment
+        .navbar-custom-menu
+          ul.top-nav.navbar-right
+            // Notification Menu
+            // User Menu
+            li.dropdown
+              a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+                i.fa.fa-user.fa-lg.pull-right(style='margin: 10px 10px 0 0;font-size: 2.2em;color: #f2815e;')
+              ul.dropdown-menu.settings-menu(style="margin-top: 35px")
+                li
+                  a(href='/logout')
+                    i.fa.fa-sign-out.fa-lg
+                    |  Logout
+      // header end
+      //
+        **********************************************************************************************************************************************************
+        MAIN SIDEBAR MENU
+        ***********************************************************************************************************************************************************
+      // sidebar start
+      aside
+        #sidebar.nav-collapse
+          // sidebar menu start
+          ul#nav-accordion.sidebar-menu
+            p.centered
+              a(href='#')
+                img.img-circle(src='images/user.png', width='80')
+            h5.centered
+              p Admin
+            li.sub-menu
+              a.active(data-toggle='tab', href='#ap')
+                i.fa.fa-edit
+                span Andhra Pradesh
+            li.sub-menu
+              a(href='/dashboard')
+                i.fa.fa-arrow-left
+                span Back
+          // sidebar menu end
+      // sidebar end
+      //
+        **********************************************************************************************************************************************************
+        MAIN CONTENT
+        ***********************************************************************************************************************************************************
+      // main content start
+      section#main-content
+        section.wrapper.site-min-height
+          h3
+            i
+          .row.mt
+            .col-lg-12
+              .tab-content
+                #ap.tab-pane.fade.in.active
+                  .col-lg-12
+                    .table-responsive
+                      table.dataTables-example.table.table-striped.table-bordered.table-hover
+                        thead
+                          tr
+                            th Image
+                            th State
+                            th District
+                            th Mandal
+                            th Village
+                            th School
+                            th Complaint
+                            th Date
+                            th Time
+                            th Category
+                            th Sub_Category
+                        tbody
+                          if Chhattisgarh
+                            each member in Chhattisgarh
+                              tr
+                                td
+                                  img.img-responsive.img-thumbnail(src="uploads/" +member.Image, width='300px', height:'300px')
+                                td #{member.State}
+                                td #{member.District}
+                                td #{member.Mandal}
+                                td #{member.Village}
+                                td #{member.School}
+                                td #{member.Complaint}
+                                td #{member.Date}
+                                td #{member.Time}
+                                td #{member.Category} 
+                                td #{member.Subcategory}                       
+            
+    //scripts
+    script(src='javascripts/jquery.js')
+    script(src='javascripts/jquery-ui-1.9.2.custom.min.js')
+    script(src='javascripts/jquery.ui.touch-punch.min.js')
+    script.include(type='text/javascript', src='javascripts/jquery.dcjqaccordion.2.7.js')
+    script(src='javascripts/jquery.scrollTo.min.js')
+    script(src='javascripts/jquery.nicescroll.js', type='text/javascript')
+    // common script for all pages
+    script(src='javascripts/common-scripts.js')
+    script(src='javascripts/jquery.dataTables.min.js')
+    script(src='javascripts/dataTables.buttons.min.js')
+    script(src='javascripts/buttons.flash.min.js')
+    script(src='javascripts/jszip.min.js')
+    script(src='javascripts/pdfmake.min.js')
+    script(src='javascripts/vfs_fonts.js')
+    script(src='javascripts/buttons.html5.min.js')
+    script(src='javascripts/buttons.print.min.js')
+    script.
+      $(document).ready(function () {
+        $('.dataTables-example').dataTable({
+          dom: 'Bfrtip',
+          buttons: [
+              {
+                  extend: 'copy',
+                  title: 'Status'
+              },
+              {
+                  extend: 'csvHtml5',
+                  title: 'Status'
+              },
+              {
+                  extend: 'excelHtml5',
+                  title: 'Status'
+              },
+              {
+                  extend: 'pdfHtml5',
+                  title: 'Status'
+              },
+              {
+                  extend: 'print',
+                  title: 'Status'
+              }
+          ]
+        });
+      });

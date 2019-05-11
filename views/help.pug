@@ -1,0 +1,155 @@
+doctype html
+html
+  head
+    title Help
+    link(type='image/png', href='../adityalogo.png', rel='icon')
+  style.
+    body {
+    font-family: sans-serif;
+    background-color: #2c3e50;
+    }
+    img {
+    width: 100%;
+    height: auto;
+    }
+    .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: white;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    }
+    .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-color:black;
+    font-size: 15px;
+    color: black;
+    display: block;
+    transition: 0.3s;
+    }
+    .sidenav a:hover, .offcanvas a:focus  {
+    color: skyblue;
+    }
+    .sidenav .closebtn{
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    }
+    @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+    }
+    h1 {
+    font: 2.25em arial; /* 18px :  16px = 1.2em*/
+    color:black;
+    text-shadow:-1px 2px 2px white;
+    }
+  script(type='text/javascript').
+    jQuery('#SP').click(function () {
+    jQuery(this).toggleClass('active');
+    });
+    jQuery('#HOD').click(function () {
+    jQuery(this).toggleClass('active');
+    });
+    jQuery('#PP').click(function () {
+    jQuery(this).toggleClass('active');
+    });
+    jQuery('#VC').click(function () {
+    jQuery(this).toggleClass('active');
+    });
+    function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    }
+    function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    }
+  body(bgcolor='skyblue')
+    #mySidenav.sidenav
+      a.closebtn(href='javascript:void(0)', onclick='closeNav()') ×
+      a(href='#login') Login
+      a(href='#com') New complaint
+      a(href='#cp') Change Password
+      a(href='#fp') Forget Password
+      a(href='#con') Contact
+      a(href='#meo') M.E.O
+      a(href='#deo') D.E.O
+      //a(href='#staff') Staff Appraisal Procedure
+      //a(href='#hod') HOD Appraisal Procedure
+      //a(href='#principal') Principal Approval Procedure
+      //a(href='#VC') VC Approval Procedure
+      //a(href='#ca') Change Avatar
+    span(style='font-size:30px;color:white;cursor:pointer;position: fixed', onclick='openNav()') ☰ Help
+    -if(role=="staff")
+    #login
+      h1(align='center') Login 
+      img(src='images/ts.png')
+      br
+      br
+      br
+      br
+      img(src='images/login.png')
+      br
+      br
+      br
+      br
+    #com
+      h1(align='center') New Complaints
+      img(src='images/com.png')
+      br
+      br
+      br
+      br
+      img(src='images/status.png')
+      br
+      br
+      br
+      br
+    #cp
+      h1(align='center') Change Password 
+      img(src='images/cp.png')
+      br
+      br
+      br
+      br
+    #fp
+      h1(align='center') Forget Password
+      img(src='images/fp.png')
+      br
+      br
+      br
+      br
+    #con
+      h1(align='center') Contact
+      img(src='images/contact.png')
+      br
+      br
+      br
+      br
+    #meo
+      h1(align='center') M.E.O
+      img(src='images/meo1.png')
+      br
+      br
+      br
+      br
+    #deo
+      h1(align='center') D.E.O
+      img(src='images/deo1.png')
+      br
+      br
+      br
+      br
+      img(src='images/deo2.png')
+      br
+      br
+      br
+      br
+  

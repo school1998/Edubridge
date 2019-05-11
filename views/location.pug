@@ -1,0 +1,35 @@
+.container
+          #app
+            step-navigation(:steps='steps', :currentstep='currentstep')
+            div(v-show='currentstep == 1')
+              .container
+                h4 Address
+                p
+                  | You can click the button below to use your current location as your address
+                #map
+                p#current_position
+                button#sid.btn.center-align
+                  i.material-icons
+                    | my_location
+                  |     Use My Location
+                form#billingAddress
+                  #locationList
+                  br
+                  .input-field
+                    textarea#address.materialize-textarea
+                    label.active(for='address') Address (Area and Street)
+                  .input-field
+                    input#locality(type='text')
+                    label.active Locality
+                  .input-field
+                    input#city(type='text')
+                    label.active City/District/Town
+                  .input-field
+                    input#postal_code(type='text')
+                    label.active Pin Code
+                  .input-field
+                    input#landmark(type='text')
+                    label.active Landmark
+                  .input-field
+                    input#state(type='text')
+                    label.active State

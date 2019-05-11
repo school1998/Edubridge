@@ -1,0 +1,2680 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='description', content='')
+    meta(name='author', content='Dashboard')
+    meta(name='keyword', content='Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina')
+    title Dashboard
+    // Bootstrap core CSS
+    link(rel='stylesheet', href='//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css')
+    link(href='stylesheets/jquery-ui.css', rel='stylesheet')
+    script(src='javascripts/jquery-1.11.1.min.js')
+    script(src='javascripts/bootstrap.min.js')
+    script(src='javascripts/jquery-ui.js')
+    // external css
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+    // Custom styles for this template
+    link(href='stylesheets/style.css', rel='stylesheet')
+    link(href='stylesheets/style-responsive.css', rel='stylesheet')
+    // Data tables CSS
+    link(rel='stylesheet', type='text/css', href='stylesheets/buttons.dataTables.min.css')
+    link(rel='stylesheet', type='text/css', href='stylesheets/jquery.dataTables.min.css')    
+    link(href='stylesheets/dataTables.bootstrap.css', rel='stylesheet')
+    script.
+      $(function(){
+      var data = [
+        "Agali",
+        "Amadagur",
+        "Amarapuram",
+        "Anantapur",
+        "Atmakur",
+        "Bathalapalle",
+        "Beluguppa",
+        "Bommanahal",
+        "Brahmasamudram",
+        "Bukkapatnam",
+        "Bukkarayasamudram",
+        "Chenne Kothapalle",
+        "Chilamathur",
+        "D.Hirehal",
+        "Dharmavaram",
+        "Gandlapenta",
+        "Garladinne",
+        "Gooty",
+        "Gorantla",
+        "Gudibanda",
+        "Gummagatta",
+        "Guntakal",
+        "Hindupur",
+        "Kadiri",
+        "Kalyandurg",
+        "Kambadur",
+        "Kanaganapalle",
+        "Kanekal",
+        "Kothacheruvu",
+        "Kudair",
+        "Kundurpi",
+        "Lepakshi",
+        "Madakasira",
+        "Mudigubba",
+        "Nallacheruvu",
+        "Nallamada",
+        "Nambulapulakunta",
+        "Narpala",
+        "Obuladevaracheruvu",
+        "Pamidi",
+        "Parigi",
+        "Peddapappur",
+        "Peddavadugur",
+        "Penu Konda",
+        "Putlur",
+        "Puttaparthi",
+        "Ramagiri",
+        "Raptadu",
+        "Rayadurg",
+        "Roddam",
+        "Rolla",
+        "Settur",
+        "Singanamala",
+        "Somandepalle",
+        "Tadimarri",
+        "Tadpatri",
+        "Talupula",
+        "Tanakal",
+        "Uravakonda",
+        "Vajrakarur",
+        "Vidapanakal",
+        "Yadiki",
+        "Yellanur",
+        "Chittoor ",
+        "B. Kothakota",
+        "Baireddipalle",
+        "Bangarupalem",
+        "Buchinaidu khandriga",
+        "Chandragiri",
+        "Chinnagottigallu",
+        "Chittoor",
+        "Chowdepalle",
+        "Gangadhara nellore",
+        "Gangavaram",
+        "Gudipala",
+        "Gudupalle",
+        "Gurramkonda",
+        "Irala",
+        "K.V.B. Puram",
+        "Kalakada",
+        "Kalikiri",
+        "Kambhamvaripalle",
+        "Karvetinagar",
+        "Kuppam",
+        "Kurabalakota",
+        "Madanapalle",
+        "Mulakalacheruvu",
+        "Nagalapuram",
+        "Nagari",
+        "Narayanavanam",
+        "Nimmanapalle",
+        "Nindra",
+        "Pakala",
+        "Palamaner",
+        "Palasamudram",
+        "Peddamandyam",
+        "Peddapanjani",
+        "Peddathippasamudram",
+        "Penumuru",
+        "Pileru",
+        "Pitchatur",
+        "Pulicherla",
+        "Punganur",
+        "Puthalapattu",
+        "Puttur",
+        "Rama Chandrapuram",
+        "Ramakuppam",
+        "Ramasamudram",
+        "Renigunta",
+        "Rompicherla",
+        "Santhipuram",
+        "Satyavedu",
+        "Sodam",
+        "Somala",
+        "Srikalahasti",
+        "Srirangarajapuram",
+        "Thamballapalle",
+        "Thavanampalle",
+        "Thottambedu",
+        "Tirupati (rural)",
+        "Tirupati (urban)",
+        "Vadamalapeta",
+        "Varadaiahpalem",
+        "Vayalpadu",
+        "Vedurukuppam",
+        "Venkatagirikota",
+        "Vijayapuram",
+        "Yadamari",
+        "Yerpedu",
+        "Yerravaripalem",
+        "Kadapa ",
+        "Atlur",
+        "B.Kodur",
+        "Badvel",
+        "Brahmamgarimatham",
+        "Chakrayapet",
+        "Chapadu",
+        "Chennur",
+        "Chinnamandem",
+        "Chinthakomma Dinne",
+        "Chitvel",
+        "Duvvur",
+        "Galiveedu",
+        "Gopavaram",
+        "Jammalamadugu",
+        "Kadapa",
+        "Kalasapadu",
+        "Kamalapuram",
+        "Khajipet",
+        "Koduru",
+        "Kondapuram",
+        "Lakkireddipalle",
+        "Lingala",
+        "Muddanur",
+        "Mydukur",
+        "Mylavaram",
+        "Nandalur",
+        "Obulavaripalle",
+        "Peddamudium",
+        "Penagalur",
+        "Pendlimarri",
+        "Porumamilla",
+        "Proddatur",
+        "Pulivendula",
+        "Pullampeta",
+        "Rajampet",
+        "Rajupalem, Kadapa",
+        "Ramapuram",
+        "Rayachoti",
+        "Sambepalle",
+        "Sidhout",
+        "Simhadripuram",
+        "Sri Avadhuth Kasinayana",
+        "T. Sundupalle",
+        "Thondur",
+        "Vallur",
+        "Veeraballi",
+        "Veerapanayani Palle",
+        "Vempalle",
+        "Vemula",
+        "Vontimitta",
+        "Yerraguntla",
+        "East Godavari  ",
+        "Amalapuram",
+        "Addateegala",
+        "Ainavilli",
+        "Alamuru",
+        "Allavaram",
+        "Ambajipeta",
+        "Anaparti",
+        "Atreyapuram",
+        "Biccavolu",
+        "Chinturu",
+        "Devipatnam",
+        "Gandepalle",
+        "Gangavaram",
+        "Gokavaram",
+        "Gollaprolu",
+        "I.Polavaram",
+        "Jaggampeta",
+        "Kadiam",
+        "Kajuluru",
+        "Kakinada (rural)",
+        "Kakinada (urban)",
+        "Kapileswarapuram",
+        "Karapa",
+        "Katrenikona",
+        "Kirlampudi",
+        "Korukonda",
+        "Kotananduru",
+        "Kothapalle",
+        "Kothapeta",
+        "Kunavaram",
+        "Malikipuram",
+        "Mandapeta",
+        "Maredumilli",
+        "Mummidivaram",
+        "Mamidikuduru",
+        "Nellipaka",
+        "P.Gannavaram",
+        "Pamarru",
+        "Pedapudi",
+        "Peddapuram",
+        "Pithapuram",
+        "Prathipadu",
+        "Rajahmundry (rural)",
+        "Rajahmundry (urban))",
+        "Rajanagaram",
+        "Rajavommangi",
+        "Ramachandrapuram",
+        "Rampachodavaram",
+        "Rangampeta",
+        "Ravulapalem",
+        "Rayavaram",
+        "Razole",
+        "Routhulapudi",
+        "Sakhinetipalli",
+        "Samalkota",
+        "Sankhavaram",
+        "Seethanagaram",
+        "Thallarevu",
+        "Thondangi",
+        "Tuni",
+        "Uppalaguptam",
+        "Vararamachandrapuram",
+        "Y.Ramavaram",
+        "Yeleswaram",
+        "Guntur ",
+        "Amaravati",
+        "Amruthalur",
+        "Achampet",
+        "Bapatla",
+        "Bhattiprolu",
+        "Bellamkonda",
+        "Bollapalle",
+        "Chebrole",
+        "Cherukupalle",
+        "Chilakaluripet",
+        "Duggirala",
+        "Dachepalle",
+        "Durgi",
+        "Edlapadu",
+        "Ipur",
+        "Guntur",
+        "Gurazala",
+        "karlapalem",
+        "Kakumanu",
+        "karempudi",
+        "Kollipara",
+        "Kolluru",
+        "Krosuru",
+        "Machavaram",
+        "Macherla",
+        "Mangalagiri",
+        "Medikonduru",
+        "Muppalla",
+        "Nadendla",
+        "Nagaram",
+        "Nekarikallu",
+        "Narasaraopet",
+        "Nizampatnam",
+        "Nuzendla",
+        "Pedakakani",
+        "Pedakurapadu",
+        "pedanandipadu",
+        "Phirangipuram",
+        "Piduguralla",
+        "Pittalavanipalem",
+        "Ponnur",
+        "Prathipadu",
+        "Rajupalem",
+        "Rentachintala",
+        "Repalle",
+        "Rompicherla",
+        "Sattenapalli",
+        "Savalyapuram",
+        "Tadikonda",
+        "Tenali",
+        "Tadepalle, Guntur",
+        "Thulluru",
+        "Tsunduru",
+        "Vatticherukuru",
+        "Veldurthi",
+        "Vemuru",
+        "Vinukonda",
+        "Krishna  ",
+        "A.Konduru",
+        "Agiripalli",
+        "Avanigadda",
+        "Bantumilli",
+        "Bapulapadu",
+        "Challapalli",
+        "Chandarlapadu",
+        "Chatrai",
+        "G.Konduru",
+        "Gampalagudem",
+        "Gannavaram",
+        "Ghantasala",
+        "Gudivada",
+        "Gudlavalleru",
+        "Guduru",
+        "Ibrahimpatnam",
+        "Jaggayyapeta",
+        "Kaikalur",
+        "Kalidindi",
+        "Kanchikacherlal",
+        "Kankipadu",
+        "Koduru",
+        "Kruthivennu",
+        "Machilipatnam",
+        "Mandavalli",
+        "Mopidevi",
+        "Movva",
+        "Mudinepalli",
+        "Musunuru",
+        "Mylavaram",
+        "Nagayalanka",
+        "Nandigama",
+        "Nandivada",
+        "Nuzvid",
+        "Pamarru",
+        "Pamidimukkala",
+        "Pedana",
+        "Pedaparupudi",
+        "Penamaluru",
+        "Penuganchiprolu",
+        "Reddigudem",
+        "Thotlavalluru",
+        "Tiruvuru",
+        "Unguturu",
+        "Vatsavai",
+        "Veerullapadu",
+        "Vijayawada (Rural)",
+        "Vijayawada East",
+        "Vijayawada Central",
+        "Vijayawada North",
+        "Vijayawada West",
+        "Vissannapeta",
+        "Vuyyuru",
+        "Kurnool  ",
+        "Adoni",
+        "Allagadda",
+        "Alur",
+        "Aspari",
+        "Atmakur",
+        "Banaganapalle",
+        "Bandi Atmakur",
+        "Bethamcherla",
+        "C.Belagal",
+        "Chagalamarri",
+        "Chippagiri",
+        "Devanakonda",
+        "Dhone alias Dronachalam",
+        "Dornipadu",
+        "Gadivemula",
+        "Gonegandla",
+        "Gospadu",
+        "Gudur",
+        "Halaharvi",
+        "Holagunda",
+        "Jupadu Bungalow",
+        "Kallur",
+        "Kodumuru",
+        "Koilkuntla",
+        "Kolimigundla",
+        "Kosigi",
+        "Kothapalle",
+        "Kowthalam",
+        "Krishnagiri",
+        "Kurnool",
+        "Maddikera (East)",
+        "Mahanandi",
+        "Mantralayam",
+        "Miduthur",
+        "Nandavaram",
+        "Nandikotkur",
+        "Nandyal",
+        "Orvakal",
+        "Owk",
+        "Pagidyala",
+        "Pamulapadu",
+        "Panyam",
+        "Pattikonda",
+        "Peapally",
+        "Pedda Kadubur",
+        "Rudravaram",
+        "Sanjamala",
+        "Sirvel",
+        "Srisailam",
+        "Tuggali",
+        "Uyyalawada",
+        "Veldurthi",
+        "Velgodu",
+        "Yemmiganur.",
+        "Nellore  ",
+        "Allur",
+        "Ananthasagaram",
+        "Anumasamudrampeta",
+        "Atmakur",
+        "Balayapalle",
+        "Bhogolu",
+        "Buchireddipalem",
+        "Chejerla",
+        "Chillakur",
+        "Chittamur",
+        "Dagadarthi",
+        "Dakkili",
+        "Doravarisatram",
+        "Duttalur",
+        "Gudur",
+        "Indukurpet",
+        "Jaladanki",
+        "Kaligiri",
+        "Kaluvoya",
+        "Kavali",
+        "Kodavalur",
+        "Kondapuram",
+        "Kota",
+        "Kovur",
+        "Manubolu",
+        "Marripadu",
+        "Muthukur",
+        "Naidupeta",
+        "Nellore",
+        "Ozili",
+        "Pellakur",
+        "Podlakur",
+        "Rapur",
+        "Seetharamapuram",
+        "Sangam",
+        "Sullurpeta",
+        "Sydapuram",
+        "Tada",
+        "Thotapalligudur",
+        "Udayagiri",
+        "Vakadu",
+        "Varikuntapadu",
+        "Venkatachalam",
+        "Vinjamur",
+        "Venkatagiri",
+        "Vidavalur",
+        "Prakasam ",
+        "Addanki",
+        "Ardhaveedu",
+        "Ballikuruva",
+        "Bestavaripeta",
+        "Chinaganjam",
+        "Chandrasekharapuram",
+        "Chimakurthi",
+        "Chirala",
+        "Cumbum",
+        "Darsi",
+        "Donakonda",
+        "Dornala",
+        "Giddaluru",
+        "Gudluru",
+        "Hanumanthunipadu",
+        "Inkollu",
+        "Janakavaram Panguluru",
+        "Kandukur",
+        "Karamchedu",
+        "Komarolu",
+        "Kanigiri",
+        "Konakanamitla",
+        "Kondapi",
+        "Korisapadu",
+        "Kothapatnam",
+        "Kurichedu",
+        "Lingasamudram",
+        "Maddipadu",
+        "Markapur",
+        "Marripudi",
+        "Martur",
+        "Mundlamuru",
+        "Naguluppalapadu",
+        "Ongole",
+        "Pamur",
+        "Parchur",
+        "Pedaaraveedu",
+        "Pedacherlopalle",
+        "Podili",
+        "Ponnaluru",
+        "Pullalacheruvu",
+        "Santhamaguluru",
+        "Santhanuthlapadu",
+        "Singarayakonda",
+        "Racherla",
+        "Tangutur",
+        "Tarlupadu",
+        "Thallur",
+        "Tripuranthakam",
+        "Ulavapadu",
+        "Veligandla",
+        "Vetapalem",
+        "Voletivaripalem",
+        "Yeddanapudi",
+        "Yerragondapalem",
+        "Zarugumilli",
+        "Srikakulam ",
+        "Amadalavalasa",
+        "Bhamini",
+        "Burja",
+        "Etcherla",
+        "Gara",
+        "Ganguvari Sigadam",
+        "Hiramandalam",
+        "Ichchapuram",
+        "Jalumuru",
+        "Kanchili",
+        "Kaviti",
+        "Kotabommali",
+        "Kothuru(Srikakulam)",
+        "Lakshminarasupeta",
+        "Laveru",
+        "Mandasa",
+        "Meliaputti",
+        "Nandigam",
+        "Narasannapeta",
+        "Palakonda",
+        "Palasa",
+        "Pathapatnam",
+        "Polaki",
+        "Ponduru",
+        "Rajam",
+        "Ranastalam",
+        "Regidi Amadalavalasa",
+        "Santhabommali",
+        "Santhakavati",
+        "Saravakota",
+        "Sarubujjili",
+        "Seethampeta",
+        "Sompeta",
+        "Srikakulam",
+        "Tekkali",
+        "Vajrapu Kotturu",
+        "Vangara",
+        "Veeraghattam",
+        "Visakhapatnam  ",
+        "Anakapalli",
+        "Anandapuram",
+        "Ananthagiri",
+        "Araku Valley",
+        "Atchutapuram",
+        "Bheemunipatnam",
+        "Butchayyapeta",
+        "Cheedikada",
+        "Chintapalle",
+        "Chodavaram",
+        "Devarapalle",
+        "Dumbriguda",
+        "G.Madugula",
+        "Gajuwaka (Urban)",
+        "Golugonda",
+        "Gudem Kotha Veedhi",
+        "Hukumpeta",
+        "K.Kotapadu",
+        "Kasimkota",
+        "Kotauratla",
+        "Koyyuru",
+        "Madugula",
+        "Makavarapalem",
+        "Munagapaka",
+        "Munchingiputtu",
+        "Nakkapalli",
+        "Narsipatnam",
+        "Nathavaram",
+        "Paderu",
+        "Padmanabham",
+        "Paravada",
+        "Payakaraopeta",
+        "Pedabayalu",
+        "Pedagantyada",
+        "Pendurthi",
+        "Rambilli",
+        "Ravikamatham",
+        "Rolugunta",
+        "S.Rayavaram",
+        "Sabbavaram",
+        "Visakhapatnam (Rural)Chinna Gadhili",
+        "Seethammadhara",
+        "Gopalapatnam",
+        "Maharanipeta",
+        "Mulagada",
+        "Yelamanchili",
+        "Vizianagaram ",
+        "Bhogapuram",
+        "Badangi",
+        "Bondapalli",
+        "Balijipeta",
+        "Bobbili",
+        "Cheepurupalli",
+        "Dattirajeru",
+        "Denkada",
+        "Gajapathinagaram",
+        "Gantyada",
+        "Garividi",
+        "Gurla",
+        "Garugubilli",
+        "Gummalaxmipuram",
+        "Jami",
+        "Jiyyammavalasa",
+        "Komarada",
+        "Kothavalasa",
+        "Kurupam",
+        "Lakkavarapukota",
+        "Makkuva",
+        "Mentada",
+        "Merakamudidam",
+        "Nellimarla",
+        "Pachipenta",
+        "Parvathipuram",
+        "Pusapatirega",
+        "Ramabhadrapuram",
+        "Salur",
+        "Seethanagaram",
+        "Srungavarapukota",
+        "Therlam",
+        "Vepada",
+        "Vizianagaram",
+        "West Godavari  ",
+        "Attili",
+        "Akiveedu",
+        "Achanta",
+        "Buttayagudem",
+        "Bhimavaram",
+        "Bhimadole",
+        "Chagallu",
+        "Chintalapudi",
+        "Devarapalle",
+        "Denduluru",
+        "Dwarakatirumala",
+        "Eluru",
+        "Gopalapuram",
+        "Ganapavaram",
+        "Iragavaram",
+        "Jeelugumilli",
+        "Jangareddigudem",
+        "Kamavarapukota",
+        "Kovvur",
+        "Kukkunoor",
+        "Kalla",
+        "Koyyalagudem",
+        "Lingapalem",
+        "Mogalthur",
+        "Narasapuram",
+        "Nallajarla",
+        "Nidadavole",
+        "Nidamarru",
+        "Polavaram",
+        "Pedavegi",
+        "Pedapadu",
+        "Pentapadu",
+        "Peravali",
+        "Poduru",
+        "Palakoderu",
+        "Penumantra",
+        "Penugonda",
+        "Palakollu",
+        "Thallapudi",
+        "T.Narasapuram",
+        "Tadepalligudem",
+        "Tanuku",
+        "Undrajavaram",
+        "Unguturu",
+        "Undi",
+        "Veeravasaram",
+        "Yelamanchili",
+        "Velerupadu"
+      ];
+      $('#man').autocomplete({
+      source: data
+      });
+      });
+    style.
+      .statesTable select{
+        width: 180px;
+      }
+      .statesTable1 input{
+        width: 175px;
+        float:right;
+      }
+      .states{
+        width: 100%;
+        display: none;
+      }
+      .states.active{
+        display: inline-block;
+      }
+    style.
+      body {
+      background-color:#2C3E50;
+      }
+      header {
+      background-color: #2C3E50;
+      border-bottom: 1px solid #fd9f1b;
+      }
+      .navbar h2 {
+      color:#fd9f1b;
+      }
+      .user {
+      font-family:;
+      }
+      .row a {
+      text-decoration: none;
+      color: black;
+      }
+      .panel-box {
+      display: table;
+      table-layout: fixed;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      border: medium none;
+      }
+      .panel-box .panel-icon {
+      display: table-cell;
+      padding-top: 30px;
+      width: 1%;
+      vertical-align: top;
+      border-radius: 0px;
+      text-align: center;
+      /*border-bottom: 1px solid #fcfcfc;
+      border-top: 1px solid #fcfcfc;
+      border-right: 1px solid #fcfcfc;*/
+      }
+      .dashboard-stats .stat-icon {
+      line-height: 65px;
+      }
+      .bg-success {
+      background-color: #A3C86D !important;
+      color: #FFF !important;
+      }
+      .success-text {
+      color: #82b33a;
+      }
+      .bg-danger {
+      background-color: #FF7857 !important;
+      color: #FFF !important;
+      }
+      .danger-text {
+      color: #d15b3d;
+      }
+      .bg-lovender {
+      background-color: #8075C4 !important;
+      color: #FFF !important;
+      }
+      .lovender-text {
+      color: #6a5fb1;
+      }
+      .bg-info {
+      background-color: #7ACBEE !important;
+      color: #FFF !important;
+      }
+      .info-text {
+      color: #3ca0cb;
+      }
+      .size-h1 {
+      font-size: 18px;
+      }
+      .panel-icon p.text {
+      font-weight: bold;
+      font-size: 14px;
+      text-align: center;
+      }
+      .panel-icon i {
+      text-align: center;
+      }
+      .panel-icon i {
+      text-align: center;
+      }
+      .text-large {
+      font-size: 50px;
+      }
+      .text-large {
+      font-size: 50px;
+      }
+      .img-circle {      
+      margin-top:0px;
+      border:6px solid lightgrey;
+      }
+      .glyphicon-off {
+      font-size: 20px;
+      }
+      .col-lg-12 {
+      color:white;
+      }
+      .header .top-menu ul li a {
+      background-color: #2C3E50;
+      border: 1px solid #2C3E50;
+      }
+      .header .top-menu ul li {
+      border-color: 1px solid #2C3E50;
+      }
+
+      .show-overlay, .show-modal{
+        display:block !important;
+        transition: all 0.5s ease 0s;
+      }
+      .form{
+      display:none;
+      }
+
+
+
+      /************ Button ************/
+
+      .button-container{
+        position:relative;
+        margin:0 auto;
+        width:200px;
+        height:150px;
+        top:150px;
+        z-index:1;
+      }
+
+      .blue-button{
+        position:relative;
+        background-color: #FF7857;
+        color:#fff;
+        font-family: "Proxima Nova";
+        font-size:16px;
+        padding:10px;
+        width:5%;
+        cursor:pointer;
+        border-radius: 2px 2px 2px 2px;
+        -moz-border-radius: 2px 2px 2px 2px;
+        -webkit-border-radius: 2px 2px 2px 2px;
+        border: 0px solid #000000;  
+        
+      }
+      
+
+      /************ Modal ************/
+
+      .modal-contain{
+        position:absolute;
+        margin:0 auto;
+        height: auto;
+        width:auto;
+        border-radius: 4px;
+        -moz-border-radius: 4px;
+        -webkit-border-radius: 4px;
+        border: 0px solid #000000;
+        background-color: #fff;
+        border-left:15px solid #7ACBEE;
+        display:none;
+        z-index:101;
+        left:40%;
+        top:15%;
+        
+        -webkit-box-shadow: -1px 4px 5px 4px rgba(0,0,0,0.51);
+        -moz-box-shadow: -1px 4px 5px 4px rgba(0,0,0,0.51);
+        box-shadow: -1px 4px 5px 4px rgba(0,0,0,0.51);
+        
+      }
+
+
+      #modal h4{
+        position:relative;
+        padding:35px 25px 5px 25px;
+        font-size:20px;
+        font-weight:100;
+        margin:0;
+        color:#000;
+        width:90%;
+        height: auto;
+        
+      }
+
+
+      #modal p{
+        position:relative;
+        font-size:14px;
+        padding:25px;
+        margin:0;
+        line-height:24px;
+        width:89%;
+        border-top:solid 1px #D1D1D1;
+        height: auto;
+        
+      }
+      .p{
+        position:relative;
+        font-size:14px;
+        padding:25px;
+        margin:0;
+        line-height:24px;
+        width:89%;
+        height: auto;
+      }
+
+      .wrapper12 {
+        width: 100%;
+        height: 100%;
+      }
+
+      .modal-contain button.blue-button{
+        width:100%;
+        margin: 0 0 30px 25px;
+        
+      }
+
+      /************ BounceIn Animation ************/
+
+      .bounceIn-animated {
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+      }
+      .bounceIn-animated.infinite {
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+      }
+      .bounceIn-animated.hinge {
+        -webkit-animation-duration: 2s;
+        animation-duration: 2s;
+      }
+      /*the animation definition*/
+      @-webkit-keyframes bounceInDown {
+       0%, 100%, 60%, 75%, 90% {
+       -webkit-transition-timing-function: cubic-bezier(0.215, .61, .355, 1);
+       transition-timing-function: cubic-bezier(0.215, .61, .355, 1)
+      }
+       0% {
+       opacity: 0;
+       -webkit-transform: translate3d(0, -100px, 0);
+       transform: translate3d(0, -100px, 0)
+      }
+       60% {
+       opacity: 1;
+       -webkit-transform: translate3d(0, 10px, 0);
+       transform: translate3d(0, 10px, 0)
+      }
+       75% {
+       -webkit-transform: translate3d(0, -10px, 0);
+       transform: translate3d(0, -10px, 0)
+      }
+       90% {
+       -webkit-transform: translate3d(0, 5px, 0);
+       transform: translate3d(0, 5px, 0)
+      }
+       100% {
+       -webkit-transform: none;
+       transform: none
+      }
+      }
+      @keyframes bounceInDown {
+       0%, 100%, 60%, 75%, 90% {
+       -webkit-transition-timing-function: cubic-bezier(0.215, .61, .355, 1);
+       transition-timing-function: cubic-bezier(0.215, .61, .355, 1)
+      }
+       0% {
+       opacity: 0;
+       -webkit-transform: translate3d(0, -100px, 0);
+       -ms-transform: translate3d(0, -100px, 0);
+       transform: translate3d(0, -100px, 0)
+      }
+       60% {
+       opacity: 1;
+       -webkit-transform: translate3d(0, 10px, 0);
+       -ms-transform: translate3d(0, 10px, 0);
+       transform: translate3d(0, 10px, 0)
+      }
+       75% {
+       -webkit-transform: translate3d(0, -10px, 0);
+       -ms-transform: translate3d(0, -10px, 0);
+       transform: translate3d(0, -10px, 0)
+      }
+       90% {
+       -webkit-transform: translate3d(0, 5px, 0);
+       -ms-transform: translate3d(0, 5px, 0);
+       transform: translate3d(0, 5px, 0)
+      }
+       100% {
+       -webkit-transform: none;
+       -ms-transform: none;
+       transform: none
+      }
+      }
+      .bounceInDown {
+        -webkit-animation-name: bounceInDown;
+        animation-name: bounceInDown
+      }
+
+
+      /************ BounceOut Animation ************/
+
+      .bounceOutUp-animated {
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+      }
+
+      /*the animation definition*/
+      @-webkit-keyframes bounceOutUp {
+       20% {
+       -webkit-transform: translate3d(0, -10px, 0);
+       transform: translate3d(0, -10px, 0)
+      }
+       40%,  45% {
+       opacity: 1;
+       -webkit-transform: translate3d(0, 5px, 0);
+       transform: translate3d(0, 5px, 0)
+      }
+       100% {
+       opacity: 0;
+       -webkit-transform: translate3d(0, -100px, 0);
+       transform: translate3d(0, -100px, 0)
+      }
+      }
+      @keyframes bounceOutUp {
+       20% {
+       -webkit-transform: translate3d(0, -10px, 0);
+       -ms-transform: translate3d(0, -10px, 0);
+       transform: translate3d(0, -10px, 0)
+      }
+       40%,  45% {
+       opacity: 1;
+       -webkit-transform: translate3d(0, 5px, 0);
+       -ms-transform: translate3d(0, 5px, 0);
+       transform: translate3d(0, 5px, 0)
+      }
+       100% {
+       opacity: 0;
+       -webkit-transform: translate3d(0, -100px, 0);
+       -ms-transform: translate3d(0, -100px, 0);
+       transform: translate3d(0, -100px, 0)
+      }
+      }
+      .bounceOutUp {
+        -webkit-animation-name: bounceOutUp;
+        animation-name: bounceOutUp
+      }
+      .modal-overlay{
+        position:fixed;
+        background-color: #000;
+        opacity: 0.8;
+        display:none;
+        height:100%;
+        width: 100%;
+        z-index:100;
+        margin:0 auto;
+        padding:0;
+        top:0%;
+        
+      }
+      p a:hover{
+        text-decoration:none;
+      }
+      @media only screen and (min-width: 320px) and (max-width:600px) {
+      .modal-contain{
+        left:0.5%;
+        }
+      }
+      @media only screen and (min-width: 990px) and (max-width:1700px) {
+      .col-md-2{
+      left:8% !important;
+      width:40% !important;
+      }
+      }
+      td{
+      min-width:100px;
+      }
+  body(oncontextmenu='return false;')
+    section#container
+      // header start
+      header.header.black-bg
+        .sidebar-toggle-box
+          .fa.fa-bars.tooltips(data-placement='right', data-original-title='Toggle Navigation')
+        // logo start
+        a.logo(href='javascript:history.back()')
+          b
+            img.img-responsive(src='images/education.png',style='height:65px;width:200px;margin-top:-13px')
+        center
+        // logo end
+        .navbar-custom-menu
+          //center
+          b.col-md-8.col-sm-7.col-xs-8
+            h3#heading.text-center(style='color:#fff; font-family: Times New Roman, Times, serif;') Improving the Rural Education
+        .navbar-custom-menu
+          ul.top-nav.navbar-right
+            // Notification Menu
+            // User Menu
+            li.dropdown
+              a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+                i.fa.fa-user.fa-lg.pull-right(style='margin: 10px 10px 0 0;font-size: 2.2em;color: #f2815e;')
+              ul.dropdown-menu.settings-menu(style="margin-top: 35px")
+                li
+                  a(href='/adminlogout')
+                    i.fa.fa-sign-out.fa-lg
+                    |  Logout
+      // header end
+      //
+        **********************************************************************************************************************************************************
+        MAIN SIDEBAR MENU
+        ***********************************************************************************************************************************************************
+      // sidebar start
+      aside
+        #sidebar.nav-collapse
+          // sidebar menu start
+          ul#nav-accordion.sidebar-menu
+            p.centered
+              a(href='#')
+                img.img-circle(src='images/user.png', width='80')
+            h5.centered
+              p Admin
+            li.sub-menu.in.active
+              a.active(data-toggle='tab', href='#state')
+                i.fa.fa-dashboard
+                span Dashboard
+            li.sub-menu
+              a(data-toggle='tab', href='#new')
+                i.fa.fa-user-plus
+                span New User    
+            li.sub-menu
+              a(data-toggle='tab', href='#edit')
+                i.fa.fa-edit
+                span Edit 
+            li.sub-menu
+              a(data-toggle='tab', href='#fb')
+                i.fa.fa-comment
+                span Feedback       
+          // sidebar menu end
+      // sidebar end
+      //
+        **********************************************************************************************************************************************************
+        MAIN CONTENT
+        ***********************************************************************************************************************************************************
+      // main content start
+    section#main-content
+      section.wrapper.site-min-height
+        h3
+          i
+        .row.mt
+          .tab-content
+            #state.tab-pane.fade.in.active
+              center
+                P(style="color:orange;font-family:san-serif;font-size:40px;") STATE-WISE COMPLAINTS MONITOR
+                  br
+                  br
+                  .row.dashboard-stats.container
+                    .col-md-3.col-sm-6.col-md-offset-2(style="border:1px solid whitesmoke; border-radius:6px; background:lightgrey;")
+                      br
+                      .col-md-12
+                        section.panel.panel-box(style="box-shadow:1px 1px 2px 1px grey;")
+                          .panel-left.panel-icon.bg-success
+                            span(style='font-size:30px') #{Total}
+                            br
+                            p(style="font-family:san-serif;font-size:40px;")
+                          .panel-right.panel-icon.bg-reverse
+                            p.text-muted.no-margin.text
+                              h3(style='color:#000') TOTAL
+                    .col-md-3.col-sm-6.col-md-offset-2(style="border:1px solid whitesmoke; border-radius:6px; background:lightgrey;")
+                      br
+                      .col-md-12
+                        section.panel.panel-box(style="box-shadow:1px 1px 2px 1px grey;")
+                          .panel-left.panel-icon.bg-info
+                            span(style='font-size:30px') #{Today}
+                            br
+                            p(style="font-family:san-serif;font-size:40px;")
+                          .panel-right.panel-icon.bg-reverse
+                            p.text-muted.no-margin.text
+                              h3(style='color:#000') TODAY      
+                  br
+                  br
+                  .col-md-2.col-sm-6
+                    a(href='/andhra')
+                      section.panel.panel-box
+                        .panel-left.panel-icon.bg-success
+                          span(style='font-size:30px') #{AndhraPradesh}
+                        .panel-right.panel-icon.bg-reverse
+                          p.size-h2 
+                            b Andhra Pradesh
+                  .col-md-2.col-sm-6
+                    a(href='/arunachal')
+                      section.panel.panel-box
+                        .panel-left.panel-icon.bg-danger
+                          span(style='font-size:30px') #{ArunachalPradesh}
+                        .panel-right.panel-icon.bg-reverse
+                          p.size-h2 
+                            b Arunachal Pradesh
+                  .col-md-2.col-sm-6
+                    a(href='/assam')
+                      section.panel.panel-box
+                        .panel-left.panel-icon.bg-lovender
+                          span(style='font-size:30px') #{Assam}
+                        .panel-right.panel-icon.bg-reverse                                                           
+                          p.size-h2 
+                            b Assam
+                  .col-md-2.col-sm-6
+                    a(href='/bihar')
+                      section.panel.panel-box
+                        .panel-left.panel-icon(style='background-color:#FFB74D;')
+                          span(style='font-size:30px;color:white') #{Bihar}
+                        .panel-right.panel-icon.bg-reverse
+                          p.size-h2
+                            b Bihar
+                  .col-md-2.col-sm-6
+                    a(href='/chattisgarh')
+                      section.panel.panel-box
+                        .panel-left.panel-icon.bg-info
+                          span(style='font-size:30px') #{Chhattisgarh}
+                        .panel-right.panel-icon.bg-reverse
+                          p.size-h2 
+                            b Chhattisgarh
+                  .col-md-2.col-sm-6
+                    a(href='/goa')
+                      section.panel.panel-box
+                        .panel-left.panel-icon(style='background-color:grey;')
+                          span(style='font-size:30px;color:white') #{Goa}
+                        .panel-right.panel-icon.bg-reverse
+                          p.size-h2 
+                            b Goa
+                  .col-md-2.col-sm-6
+                    a(href='/gujarat')
+                      section.panel.panel-box
+                        .panel-left.panel-icon(style='background-color:grey;')
+                          span(style='font-size:30px;color:white') #{Gujarat}
+                        .panel-right.panel-icon.bg-reverse
+                          p.size-h2 
+                            b Gujarat
+                  .col-md-2.col-sm-6
+                    a(href='/haryana')
+                      section.panel.panel-box
+                        .panel-left.panel-icon.bg-info
+                          span(style='font-size:30px') #{Haryana}
+                        .panel-right.panel-icon.bg-reverse
+                          p.size-h2 
+                            b Haryana
+                  .col-md-2.col-sm-6
+                    a(href='/himachal')
+                      section.panel.panel-box
+                        .panel-left.panel-icon(style='background-color:#FFB74D;')
+                          span(style='font-size:30px;color:white') #{HimachalPradesh}
+                        .panel-right.panel-icon.bg-reverse
+                          p.size-h2 
+                            b Himachal Pradesh
+                  .col-md-2.col-sm-6
+                    a(href='/jammu')
+                      section.panel.panel-box
+                        .panel-left.panel-icon.bg-lovender
+                          span(style='font-size:30px') #{JammuKashmir}
+                        .panel-right.panel-icon
+                          p.size-h2
+                            b Jammu & Kashmir
+                  .col-md-2.col-sm-6
+                    a(href='/jharkhand')
+                      section.panel.panel-box
+                        .panel-left.panel-icon.bg-danger
+                          span(style='font-size:30px') #{Jharkhand}
+                        .panel-right.panel-icon.bg-reverse
+                          p.size-h2 
+                            b Jharkhand
+                  .col-md-2.col-sm-6
+                    a(href='/karnataka')
+                      section.panel.panel-box
+                        .panel-left.panel-icon(style='background-color:#FFB74D;')
+                          span(style='font-size:30px;color:white') #{Karnataka}
+                        .panel-right.panel-icon.bg-reverse
+                          p.size-h2 
+                            b Karnataka
+                  .col-md-2.col-sm-6
+                    a(href='/kerala')
+                      section.panel.panel-box
+                        .panel-left.panel-icon.bg-info
+                          span(style='font-size:30px') #{Kerala}
+                        .panel-right.panel-icon.bg-reverse
+                          p.size-h2 
+                            b Kerala
+                  .col-md-2.col-sm-6
+                    a(href='/madhya')
+                      section.panel.panel-box
+                        .panel-left.panel-icon.bg-success
+                          span(style='font-size:30px') #{MadhyaPradesh}
+                        .panel-right.panel-icon.bg-reverse
+                          p.size-h2 
+                            b Madhya Pradesh
+                  .col-md-2.col-sm-6
+                    a(href='/maharashtra')
+                      section.panel.panel-box
+                        .panel-left.panel-icon.bg-danger
+                          span(style='font-size:30px') #{Maharashtra}
+                        .panel-right.panel-icon.bg-reverse
+                          p.size-h2 
+                            b Maharashtra
+                  .col-md-2.col-sm-6
+                    a(href='/manipur')
+                      section.panel.panel-box
+                        .panel-left.panel-icon.bg-lovender
+                          span(style='font-size:30px') #{Manipur}
+                        .panel-right.panel-icon.bg-reverse                                                           
+                          p.size-h2 
+                            b Manipur
+                  .col-md-2.col-sm-6
+                    a(href='/meghalaya')
+                      section.panel.panel-box
+                        .panel-left.panel-icon(style='background-color:#FFB74D;')
+                          span(style='font-size:30px;color:white') #{Meghalaya}
+                        .panel-right.panel-icon.bg-reverse
+                          p.size-h2
+                            b Meghalaya
+                  .col-md-2.col-sm-6
+                    a(href='/mizoram')
+                      section.panel.panel-box
+                        .panel-left.panel-icon.bg-info
+                          span(style='font-size:30px') #{Mizoram}
+                        .panel-right.panel-icon.bg-reverse
+                          p.size-h2 
+                            b Mizoram
+                  .col-md-2.col-sm-6
+                    a(href='/nagaland')
+                      section.panel.panel-box
+                        .panel-left.panel-icon.bg-success
+                          span(style='font-size:30px') #{Nagaland}
+                        .panel-right.panel-icon.bg-reverse
+                          p.size-h2 
+                            b Nagaland
+                  .col-md-2.col-sm-6
+                    a(href='/odisha')
+                      section.panel.panel-box
+                        .panel-left.panel-icon(style='background-color:grey;')
+                          span(style='font-size:30px;color:white') #{Odisha}
+                        .panel-right.panel-icon.bg-reverse
+                          p.size-h2 
+                            b Odisha
+                  .col-md-2.col-sm-6
+                    a(href='/punjab')
+                      section.panel.panel-box
+                        .panel-left.panel-icon.bg-info
+                          span(style='font-size:30px') #{Punjab}
+                        .panel-right.panel-icon.bg-reverse
+                          p.size-h2 
+                            b Punjab
+                  .col-md-2.col-sm-6
+                    a(href='/rajasthan')
+                      section.panel.panel-box
+                        .panel-left.panel-icon(style='background-color:#FFB74D;')
+                          span(style='font-size:30px;color:white') #{Rajasthan}
+                        .panel-right.panel-icon.bg-reverse
+                          p.size-h2 
+                            b Rajasthan
+                  .col-md-2.col-sm-6
+                    a(href='/sikkim')
+                      section.panel.panel-box
+                        .panel-left.panel-icon.bg-lovender
+                          span(style='font-size:30px') #{Sikkim}
+                        .panel-right.panel-icon
+                          p.size-h2
+                            b Sikkim
+                  .col-md-2.col-sm-6
+                    a(href='/tamilNadu')
+                      section.panel.panel-box
+                        .panel-left.panel-icon.bg-danger
+                          span(style='font-size:30px') #{TamilNadu}
+                        .panel-right.panel-icon.bg-reverse
+                          p.size-h2 
+                            b TamilNadu
+                  .col-md-2.col-sm-6
+                    a(href='/telangana')
+                      section.panel.panel-box
+                        .panel-left.panel-icon.bg-success
+                          span(style='font-size:30px') #{Telangana}
+                        .panel-right.panel-icon.bg-reverse
+                          p.size-h2 
+                            b Telangana
+                  .col-md-2.col-sm-6
+                    a(href='/tripura')
+                      section.panel.panel-box
+                        .panel-left.panel-icon.bg-lovender
+                          span(style='font-size:30px') #{Tripura}
+                        .panel-right.panel-icon.bg-reverse
+                          p.size-h2 
+                            b Tripura
+                  .col-md-2.col-sm-6
+                    a(href='/uttarakhand')
+                      section.panel.panel-box
+                        .panel-left.panel-icon.bg-danger
+                          span(style='font-size:30px') #{Uttarakhand}
+                        .panel-right.panel-icon.bg-reverse
+                          p.size-h2 
+                            b Uttarakhand
+                  .col-md-2.col-sm-6
+                    a(href='/uttarpradesh')
+                      section.panel.panel-box
+                        .panel-left.panel-icon.bg-success
+                          span(style='font-size:30px') #{UttarPradesh}
+                        .panel-right.panel-icon.bg-reverse
+                          p.size-h2 
+                            b Uttar Pradesh
+                  .col-md-2.col-sm-6
+                    a(href='/westbengal')
+                      section.panel.panel-box
+                        .panel-left.panel-icon(style='background-color:grey;')
+                          span(style='font-size:30px;color:white') #{WestBengal}
+                        .panel-right.panel-icon.bg-reverse
+                          p.size-h2 
+                            b West Bengal
+            #new.tab-pane.fade.align
+              .row.dashboard-stats.container
+                br
+                br
+                .tab-pane.fade.in.active
+                  ul.nav.nav-tabs.nav-justified
+                    li.active
+                      a(data-toggle='pill', href='#singlemember') Add Single User
+                    li
+                      a(data-toggle='pill', href='#multipleusers') Add Multiple Users
+                  .tab-content
+                    // Add Single user
+                    #singlemember.tab-pane.fade.in.active
+                      br
+                      br
+                      .container(style='width: 40%;border-radius: 10px')
+                        br 
+                        br
+                        form(method='post', autocomplete='off', action='/addnewuser', name='reg')         
+                          .table-responsive    
+                            table(align='center')
+                              tr
+                                td
+                                  label#name Staff Code:
+                                td
+                                  input.form-control(type='text', name='stcode', placeholder='Enter Staff Code', required)
+                              tr
+                                td
+                                  label#name Staff Name:
+                                td
+                                  input.form-control(type='text', name='sname', placeholder='Enter Staff Name', required)
+                              tr
+                                td
+                                  label#name Email:
+                                td
+                                  input.form-control(type='text', name='semail', placeholder='Enter Email', required)
+                              tr
+                                td
+                                  label#name Role:
+                                td
+                                  select.form-control(name='role', required)
+                                    option(value='') --select--
+                                    option(value='M.E.O') M.E.O
+                                    option(value='D.E.O') D.E.O
+                                    option(value='Staff') Staff
+                                    option(value='S.M.C') S.M.C
+                              tr
+                                td
+                                  label#name Country:
+                                td
+                                  input.input.form-control(name='country', type='text', value='India' readonly='')
+                              tr
+                                td
+                                  label#name State:
+                                td
+                                  select.state.input.form-control(name='state')
+                                    option(value='') -- State --
+                                    option(value='AndhraPradesh') Andhra Pradesh
+                                    option(value='ArunachalPradesh') Arunachal Pradesh
+                                    option(value='Assam') Assam
+                                    option(value='Bihar') Bihar
+                                    option(value='Chhattisgarh') Chhattisgarh
+                                    option(value='Goa') Goa
+                                    option(value='Gujarat') Gujarat
+                                    option(value='Haryana') Haryana
+                                    option(value='HimachalPradesh') Himachal Pradesh
+                                    option(value='JammuKashmir') Jammu & Kashmir
+                                    option(value='Jharkhand') Jharkhand
+                                    option(value='Karnataka') Karnataka
+                                    option(value='Kerala') Kerala
+                                    option(value='MadhyaPradesh') Madhya Pradesh
+                                    option(value='Maharashtra') Maharashtra
+                                    option(value='Manipur') Manipur
+                                    option(value='Meghalaya') Meghalaya
+                                    option(value='Mizoram') Mizoram
+                                    option(value='Nagaland') Nagaland
+                                    option(value='Odisha') Odisha
+                                    option(value='Punjab') Punjab
+                                    option(value='Rajasthan') Rajasthan
+                                    option(value='Sikkim') Sikkim
+                                    option(value='TamilNadu') TamilNadu
+                                    option(value='Telangana') Telangana
+                                    option(value='Tripura') Tripura
+                                    option(value='Uttarakhand') Uttarakhand
+                                    option(value='UttarPradesh') Uttar Pradesh
+                                    option(value='WestBengal') West Bengal                         
+                            table.statesTable(align='center', width='60%')
+                              tr.states.AndhraPradesh
+                                td
+                                  label#name District:
+                                td.col-md-12
+                                  select.input.form-control(name='')
+                                    option(value='') -- District --
+                                    option(value='Anantapur') Anantapur
+                                    option(value='Chittoor') Chittoor
+                                    option(value='East Godavari') East Godavari
+                                    option(value='Guntur') Guntur
+                                    option(value='Krishna') Krishna
+                                    option(value='Kurnool') Kurnool
+                                    option(value='Prakasam') Prakasam
+                                    option(value='Nellore') Nellore
+                                    option(value='Srikakulam') Srikakulam
+                                    option(value='Visakhapatnam') Visakhapatnam
+                                    option(value='Vizianagaram') Vizianagaram
+                                    option(value='West Godavari') West Godavari
+                                    option(value='Cuddapah') Cuddapah                           
+                              tr.states.ArunachalPradesh
+                                td
+                                  label#name District:
+                                td.col-md-12
+                                  select.input.form-control(name='')
+                                    option(value='') -- District --
+                                    option(value='Anjaw') Anjaw 
+                                    option(value='Changlang') Changlang 
+                                    option(value='East Kameng') East Kameng  
+                                    option(value='Pasighat') Pasighat 
+                                    option(value='Lohit') Lohit 
+                                    option(value='Lower Subansiri') Lower Subansiri 
+                                    option(value='Papum Pare') Papum Pare 
+                                    option(value='Tawang Town') Tawang Town 
+                                    option(value='Tirap') Tirap 
+                                    option(value='Lower Dibang Valley') Lower Dibang Valley    
+                                    option(value='Upper Siang') Upper Siang 
+                                    option(value='Upper Subansiri') Upper Subansiri  
+                                    option(value='West Kameng') West Kameng 
+                                    option(value='West Siang') West Siang 
+                                    option(value='Upper Dibang Valley') Upper Dibang Valley     
+                                    option(value='Kurung Kumey') Kurung Kumey 
+                                  p#sp7
+                              tr.states.Assam
+                                td
+                                  label#name District:
+                                td.col-md-12
+                                  select.input.form-control(name='')
+                                    option(value='') -- District --
+                                    option(value='Baksa') Baksa  
+                                    option(value='Barpeta') Barpeta  
+                                    option(value='Bongaigaon') Bongaigaon
+                                    option(value='Cachar') Cachar
+                                    option(value='Chirang') Chirang  
+                                    option(value='Darrang') Darrang  
+                                    option(value='Dhemaji') Dhemaji  
+                                    option(value='Dhubri') Dhubri
+                                    option(value='Dibrugarh') Dibrugarh  
+                                    option(value='Dima Hasao') Dima Hasao 
+                                    option(value='Goalpara') Goalpara 
+                                    option(value='Golaghat') Golaghat 
+                                    option(value='Hailakandi') Hailakandi 
+                                    option(value='Jorhat') Jorhat 
+                                    option(value='Kamrup') Kamrup 
+                                    option(value='Kamrup Metropolitan') Kamrup Metropolitan  
+                                    option(value='Karbi Anglong') Karbi Anglong  
+                                    option(value='Karimganj') Karimganj  
+                                    option(value='Kokrajhar') Kokrajhar  
+                                    option(value='Lakhimpur') Lakhimpur  
+                                    option(value='Morigaon') Morigaon 
+                                    option(value='Nagaon') Nagaon 
+                                    option(value='Nalbari') Nalbari  
+                                    option(value='Sivasagar') Sivasagar  
+                                    option(value='Sonitpur') Sonitpur 
+                                    option(value='Tinsukia') Tinsukia 
+                                    option(value='Udalguri') Udalguri 
+                                    option(value='Biswanath') Biswanath  
+                                    option(value='Charaideo') Charaideo  
+                                    option(value='Hojai') Hojai  
+                                    option(value='Majuli') Majuli 
+                                    option(value='South Salamara-Mankachar') South Salamara-Mankachar 
+                                    option(value='West Karbi Anglon') West Karbi Anglon
+                                    option(value='Charaideo') Charaideo  
+                                    option(value='Hojai') Hojai  
+                                    option(value='Majuli') Majuli 
+                                    option(value='South Salamara-Mankachar') South Salamara-Mankachar 
+                                    option(value='West Karbi Anglon') West Karbi Anglon                             
+                                tr.states.Bihar
+                                  td
+                                    label#name District:
+                                  td.col-md-12
+                                    select.input.form-control(name='')
+                                      option(value='') -- District --
+                                      option(value='Araria') Araria 
+                                      option(value='Arwala') Arwala 
+                                      option(value='Aurangabad') Aurangabad 
+                                      option(value='Banka') Banka 
+                                      option(value='Begusarai') Begusarai 
+                                      option(value='Bhagalpur') Bhagalpur 
+                                      option(value='Bhojpur') Bhojpur 
+                                      option(value='Buxar') Buxar 
+                                      option(value='Darbhanga') Darbhanga 
+                                      option(value='East Champaran') East Champaran 
+                                      option(value='Gaya') Gaya 
+                                      option(value='Gopalganj') Gopalganj 
+                                      option(value='Jamui') Jamui 
+                                      option(value='Jehanabad') Jehanabad 
+                                      option(value='Khagaria') Khagaria 
+                                      option(value='Kishanganj') Kishanganj 
+                                      option(value='Kaimur') Kaimur 
+                                      option(value='Katihar') Katihar 
+                                      option(value='Lakhisarai') Lakhisarai 
+                                      option(value='Madhubani') Madhubani 
+                                      option(value='Munger') Munger 
+                                      option(value='Madhepura') Madhepura 
+                                      option(value='Muzaffarpur') Muzaffarpur 
+                                      option(value='Nalanda') Nalanda 
+                                      option(value='Nawada') Nawada 
+                                      option(value='Patna') Patna 
+                                      option(value='Purnia') Purnia 
+                                      option(value='Rohtas') Rohtas 
+                                      option(value='Saharsa') Saharsa 
+                                      option(value='Samastipur') Samastipur 
+                                      option(value='Sheohar') Sheohar 
+                                      option(value='Sheikhpura') Sheikhpura 
+                                      option(value='Saran') Saran 
+                                      option(value='Sitamarhi') Sitamarhi 
+                                      option(value='Supaul') Supaul 
+                                      option(value='Siwan') Siwan 
+                                      option(value='Vaishali') Vaishali 
+                                      option(value='West Champaran') West Champaran         
+                              
+                                tr.states.Chhattisgarh
+                                  td
+                                    label#name District:
+                                  td.col-md-12
+                                    select.input.form-control(name='')
+                                      option(value='') -- District --
+                                      option(value='Balod') Balod 
+                                      option(value='Baloda Bazar') Baloda Bazar  
+                                      option(value='Balrampur') Balrampur 
+                                      option(value='Bastar') Banka 
+                                      option(value='Bemetara') Bemetara 
+                                      option(value='Bijapur') Bijapur 
+                                      option(value='Bilaspur') Bilaspur 
+                                      option(value='Dantewada') Dantewada 
+                                      option(value='Dhamtari') Dhamtari 
+                                      option(value='Durg') Durg  
+                                      option(value='Gariyaband') Gariyaband 
+                                      option(value='Janjgir-Champa') Janjgir-Champa 
+                                      option(value='Jashpur') Jashpur 
+                                      option(value='Kabirdham') Kabirdham 
+                                      option(value='Kanker') Kanker 
+                                      option(value='Kondagaon') Kondagaon 
+                                      option(value='Korba') Korba 
+                                      option(value='Korea') Korea 
+                                      option(value='Mahasamund') Mahasamund 
+                                      option(value='Mungeli') Mungeli 
+                                      option(value='Narayanpur') Narayanpur 
+                                      option(value='Raigarh') Raigarh 
+                                      option(value='Raipur') Raipur 
+                                      option(value='Rajnandgaon') Rajnandgaon 
+                                      option(value='Sukma') Sukma 
+                                      option(value='Surajpur') Surajpur 
+                                      option(value='Surguja') Surguja          
+                              
+                                tr.states.Goa
+                                  td
+                                    label#name District:
+                                  td.col-md-12
+                                    select.input.form-control(name='')
+                                      option(value='') -- District --
+                                      option(value='Panaji') Panaji 
+                                      option(value='Mapusa') Mapusa 
+                                      option(value='Bicholim') Bicholim 
+                                      option(value='Ponda') Ponda 
+                                      option(value='Mormugao') Mormugao 
+                                      option(value='Margao') Margao 
+                                      option(value='Quepem') Quepem 
+                                      option(value='Dharbandori') Dharbandori           
+                              
+                                tr.states.Gujarat
+                                  td
+                                    label#name District:
+                                  td.col-md-12
+                                    select.input.form-control(name='')
+                                      option(value='') -- District --
+                                      option(value='Ahmedabad') Ahmedabad 
+                                      option(value='AmreliBazar') Amreli Bazar 
+                                      option(value='Anand') Anand 
+                                      option(value='Aravalli') Aravalli 
+                                      option(value='Banaskantha') Banaskantha 
+                                      option(value='Bharuch') Bharuch 
+                                      option(value='Bhavnagar') Bhavnagar 
+                                      option(value='Botad') Botad 
+                                      option(value='Chhota Udepur') Chhota Udepur 
+                                      option(value='Dahod') Dahod  
+                                      option(value='Dangs') Dangs 
+                                      option(value='Devbhoomi Dwarka') Devbhoomi Dwarka 
+                                      option(value='Gandhinagar') Gandhinagar 
+                                      option(value='Gir Somnath') Gir Somnath 
+                                      option(value='Jamnagar') Jamnagar 
+                                      option(value='Junagadh') Junagadh 
+                                      option(value='Kachchh') Kachchh 
+                                      option(value='Kheda') Kheda 
+                                      option(value='Mahisagar') Mahisagar 
+                                      option(value='Mehsana') Mehsana 
+                                      option(value='Morbi') Morbi 
+                                      option(value='Narmada') Narmada 
+                                      option(value='Navsari') Navsari 
+                                      option(value='Panchmahal') Panchmahal 
+                                      option(value='Patan') Patan 
+                                      option(value='Porbandar') Porbandar 
+                                      option(value='Rajkot') Rajkot 
+                                      option(value='Sabarkantha') Sabarkantha 
+                                      option(value='Surat') Surat 
+                                      option(value='Surendranagar') Surendranagar 
+                                      option(value='Tapi') Tapi 
+                                      option(value='Vadodara') Vadodara 
+                                      option(value='Valsad') Valsad           
+                              
+                                tr.states.Haryana
+                                  td
+                                    label#name District:
+                                  td.col-md-12
+                                    select.input.form-control(name='')
+                                      option(value='') -- District -- 
+                                      option(value='Ambala') Ambala 
+                                      option(value='Bhiwani') Bhiwani  
+                                      option(value='Charkhi Dadri') Charkhi Dadri
+                                      option(value='Faridabad') Faridabad 
+                                      option(value='Fatehabad') Fatehabad 
+                                      option(value='Gurgaon') Gurgaon 
+                                      option(value='Hisar') Hisar 
+                                      option(value='Jhajjar') Jhajjar 
+                                      option(value='Jind') Jind  
+                                      option(value='Kaithal') Kaithal  
+                                      option(value='Karnal') Karnal 
+                                      option(value='Kurukshetra') Kurukshetra 
+                                      option(value='Mahendragarh') Mahendragarh 
+                                      option(value='Mewat') Mewat 
+                                      option(value='Palwal') Palwal 
+                                      option(value='Panchkula') Panchkula 
+                                      option(value='Panipat') Panipat 
+                                      option(value='Rewari') Rewari 
+                                      option(value='Rohtak') Rohtak 
+                                      option(value='Sirsa') Sirsa 
+                                      option(value='Sonipat') Sonipat 
+                                      option(value='Yamunanagar') Yamunanagar         
+                              
+                                tr.states.HimachalPradesh
+                                  td
+                                    label#name District:
+                                  td.col-md-12
+                                    select.input.form-control(name='')
+                                      option(value='') -- District -- 
+                                      option(value='Bilaspur') Bilaspur 
+                                      option(value='Chamba') Chamba  
+                                      option(value='Hamirpur') Hamirpur 
+                                      option(value='Kangra') Kangra 
+                                      option(value='Kinnaur') Kinnaur 
+                                      option(value='Kullu') Kullu 
+                                      option(value='Lahaul & Spiti') Lahaul & Spiti
+                                      option(value='Mandi') Mandi 
+                                      option(value='Shimla ') Shimla  
+                                      option(value='Sirmaur') Sirmaur  
+                                      option(value='Solan') Solan 
+                                      option(value='Una ') Una           
+                              
+                                tr.states.JammuKashmir
+                                  td
+                                    label#name District:
+                                  td.col-md-12
+                                    select.input.form-control(name='')
+                                      option(value='') -- District -- 
+                                      option(value='Anantnag') Anantnag 
+                                      option(value='Bandipore') Bandipore  
+                                      option(value='Baramulla') Baramulla 
+                                      option(value='Budgam') Budgam 
+                                      option(value='Doda') Doda 
+                                      option(value='Ganderbal') Ganderbal 
+                                      option(value='Jammu') Jammu 
+                                      option(value='Kargil') Kargil 
+                                      option(value='Kathua') Kathua  
+                                      option(value='Kishtwar') Kishtwar  
+                                      option(value='Kulgam') Kulgam 
+                                      option(value='Kupwara') Kupwara 
+                                      option(value='Leh') Leh 
+                                      option(value='Poonch') Poonch 
+                                      option(value='Pulwama') Pulwama 
+                                      option(value='Rajouri') Rajouri 
+                                      option(value='Ramban') Ramban 
+                                      option(value='Reasi') Reasi 
+                                      option(value='Samba') Samba 
+                                      option(value='Shopian') Shopian 
+                                      option(value='Srinagar') Srinagar 
+                                      option(value='Udhampur') Udhampur            
+                              
+                                tr.states.Jharkhand
+                                  td
+                                    label#name District:
+                                  td.col-md-12
+                                    select.input.form-control(name='')
+                                      option(value='') -- District --
+                                      option(value='Bokaro') Bokaro 
+                                      option(value='Chatra') Chatra  
+                                      option(value='Deoghar') Deoghar 
+                                      option(value='Dhanbad') Dhanbad 
+                                      option(value='Dumka') Dumka 
+                                      option(value='East Singhbhum') East Singhbhum 
+                                      option(value='Garhwa') Garhwa 
+                                      option(value='Giridih') Giridih 
+                                      option(value='Godda') Godda  
+                                      option(value='Gumla') Gumla  
+                                      option(value='Hazaribagh') Hazaribagh 
+                                      option(value='Jamtara') Jamtara 
+                                      option(value='Khunti') Khunti 
+                                      option(value='Koderma') Koderma 
+                                      option(value='Latehar') Latehar 
+                                      option(value='Lohardaga') Lohardaga 
+                                      option(value='Pakur') Pakur 
+                                      option(value='Palamu') Palamu 
+                                      option(value='Ramgarh') Ramgarh 
+                                      option(value='Ranchi') Ranchi 
+                                      option(value='Sahibganj') Sahibganj 
+                                      option(value='Seraikela-Kharsawan') Seraikela-Kharsawan
+                                      option(value='Simdega') Simdega 
+                                      option(value='West Singhbhum') West Singhbhum            
+                              
+                                tr.states.Karnataka
+                                  td
+                                    label#name District:
+                                  td.col-md-12
+                                    select.input.form-control(name='')
+                                      option(value='') -- District --
+                                      option(value='Bagalkot') Bagalkot 
+                                      option(value='Ballari') Ballari  
+                                      option(value='Belagavi ') Belagavi 
+                                      option(value='Bengaluru Rural') Bengaluru Rural
+                                      option(value='Bengaluru Urban') Bengaluru Urban
+                                      option(value='Bidar') Bidar  
+                                      option(value='Chamarajanagar') Chamarajanagar 
+                                      option(value='Chikballapur') Chikballapur 
+                                      option(value='Chikkamagaluru') Chikkamagaluru  
+                                      option(value='Chitradurga') Chitradurga  
+                                      option(value='Dakshina Kannada') Dakshina Kannada
+                                      option(value='Davangere') Davangere 
+                                      option(value='Dharwad') Dharwad 
+                                      option(value='Gadag') Gadag 
+                                      option(value='Hassan') Hassan 
+                                      option(value='Haveri') Haveri 
+                                      option(value='Kalaburagi') Pakur 
+                                      option(value='Kodagu') Kodagu 
+                                      option(value='Kolar') Kolar 
+                                      option(value='Koppal') Koppal 
+                                      option(value='Mandya') Mandya 
+                                      option(value='Mysuru') Mysuru
+                                      option(value='Raichur') Raichur 
+                                      option(value='Ramanagara ') Ramanagara
+                                      option(value='Shivamogga') Shivamogga 
+                                      option(value='Tumakuru') Tumakuru  
+                                      option(value='Udupi') Udupi 
+                                      option(value='Uttara Kannada') Uttara Kannada
+                                      option(value='Vijayapura') Vijayapura 
+                                      option(value='Yadgir') Yadgir           
+                              
+                                tr.states.Kerala
+                                  td
+                                    label#name District:
+                                  td.col-md-12
+                                    select.input.form-control(name='')
+                                      option(value='') -- District --
+                                      option(value='Alappuzha') Alappuzha 
+                                      option(value='Ernakulam') Ernakulam  
+                                      option(value='Idukki') Idukki 
+                                      option(value='Kannur') Kannur 
+                                      option(value='Kasaragod') Kasaragod
+                                      option(value='Kollam') Kollam  
+                                      option(value='Kottayam') Kottayam 
+                                      option(value='Kozhikode') Kozhikode 
+                                      option(value='Malappuram') Malappuram  
+                                      option(value='Palakkad') Palakkad  
+                                      option(value='Pathanamthitta') Pathanamthitta 
+                                      option(value='Thiruvananthapuram') Thiruvananthapuram 
+                                      option(value='Thrissur') Thrissur 
+                                      option(value='Wayanad') Wayanad        
+                              
+                                tr.states.MadhyaPradesh
+                                  td
+                                    label#name District:
+                                  td.col-md-12
+                                    select.input.form-control(name='')
+                                      option(value='') -- District --
+                                      option(value='Agar Malwa') Agar Malwa 
+                                      option(value='Alirajpur') Alirajpur  
+                                      option(value='Anuppur') Anuppur 
+                                      option(value='Ashoknagar') Ashoknagar 
+                                      option(value='Balaghat') Balaghat 
+                                      option(value='Barwani') Barwani  
+                                      option(value='Betul') Betul 
+                                      option(value='Bhind') Bhind 
+                                      option(value='Bhopal') Bhopal  
+                                      option(value='Burhanpur') Burhanpur  
+                                      option(value='Chhatarpur') Chhatarpur
+                                      option(value='Chhindwara') Chhindwara 
+                                      option(value='Damoh') Damoh 
+                                      option(value='Datia') Datia 
+                                      option(value='Dewas') Dewas 
+                                      option(value='Dhar') Dhar 
+                                      option(value='Dindori') Dindori 
+                                      option(value='Guna') Guna 
+                                      option(value='Gwalior') Gwalior 
+                                      option(value='Harda') Harda 
+                                      option(value='Hoshangabad') Hoshangabad 
+                                      option(value='Indore') Indore
+                                      option(value='Jabalpur') Jabalpur 
+                                      option(value='Jhabua ') Jhabua
+                                      option(value='Katni') Katni 
+                                      option(value='Khandwa') Khandwa  
+                                      option(value='Khargone ') Khargone 
+                                      option(value='Mandla ') Mandla
+                                      option(value='Mandsaur') Mandsaur 
+                                      option(value='Morena ') Morena 
+                                      option(value='Narsinghpur') Narsinghpur 
+                                      option(value='Neemuch') Neemuch  
+                                      option(value='Panna') Panna 
+                                      option(value='Raisen ') Raisen
+                                      option(value='Rajgarh') Rajgarh 
+                                      option(value='Ratlam ') Ratlam  
+                                      option(value='Rewa') Rewa 
+                                      option(value='Sagar') Sagar 
+                                      option(value='Satna') Satna  
+                                      option(value='Sehore') Sehore  
+                                      option(value='Seoni') Seoni 
+                                      option(value='Shahdol') Shahdol 
+                                      option(value='Shajapur') Shajapur 
+                                      option(value='Sheopur') Sheopur 
+                                      option(value='Shivpuri') Shivpuri 
+                                      option(value='Sidhi') Sidhi 
+                                      option(value='Singrauli') Singrauli 
+                                      option(value='Tikamgarh') Tikamgarh 
+                                      option(value='Ujjain') Ujjain 
+                                      option(value='Umaria') Umaria 
+                                      option(value='Vidisha') Vidisha        
+                              
+                                tr.states.Maharashtra
+                                  td
+                                    label#name District:
+                                  td.col-md-12
+                                    select.input.form-control(name='')
+                                      option(value='') -- District --
+                                      option(value='Ahmednagar') Ahmednagar 
+                                      option(value='Akola') Akola  
+                                      option(value='Amravati') Amravati 
+                                      option(value='Aurangabad') Aurangabad 
+                                      option(value='Beed') Beed 
+                                      option(value='Bhandara ') Bhandara  
+                                      option(value='Buldhana') Buldhana 
+                                      option(value='Chandrapur') Chandrapur 
+                                      option(value='Dhule') Dhule  
+                                      option(value='Gadchiroli') Gadchiroli  
+                                      option(value='Gondia') Gondia
+                                      option(value='Hingoli') Hingoli 
+                                      option(value='Jalgaon') Jalgaon 
+                                      option(value='Jalna') Jalna 
+                                      option(value='Kolhapur') Kolhapur 
+                                      option(value='Latur') Latur 
+                                      option(value='Mumbai City') Mumbai City 
+                                      option(value='Mumbai Suburban') Mumbai Suburban
+                                      option(value='Nagpur') Nagpur 
+                                      option(value='Nanded') Nanded 
+                                      option(value='Nandurbar') Nandurbar 
+                                      option(value='Nashik') Nashik
+                                      option(value='Osmanabad') Osmanabad 
+                                      option(value='Palghar ') Palghar
+                                      option(value='Parbhani') Parbhani 
+                                      option(value='Pune') Pune  
+                                      option(value='Raigad ') Raigad 
+                                      option(value='Ratnagiri') Ratnagiri
+                                      option(value='Sangli') Sangli 
+                                      option(value='Satara') Satara 
+                                      option(value='Sindhudurg') Sindhudurg 
+                                      option(value='Solapur') Solapur  
+                                      option(value='Thane') Thane 
+                                      option(value='Wardha Rural') Wardha Rural
+                                      option(value='Washim Urban') Washim Urban
+                                      option(value='Yavatmal') Yavatmal      
+                              
+                                tr.states.Manipur
+                                  td
+                                    label#name District:
+                                  td.col-md-12
+                                    select.input.form-control(name='')
+                                      option(value='') -- District --
+                                      option(value='Bishnupur') Bishnupur 
+                                      option(value='Chandel') Chandel  
+                                      option(value='Churachandpur') Churachandpur 
+                                      option(value='Imphal East') Imphal East
+                                      option(value='Imphal West') Imphal West
+                                      option(value='Jiribam') Jiribam  
+                                      option(value='Kakching') Kakching 
+                                      option(value='Kamjong') Kamjong 
+                                      option(value='Kangpokpi') Kangpokpi  
+                                      option(value='Noney') Noney  
+                                      option(value='Pherzawl') Pherzawl
+                                      option(value='Senapati') Senapati 
+                                      option(value='Tamenglong') Tamenglong 
+                                      option(value='Tengnoupal') Tengnoupal 
+                                      option(value='Thoubal') Thoubal 
+                                      option(value='Ukhrul') Ukhrul          
+                              
+                                tr.states.Meghalaya
+                                  td
+                                    label#name District:
+                                  td.col-md-12
+                                    select.input.form-control(name='')
+                                      option(value='') -- District --
+                                      option(value='East Garo Hills') East Garo Hills 
+                                      option(value='East Jaintia Hills') East Jaintia Hills  
+                                      option(value='East Khasi Hills') East Khasi Hills 
+                                      option(value='North Garo Hills') North Garo Hills 
+                                      option(value='Ri Bhoi') Ri Bhoi
+                                      option(value='South Garo Hills') South Garo Hills  
+                                      option(value='South West Garo Hills') South West Garo Hills 
+                                      option(value='South West Khasi Hills') South West Khasi Hills 
+                                      option(value='West Garo Hills') West Garo Hills  
+                                      option(value='West Jaintia Hills') West Jaintia Hills  
+                                      option(value='West Khasi Hills') West Khasi Hills          
+                              
+                                tr.states.Mizoram
+                                  td
+                                    label#name District:
+                                  td.col-md-12
+                                    select.input.form-control(name='')
+                                      option(value='') -- District --
+                                      option(value='Aizawl') Aizawl 
+                                      option(value='Champhai') Champhai 
+                                      option(value='Kolasib') Kolasib
+                                      option(value='Lawngtlai') Lawngtlai
+                                      option(value='Lunglei') Lunglei
+                                      option(value='Mamit') Mamit   
+                                      option(value='Saiha') Saiha 
+                                      option(value='Serchhip') Serchhip           
+                              
+                                tr.states.Nagaland
+                                  td
+                                    label#name District:
+                                  td.col-md-12
+                                    select.input.form-control(name='')
+                                      option(value='') -- District --
+                                      option(value='Dimapur') Dimapur 
+                                      option(value='Kiphire') Kiphire 
+                                      option(value='Kohima') Kohima
+                                      option(value='Longleng') Longleng
+                                      option(value='Mokokchung') Mokokchung
+                                      option(value='Mon') Mon   
+                                      option(value='Peren') Peren 
+                                      option(value='Phek') Phek
+                                      option(value='Tuensang') Tuensang 
+                                      option(value='Wokha') Wokha
+                                      option(value='Zunheboto') Zunheboto          
+                              
+                                tr.states.Odisha
+                                  td
+                                    label#name District:
+                                  td.col-md-12
+                                    select.input.form-control(name='')
+                                      option(value='') -- District --
+                                      option(value='Angul') Angul 
+                                      option(value='Balangir') Balangir  
+                                      option(value='Balasore') Balasore 
+                                      option(value='Bargarh') Bargarh 
+                                      option(value='Bhadrak') Bhadrak 
+                                      option(value='Boudh') Boudh  
+                                      option(value='Cuttack') Cuttack 
+                                      option(value='Deogarh') Deogarh 
+                                      option(value='Dhenkanal') Dhenkanal  
+                                      option(value='Gajapati') Gajapati  
+                                      option(value='Ganjam') Ganjam
+                                      option(value='Jagatsinghapur') Jagatsinghapur 
+                                      option(value='Jajpur') Jajpur 
+                                      option(value='Jharsuguda') Jharsuguda 
+                                      option(value='Kalahandi') Kalahandi 
+                                      option(value='Kandhamal') Kandhamal 
+                                      option(value='Kendrapara') Kendrapara 
+                                      option(value='Kendujhar') Kendujhar 
+                                      option(value='Khordha') Khordha 
+                                      option(value='Koraput') Koraput 
+                                      option(value='Malkangiri') Malkangiri 
+                                      option(value='Mayurbhanj') Mayurbhanj
+                                      option(value='Nabarangpur') Nabarangpur 
+                                      option(value='Nayagarh') Nayagarh
+                                      option(value='Nuapada') Nuapada 
+                                      option(value='Puri') Puri  
+                                      option(value='Rayagada ') Rayagada 
+                                      option(value='Sambalpur') Sambalpur
+                                      option(value='Sonepur') Sonepur 
+                                      option(value='Sundargarh') Sundargarh            
+                              
+                                tr.states.Punjab
+                                  td
+                                    label#name District:
+                                  td.col-md-12
+                                    select.input.form-control(name='')
+                                      option(value='') -- District --
+                                      option(value='Amritsar') Amritsar 
+                                      option(value='Barnala') Barnala  
+                                      option(value='Bathinda') Bathinda 
+                                      option(value='Faridkot') Faridkot 
+                                      option(value='Fatehgarh Sahib') Fatehgarh Sahib
+                                      option(value='Fazilka') Fazilka  
+                                      option(value='Ferozepur') Ferozepur 
+                                      option(value='Gurdaspur') Gurdaspur 
+                                      option(value='Hoshiarpur') Hoshiarpur  
+                                      option(value='Jalandhar') Jalandhar  
+                                      option(value='Kapurthala') Kapurthala
+                                      option(value='Ludhiana') Ludhiana 
+                                      option(value='Mansa') Mansa 
+                                      option(value='Moga') Moga 
+                                      option(value='Muktsar') Muktsar 
+                                      option(value='Nawanshahr') Nawanshahr 
+                                      option(value='Pathankot') Pathankot  
+                                      option(value='Patiala') Kendujhar 
+                                      option(value='Rupnagar') Rupnagar 
+                                      option(value='Sahibzada') Sahibzada 
+                                      option(value='Sangrur') Sangrur 
+                                      option(value='Tarn Taran') Tarn Taran            
+                              
+                                tr.states.Rajasthan
+                                  td
+                                    label#name District:
+                                  td.col-md-12
+                                    select.input.form-control(name='')
+                                      option(value='') -- District --
+                                      option(value='Ajmer') Ajmer 
+                                      option(value='Alwar') Alwar  
+                                      option(value='Banswara') Banswara 
+                                      option(value='Baran') Baran 
+                                      option(value='Barmer') Barmer 
+                                      option(value='Bharatpur') Bharatpur  
+                                      option(value='Bhilwara') Bhilwara 
+                                      option(value='Bikaner') Bikaner 
+                                      option(value='Bundi') Bundi  
+                                      option(value='Chittorgarh') Chittorgarh  
+                                      option(value='Churu') Churu
+                                      option(value='Dausa') Dausa 
+                                      option(value='Dholpur') Dholpur 
+                                      option(value='Dungarpur') Dungarpur 
+                                      option(value='Hanumangarh') Hanumangarh 
+                                      option(value='Jaipur') Jaipur 
+                                      option(value='Jaisalmer') Jaisalmer 
+                                      option(value='Jalore') Jalore 
+                                      option(value='Jhalawar') Jhalawar 
+                                      option(value='Jhunjhunu') Jhunjhunu 
+                                      option(value='Jodhpur') Jodhpur 
+                                      option(value='Karauli') Karauli
+                                      option(value='Kota') Kota 
+                                      option(value='Nagaur ') Nagaur
+                                      option(value='Pali') Pali 
+                                      option(value='Pratapgarh') Pratapgarh  
+                                      option(value='Rajsamand') Rajsamand 
+                                      option(value='Sawai Madhopur') Sawai Madhopur
+                                      option(value='Sikar') Sikar 
+                                      option(value='Sirohi') Sirohi 
+                                      option(value='Sri Ganganagar') Sri Ganganagar 
+                                      option(value='Tonk') Tonk
+                                      option(value='Udaipur') Udaipur            
+                              
+                                tr.states.Sikkim
+                                  td
+                                    label#name District:
+                                  td.col-md-12
+                                    select.input.form-control(name='')
+                                      option(value='') -- District --
+                                      option(value='North sikkim district') North sikkim district 
+                                      option(value='south sikkim district') south sikkim district 
+                                      option(value='East sikkim district') East sikkim district
+                                      option(value='West sikkm district') West sikkm district           
+                              
+                                tr.states.TamilNadu
+                                  td
+                                    label#name District:
+                                  td.col-md-12
+                                    select.input.form-control(name='')
+                                      option(value='') -- District --
+                                      option(value='Ariyalur') Ariyalur
+                                      option(value='Chennai') Chennai
+                                      option(value='Coimbatore') Coimbatore
+                                      option(value='Cuddalore') Cuddalore
+                                      option(value='Dharmapuri') Dharmapuri
+                                      option(value='Dindigul') Dindigul
+                                      option(value='Erode') Erode
+                                      option(value='Kanchipuram') Kanchipuram
+                                      option(value='Kanyakumari') Kanyakumari
+                                      option(value='Karur') Karur
+                                      option(value='Krishnagiri') Krishnagiri
+                                      option(value='Madurai') Madurai
+                                      option(value='Nagapattinam') Nagapattinam
+                                      option(value='Namakkal') Namakkal
+                                      option(value='Nilgiris') Nilgiris
+                                      option(value='Perambalur') Perambalur
+                                      option(value='Pudukkottai') Pudukkottai
+                                      option(value='Ramanathapuram') Ramanathapuram
+                                      option(value='Salem') Salem
+                                      option(value='Sivaganga') Sivaganga
+                                      option(value='Thanjavur') Thanjavur
+                                      option(value='Theni') Theni
+                                      option(value='Thoothukudi ') Thoothukudi 
+                                      option(value='Tiruchirappalli') Tiruchirappalli
+                                      option(value='Tirunelveli') Tirunelveli
+                                      option(value='Tiruppur') Tiruppur
+                                      option(value='Tiruvallur') Tiruvallur
+                                      option(value='Tiruvannamalai') Tiruvannamalai
+                                      option(value='Tiruvarur') Tiruvarur
+                                      option(value='Vellore') Vellore
+                                      option(value='Viluppuram') Viluppuram
+                                      option(value='Virudhunagar') Virudhunagar          
+                              
+                                tr.states.Telangana
+                                  td
+                                    label#name District:
+                                  td.col-md-12
+                                    select.input.form-control(name='')
+                                      option(value='') -- District --
+                                      option(value='Adilabad') Adilabad
+                                      option(value='Bhadradri Kothagudem') Bhadradri Kothagudem
+                                      option(value='Hyderabad') Hyderabad
+                                      option(value='Jagtial') Jagtial
+                                      option(value='Jangaon') Jangaon
+                                      option(value='Jayashankar Bhoopalpally') Jayashankar Bhoopalpally
+                                      option(value='Jogulamba Gadwal') Jogulamba Gadwal
+                                      option(value='Kamareddy') Kamareddy
+                                      option(value='Karimnagar') Karimnagar
+                                      option(value='Khammam') Khammam
+                                      option(value='Komaram Bheem Asifabad') Komaram Bheem Asifabad
+                                      option(value='Mahabubabad') Mahabubabad
+                                      option(value='Mahabubnagar') Mahabubnagar
+                                      option(value='Mancherial') Mancherial
+                                      option(value='Medak') Medak
+                                      option(value='Medchal') Medchal
+                                      option(value='Nagarkurnool') Nagarkurnool
+                                      option(value='Nalgonda') Nalgonda
+                                      option(value='Nirmal') Nirmal
+                                      option(value='Nizamabad') Nizamabad
+                                      option(value='Peddapalli') Peddapalli
+                                      option(value='Rajanna Sircilla') Rajanna Sircilla
+                                      option(value='Rangareddy') Rangareddy 
+                                      option(value='Sangareddy') Sangareddy
+                                      option(value='Siddipet') Siddipet
+                                      option(value='Suryapet') Suryapet
+                                      option(value='Vikarabad') Vikarabad
+                                      option(value='Wanaparthy') Wanaparthy
+                                      option(value='Warangal Rural') Warangal Rural
+                                      option(value='Warangal Urban') Warangal Urban
+                                      option(value='Yadadri Bhuvanagiri') Yadadri Bhuvanagiri             
+                              
+                                tr.states.Tripura
+                                  td
+                                    label#name District:
+                                  td.col-md-12
+                                    select.input.form-control(name='')
+                                      option(value='') -- District --
+                                      option(value='Dhalai') Dhalai
+                                      option(value='Gomati') Gomati 
+                                      option(value='Khowai') Khowai
+                                      option(value='North Tripura') North Tripura
+                                      option(value='Sepahijala') Sepahijala
+                                      option(value='South Tripura') South Tripura 
+                                      option(value='Unakoti') Unakoti Gadwal
+                                      option(value='West Tripura') West Tripura            
+                              
+                                tr.states.Uttarakhand
+                                  td
+                                    label#name District:
+                                  td.col-md-12
+                                    select.input.form-control(name='')
+                                      option(value='') -- District --
+                                      option(value='Almora') Almora
+                                      option(value='Bageshwar') Bageshwar
+                                      option(value='Chamoli') Chamoli
+                                      option(value='Champawat') Champawat
+                                      option(value='Dehradun') Dehradun
+                                      option(value='Haridwar') Haridwar
+                                      option(value='Nainital') Nainital 
+                                      option(value='Pauri Garhwal') Pauri Garhwal 
+                                      option(value='Pithoragarh') Pithoragarh
+                                      option(value='Rudraprayag') Rudraprayag
+                                      option(value='Tehri Garhwal') Tehri Garhwal
+                                      option(value='Udham Singh Nagar') Udham Singh Nagar 
+                                      option(value='Uttarkashi') Uttarkashi           
+                              
+                                tr.states.UttarPradesh
+                                  td
+                                    label#name District:
+                                  td.col-md-12
+                                    select.input.form-control(name='')
+                                      option(value='') -- District --
+                                      option(value='Agra') Agra  
+                                      option(value='Aligarh') Aligarh  
+                                      option(value='Allahabad') Allahabad 
+                                      option(value='Ambedkar Nagar') Ambedkar Nagar 
+                                      option(value='Amethi') Amethi 
+                                      option(value='Amroha') Amroha  
+                                      option(value='Auraiya') Auraiya 
+                                      option(value='Azamgarh') Azamgarh 
+                                      option(value='Baghpat') Baghpat  
+                                      option(value='Bahraich') Bahraich  
+                                      option(value='Ballia') Ballia
+                                      option(value='Balrampur') Balrampur 
+                                      option(value='Banda') Banda 
+                                      option(value='Barabanki') Barabanki 
+                                      option(value='Bareilly') Bareilly 
+                                      option(value='Basti') Basti 
+                                      option(value='Bhadohi') Bhadohi 
+                                      option(value='Bijnor') Bijnor 
+                                      option(value='Budaun') Budaun 
+                                      option(value='Bulandshahr') Bulandshahr 
+                                      option(value='Chandauli') Chandauli 
+                                      option(value='Chitrakoot') Chitrakoot
+                                      option(value='Deoria') Deoria 
+                                      option(value='Etah') Etah
+                                      option(value='Etawah') Etawah 
+                                      option(value='Faizabad') Faizabad  
+                                      option(value='Farrukhabad') Farrukhabad 
+                                      option(value='Fatehpur') Fatehpur
+                                      option(value='Firozabad') Firozabad 
+                                      option(value='Gautam Buddha Nagar') Gautam Buddha Nagar 
+                                      option(value='Ghaziabad') Ghaziabad 
+                                      option(value='Ghazipur') Ghazipur  
+                                      option(value='Gonda') Gonda 
+                                      option(value='Gorakhpur') Gorakhpur
+                                      option(value='Hamirpur') Hamirpur 
+                                      option(value='Hapur') Hapur  
+                                      option(value='Hardoi') Hardoi 
+                                      option(value='Hathras') Hathras 
+                                      option(value='Jalaun') Jalaun  
+                                      option(value='Jaunpur') Jaunpur  
+                                      option(value='Jhansi') Jhansi 
+                                      option(value='Kannauj') Kannauj 
+                                      option(value='Kanpur Dehat') Kanpur Dehat 
+                                      option(value='Kanpur Nagar') Kanpur Nagar 
+                                      option(value='Kanshiram Nagar') Kanshiram Nagar 
+                                      option(value='Kaushambi') Kaushambi 
+                                      option(value='Kushinagar') Kushinagar 
+                                      option(value='Lakhimpur') Lakhimpur 
+                                      option(value='Lalitpur') Lalitpur 
+                                      option(value='Lucknow') Lucknow 
+                                      option(value='Maharajganj') Maharajganj
+                                      option(value='Mahoba') Mahoba Malwa 
+                                      option(value='Mainpuri') Mainpuri  
+                                      option(value='Mathura') Mathura 
+                                      option(value='Mau') Mau 
+                                      option(value='Meerut') Meerut 
+                                      option(value='Mirzapur') Mirzapur  
+                                      option(value='Moradabad') Moradabad 
+                                      option(value='Muzaffarnagar') Muzaffarnagar 
+                                      option(value='Pilibhit') Pilibhit  
+                                      option(value='Pratapgarh') Pratapgarh  
+                                      option(value='RaeBareli') RaeBareli
+                                      option(value='Rampur') Rampur 
+                                      option(value='Saharanpur') Saharanpur 
+                                      option(value='Sambhal') Sambhal 
+                                      option(value='Sant Kabir Nagar') Sant Kabir Nagar 
+                                      option(value='Shahjahanpur') Shahjahanpur 
+                                      option(value='Shamali') Shamali 
+                                      option(value='Shravasti') Shravasti 
+                                      option(value='Siddharth Nagar') Siddharth Nagar 
+                                      option(value='Sitapur') Sitapur 
+                                      option(value='Sonbhadra') Sonbhadra 
+                                      option(value='Sultanpur') Sultanpur
+                                      option(value='Unnao') Unnao 
+                                      option(value='Varanasi') Varanasi     
+                              
+                                tr.states.WestBengal
+                                  td
+                                    label#name District:
+                                  td.col-md-12
+                                    select.input.form-control(name='')
+                                      option(value='') -- District --
+                                      option(value='Alipurduar') Alipurduar  
+                                      option(value='Bankura') Bankura  
+                                      option(value='Birbhum') Birbhum 
+                                      option(value='Cooch Behar') Cooch Behar  
+                                      option(value='Dakshin Dinajpur') Dakshin Dinajpur 
+                                      option(value='Darjeeling') Darjeeling  
+                                      option(value='Hooghly') Hooghly 
+                                      option(value='Howrah') Howrah 
+                                      option(value='Jalpaiguri') Jalpaiguri  
+                                      option(value='Jhargram') Jhargram  
+                                      option(value='Kalimpong') Kalimpong
+                                      option(value='Kolkata') Kolkata 
+                                      option(value='Malda') Malda 
+                                      option(value='Murshidabad') Murshidabad 
+                                      option(value='Nadia') Nadia 
+                                      option(value='North 24 Parganas') North 24 Parganas 
+                                      option(value='Paschim Medinipur') Paschim Medinipur 
+                                      option(value='Paschim Burdwan') Paschim Burdwan 
+                                      option(value='Purba Burdwan') Purba Burdwan 
+                                      option(value='Purba Medinipur') Purba Medinipur 
+                                      option(value='Purulia') Purulia 
+                                      option(value='South 24 Parganas') South 24 Parganas
+                                      option(value='Uttar Dinajpur') Uttar Dinajpur   
+                              table(align='center')
+                                tr
+                                  td
+                                    label#name Mandal:
+                                  td
+                                    input#man.form-control(type='text', name='mandal', placeholder='Enter Mandal', required)
+                                tr
+                                  td
+                                tr
+                                  td(colspan='2')
+                                    input.btn.btn-primary(type='submit', name='reg', value='Add Member', style='margin-left: 160px' align='center')
+                            br 
+                    #multipleusers.tab-pane.fade
+                      br 
+                      br
+                      .container(style='width: 100%;height:100%;')
+                        br
+                        br
+                        center
+                          form(enctype='multipart/form-data', action='uploadadmin', method='post')
+                            input.form-control(type='file', name='file')
+                            br
+                            br
+                            button.btn.btn-info(type='submit', value='Upload', name='submit') upload
+                          br
+                          br 
+            #fb.tab-pane.fade.align
+              .container(style='width: 90%;height:100%;border-radius: 1px')      
+                .row 
+                  .table-responsive
+                    table.dataTables-example.table.table-striped.table-bordered.table-hover
+                      thead
+                        tr
+                          th Experience
+                          th Comments
+                          th User Name
+                          th User Email
+                      tbody
+                        if feedback
+                          each member in feedback
+                            tr
+                              td #{member.experience}
+                              td #{member.comment}
+                              td #{member.name}
+                              td #{member.email}
+            #edit.tab-pane.fade.align
+              .container(style='width: 90%;height:100%;border-radius: 1px')      
+                .row 
+                  .table-responsive
+                    table.dataTables-example.table.table-striped.table-bordered.table-hover
+                      thead
+                        tr
+                          th Email
+                          th Name
+                          th Role
+                          th Mandal
+                          th District
+                          th Id
+                          th State
+                          th Action
+                      tbody
+                        if edit
+                          each member in edit
+                            tr
+                              td #{member.Email}
+                              td #{member.Name}
+                              td #{member.Role}
+                              td #{member.Mandal}
+                              td #{member.District}
+                              td #{member.Id}
+                              td #{member.State}
+                              td(style="min-width:150px;")
+                                button(style="margin-right:15px;").btn.btn-primary.edit_val(name="edit", value=member.Id) Edit 
+                                button.btn.btn-danger.del_val(name="delete", value=member.Id) Remove
+                  .form
+                    .container(style='background-color: #fff;width: 100%;height:100%;border-radius: 1px')
+                      br
+                      br
+                      .col-lg-9
+                        form#reg_form.form-horizontal(action='/update', method='post')
+                          fieldset
+                            .form-group
+                              label.col-md-4.control-label.text Country :
+                              .col-md-6.inputGroupContainer
+                                .input-group
+                                  span.input-group-addon.input
+                                    i.fa.fa-globe(style='font-size:16px; color:#4267B2')
+                                  input.input#c.form-control(type='text', name='country', required)
+                            .form-group
+                              label.col-md-4.control-label.text State :
+                              .col-md-6.inputGroupContainer
+                                .input-group
+                                  span.input-group-addon.input
+                                    i.fa.fa-map-marker(style='font-size:16px; color:red')
+                                  input.input#s.form-control(type='text', name='state', required)
+                            .form-group
+                              label.col-md-4.control-label.text District :
+                              .col-md-6.inputGroupContainer
+                                .input-group
+                                  span.input-group-addon.input
+                                     i.fa.fa-location-arrow(style='font-size:16px; color:green')
+                                  input.input#d.form-control(type='text', name='district', required)
+                            .form-group
+                              label.col-md-4.control-label.text Mandal :
+                              .col-md-6.inputGroupContainer
+                                .input-group
+                                  span.input-group-addon.input
+                                    i.fa.fa-map-pin(style='font-size:16px; color:#d1c455')
+                                  input.input#m.man.form-control(name='mandal', type='text', required)
+                            .form-group
+                              label.col-md-4.control-label.text Name :
+                              .col-md-6.inputGroupContainer
+                                .input-group
+                                  span.input-group-addon.input
+                                    i.fa.fa-user(style='font-size:16px; color:#black')
+                                  input.input#n.form-control(type='text', name='name', required)
+                            .form-group
+                              label.col-md-4.control-label.text Email :
+                              .col-md-6.inputGroupContainer
+                                .input-group
+                                  span.input-group-addon.input
+                                    i.fa.fa-envelope(style='font-size:16px; color:#4267B2')
+                                  input.input#e.form-control(type='email', name='email', required)
+                            .form-group
+                              label.col-md-4.control-label.text Role :
+                              .col-md-6.inputGroupContainer
+                                .input-group
+                                  span.input-group-addon.input
+                                    i.fa.fa-user-o(style='font-size:16px; color:orange')
+                                  input.input#r.form-control(type='text', name='role', required)
+                            .form-group
+                              label.col-md-4.control-label.text Village :
+                              .col-md-6.inputGroupContainer
+                                .input-group
+                                  span.input-group-addon.input
+                                    i.fa.fa-street-view(style='font-size:16px; color:#4CAF50')
+                                  input.input#v.form-control(type='text', name='village', required)
+                            .form-group
+                              label.col-md-4.control-label.text school :
+                              .col-md-6.inputGroupContainer
+                                .input-group
+                                  span.input-group-addon.input
+                                    i.fa.fa-university(style='font-size:16px; color:#000')
+                                  input.input#sc.form-control(type='text', name='school', required)
+                            .form-group
+                              label.col-md-4.control-label.text Id :
+                              .col-md-6.inputGroupContainer
+                                .input-group
+                                  span.input-group-addon.input
+                                    i.fa.fa-id-badge(style='font-size:16px; color:brown')
+                                  input.input#i.form-control(type='text', name='id', required, readonly)
+                            // Button
+                            .form-group
+                              label.col-md-4.control-label
+                              .col-md-4
+                                button.btn(type='update', style='background-color:#31B0D5; color:white')
+                                  | update
+                                  span.glyphicon.glyphicon-send
+
+    //scripts
+    script(src='javascripts/jquery.js')
+    script(src='javascripts/jquery-ui-1.9.2.custom.min.js')
+    script(src='javascripts/jquery.ui.touch-punch.min.js')
+    script.include(type='text/javascript', src='javascripts/jquery.dcjqaccordion.2.7.js')
+    script(src='javascripts/jquery.scrollTo.min.js')
+    script(src='javascripts/jquery.nicescroll.js', type='text/javascript')
+    // common script for all pages
+    script(src='javascripts/common-scripts.js')
+    script(src='javascripts/jquery.dataTables.min.js')
+    script(src='javascripts/dataTables.buttons.min.js')
+    script(src='javascripts/buttons.flash.min.js')
+    script(src='javascripts/jszip.min.js')
+    script(src='javascripts/pdfmake.min.js')
+    script(src='javascripts/vfs_fonts.js')
+    script(src='javascripts/buttons.html5.min.js')
+    script(src='javascripts/buttons.print.min.js')
+    //script for datatables
+    script.
+      $(document).ready(function () {
+        $('.dataTables-example').dataTable({
+          dom: 'Bfrtip',
+          buttons: [
+              {
+                  extend: 'copy',
+                  title: 'Status'
+              },
+              {
+                  extend: 'csvHtml5',
+                  title: 'Status'
+              },
+              {
+                  extend: 'excelHtml5',
+                  title: 'Status'
+              },
+              {
+                  extend: 'pdfHtml5',
+                  title: 'Status'
+              },
+              {
+                  extend: 'print',
+                  title: 'Status'
+              }
+          ]
+        });
+      });
+    script.
+      $('.del_val').click(function(){
+        var id = $(this).val();
+        $.post('/remove',{id:id}, function(data,textStatus,jqXHR){
+          alert('Deleted Successfully')
+          location.reload();
+        });
+      });
+    script.
+      $('.edit_val').click(function(){
+        var id = $(this).val();
+        $.post('/edit',{id:id}, function(data,textStatus,jqXHR){
+          var jsondata = JSON.stringify(data[0]);
+            var docs = JSON.parse(jsondata);
+            $("#e").val(docs.Email);
+            $("#n").val(docs.Name);
+            $("#r").val(docs.Role);
+            $("#m").val(docs.Mandal);
+            $("#v").val(docs.Village);
+            $("#sc").val(docs.School);
+            $("#i").val(docs.Id);
+            $("#s").val(docs.State);
+            $("#c").val(docs.Country);
+            $("#d").val(docs.District);
+        });
+        $('.form').show();
+      });
+    script.
+      $(function(){
+        $(".state").on("change", function(){
+          $(".states.active").removeClass("active");
+          var subList = $(".states."+$(this).val());
+          if (subList.length){
+            subList.addClass("active");
+            $(".states").find(".form-control").removeAttr('name');
+            $(".states").find(".form-control").removeAttr('required');
+            $(subList).find(".form-control").attr('name', 'district');
+            $(subList).find(".form-control").attr('required', true);
+          }
+        });
+      });
